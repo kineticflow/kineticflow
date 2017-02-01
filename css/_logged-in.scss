@@ -1,4 +1,52 @@
 // main: main.scss
 .user-logged-in {
   display: none;
+  background: $off-white;
+  .wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+  }
+  .tabs {
+    padding: 0;
+    margin: 1rem 0 0 2rem;
+    list-style: none;
+    li {
+      display: inline-block;
+      margin: 0;
+      button {
+        padding: 0.66rem 1rem;
+        margin: 0;
+        border: 1px solid transparent;
+        background: transparent;
+        color: $dark-grey;
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+    li.active {
+      button {
+        border-top: 4px solid $brand;
+        border-right: 1px solid $grey;
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid $grey;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background: #fff;
+        color: $dark;
+      }
+    }
+  }
+  .inner {
+    border: 1px solid $grey;
+    padding: 2rem;
+    background: #fff;
+  }
+  section {
+    display: none;
+  }
+  #work {
+    display: block;
+  }
 }

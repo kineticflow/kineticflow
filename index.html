@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Get prepared for life with Kinetic Flow, mindfulness and performance.">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <title>Kinetic Flow</title>
   </head>
@@ -52,13 +52,29 @@
       </header>
 
       <div class="wrapper">
+        <ul class="tabs">
+          <li class="active"><button id="workTab"><i class="fa fa-id-badge icon-left-close"></i>Work</button></li>
+          <li><button id="personalTab"><i class="fa fa-sun-o icon-left-close"></i>Personal</button></li>
+          <li><button id="favouritesTab"><i class="fa fa-heart icon-left-close"></i>Favourites</button></li>
+        </ul>
+        <div class="inner">
 
-        <section>
-          <h3>Congrats!</h3>
-          <p>Good job logging in <strong><span class="user-email"></span></strong>.</p>
-          <p>For now, the only thing you can do is log back out... Unless you're on mobile. And then you can't even do that! Yet...</p>
-        </section>
+          <section id="work">
+            <h3>This is the work tab!</h3>
+            <p>There will be a list of work related activities.</p>
+          </section>
 
+          <section id="personal">
+            <h3>Personal tab here!</h3>
+            <p>Instead of work stuff, you'll see personal activities.</p>
+          </section>
+
+          <section id="favourites">
+            <h3>Favourites</h3>
+            <p>You haven't saved any audio as a favourite yet.</p>
+          </section>
+
+        </div>
       </div><!-- /.wrapper -->
 
     </div>
@@ -97,5 +113,6 @@
   <script src="./scripts/scripts.js" ></script>
   <script src="./scripts/app.js" ></script>
   <script src="./scripts/auth.js" ></script>
+  <script src="./scripts/views.js" ></script>
 
 </html>

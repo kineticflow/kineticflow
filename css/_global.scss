@@ -39,6 +39,12 @@
 .icon-right {
   margin-left: 0.66rem;
 }
+.icon-left {
+  margin-right: 0.66rem;
+}
+.icon-left-close {
+  margin-right: 0.33rem;
+}
 .text-center {
   text-align: center;
 }
@@ -58,22 +64,4 @@
 }
 .space-between {
   justify-content: space-between;
-}
-.column {
-  padding: 1rem;
-}
-.input-row {
-  .column:first-child {
-    width: 100px;
-    text-align: right;
-  }
-}
-.wrapper {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-#newResultView,
-#newPlayerView {
-  display: none;
 }
