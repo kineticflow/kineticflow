@@ -1,0 +1,51 @@
+// main: main.scss
+
+html, body {
+  min-height: 100%;
+}
+html {
+  font-size: $base-font-size;
+  position: relative;
+}
+body {
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  margin: 0;
+  background: $background;
+}
+section {
+  margin: 2rem auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 30px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+p {
+  line-height: 1.7rem;
+  margin: 0 0 1rem;
+}
+hr {
+  margin: 0 0 1rem;
+}
+strong {
+  font-weight: 700;
+}
+button,
+input[button] {
+  border: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+li {
+  margin-bottom: 1rem;
+}

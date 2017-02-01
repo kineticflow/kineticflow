@@ -1,0 +1,79 @@
+// main: main.scss
+.btn {
+  padding: 8px 14px;
+  text-decoration: none;
+  color: #fff;
+  background: $brand;
+  border-radius: 4px;
+  &:hover {
+    background: darken($brand, 15%);
+  }
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid $dark;
+  color: $dark;
+  &:hover {
+    background: $dark;
+    color: #fff;
+  }
+}
+.btn-success {
+  background: $success;
+  &:hover {
+    background: darken($success, 15%);
+  }
+}
+.btn-error {
+  background: $error;
+  &:hover {
+    background: darken($error, 15%);
+  }
+}
+.btn-warning {
+  background: $warning;
+  &:hover {
+    background: darken($warning, 15%);
+  }
+}
+.icon-right {
+  margin-left: 0.66rem;
+}
+.text-center {
+  text-align: center;
+}
+.help-text {
+  color: $error;
+  font-style: italic;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+.space-between {
+  justify-content: space-between;
+}
+.column {
+  padding: 1rem;
+}
+.input-row {
+  .column:first-child {
+    width: 100px;
+    text-align: right;
+  }
+}
+.wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+#newResultView,
+#newPlayerView {
+  display: none;
+}

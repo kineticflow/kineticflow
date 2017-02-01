@@ -1,0 +1,38 @@
+// The main Scarborough Tennis Table SASS file
+
+// =============================================
+//
+//  Variables and imports only please!
+//
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+// Colours first
+$brand:       #4db8dd;  // Blue
+$background:  #fff;     // White
+$secondary:   #59a28e;  // Patina
+$dark:        #5e537b;  // Comet
+
+$grey:        #fdfdfd;  // Off white
+$dark-grey:   #777;     // Dark grey
+
+$success:     #66b47d;  // Forest green
+$warning:     #edc963;  // Golden sand
+$error:       #e25835;  // Flame pea
+
+// Global styles
+$base-font-family:    'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-weight:    400;
+$base-font-size:      15px;
+
+@import
+  "_resets",
+  "_breakpoints",
+  "_elements",
+  "_global",
+  "_header",
+  "_footer",
+  "_logged-out",
+  "_logged-in",
+  "_shame",
+  "_forms"
+  ;

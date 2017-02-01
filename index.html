@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get prepared for life with Kinetic Flow, mindfulness and performance.">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Kinetic Flow</title>
+  </head>
+
+  <body>
+
+    <!-- Initial state: nobody logged in -->
+    <div class="user-logged-out">
+
+      <div class="log-in-wrapper">
+        <h1>Kinetic Flow</h1>
+        <div class="log-in-box">
+          <h3>Log in to get prepared for life</h3>
+          <form id="logInForm">
+            <div class="input-group">
+              <label for="logInEmail">Email</label>
+              <input type="email" id="logInEmail" />
+            </div>
+            <div class="input-group">
+              <label for="logInPassword">Password</label>
+              <input type="password" id="logInPassword" />
+            </div>
+            <button class="btn" id="logInButton">Log In</button>
+          </form>
+        </div>
+        <p><em>Don't have an account? <br /><a href="mailto:hello@kineticflow.com.au" target="_blank">Request one!</a></em></p>
+      </div>
+
+    </div>
+
+    <!-- Logged in state -->
+    <div class="user-logged-in">
+
+      <header>
+        <div class="row space-between">
+          <a href="./"><h1>Kinetic Flow</h1></a>
+          <div class="user-info">
+            <span>Logged in as <span class="user-email"></span></span>
+            <button class="btn log-out-button">Log Out</button>
+          </div>
+          <button class="btn btn-outline menu-btn">Menu <i class="fa fa-bars icon-right"></i></button>
+        </div>
+      </header>
+
+      <div class="wrapper">
+
+        <section>
+          <h3>Congrats!</h3>
+          <p>Good job logging in <strong><span class="user-email"></span></strong>.</p>
+          <p>For now, the only thing you can do is log back out... Unless you're on mobile. And then you can't even do that! Yet...</p>
+        </section>
+
+      </div><!-- /.wrapper -->
+
+    </div>
+
+    <footer>
+      <div>
+        <ul>
+          <li><h3>Kinetic Flow</h3></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>&copy; Kinetic Flow 2017</p>
+      </div>
+    </footer>
+
+  </body>
+
+  <script src="./scripts/jquery-2.2.4.min.js" ></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+  <script>
+    // Hook up to Firebase
+    var config = {
+      apiKey: "AIzaSyAmiL4b_V8gsqLvXdBOA4n7XlaTZDwv82Q",
+      authDomain: "kinetic-flow.firebaseapp.com",
+      databaseURL: "https://kinetic-flow.firebaseio.com",
+      storageBucket: "kinetic-flow.appspot.com",
+      messagingSenderId: "1049702057178"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="./scripts/scripts.js" ></script>
+  <script src="./scripts/app.js" ></script>
+  <script src="./scripts/auth.js" ></script>
+
+</html>

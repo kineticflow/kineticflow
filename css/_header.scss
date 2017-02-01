@@ -1,0 +1,40 @@
+// main: main.scss
+
+header {
+  background: transparent;
+  padding: 0px 1rem;
+  border-bottom: 1px solid $brand;
+  @include for-tablet-portrait-up {
+    padding: 0px 2rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    color: $brand;
+    margin: 0;
+    line-height: 70px;
+    @include for-phone-only {
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+  }
+  .user-info {
+    display: none;
+    @include for-tablet-portrait-up {
+      display: block;
+    }
+  }
+  .menu-btn {
+    display: block;
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+  .log-out-button {
+    @include for-tablet-portrait-up {
+      margin-left: 2rem;
+    }
+  }
+}
