@@ -28,6 +28,7 @@ $(document).ready(function() {
     var outboundUser = firebase.auth().currentUser.email;
     firebase.auth().signOut().then(function() {
         // The user logs out!
+        $(".mobile-menu").fadeOut();
         console.log(outboundUser + "logged out");
       }, function(error) {
         // An error happened.

@@ -1,6 +1,6 @@
 // main: main.scss
 footer {
-  padding: 5rem 2rem;
+  padding: 2rem 2rem 4rem;
   background: $dark;
   color: $grey;
   position: absolute;
@@ -13,6 +13,7 @@ footer {
   justify-content: space-between;
   @include for-tablet-landscape-up {
     flex-direction: row;
+    padding: 5rem 2rem;
   }
   p,
   h3 {

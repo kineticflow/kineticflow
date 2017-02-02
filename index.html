@@ -41,14 +41,22 @@
     <div class="user-logged-in">
 
       <header>
-        <div class="row space-between">
-          <a href="./"><h1>Kinetic Flow</h1></a>
-          <div class="user-info">
-            <span>Logged in as <span class="user-email"></span></span>
-            <button class="btn log-out-button">Log Out</button>
-          </div>
-          <button class="btn btn-outline menu-btn">Menu <i class="fa fa-bars icon-right"></i></button>
+
+        <a href="./"><h1>Kinetic Flow</h1></a>
+        <div class="user-info">
+          <span>Logged in as <span class="user-email"></span></span>
+          <button class="btn log-out-button">Log Out</button>
         </div>
+        <button class="btn btn-outline menu-btn">Menu <i class="fa fa-bars icon-right"></i></button>
+
+        <div class="mobile-menu">
+          <ul class="list-unstyled">
+            <li><button class="close-menu-btn">Close <i class="fa fa-times icon-right"></i></button></li>
+            <li class="menu-text"><span class="user-email"></span></li>
+            <li><button class="log-out-button">Log Out <i class="fa fa-sign-out icon-right"></i></button></li>
+          </ul>
+        </div>
+
       </header>
 
       <div class="wrapper">
@@ -76,6 +84,8 @@
 
         </div>
       </div><!-- /.wrapper -->
+
+      <p class="quote-banner"><em>You will never have this day again. Embrace it.</em></p>
 
     </div>
 

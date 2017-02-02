@@ -2,15 +2,26 @@
 .user-logged-in {
   display: none;
   background: $off-white;
+  .quote-banner {
+    padding-bottom: 2rem;
+    text-align: center;
+  }
   .wrapper {
-    max-width: 70%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 2rem 0 4rem;
+    padding: 1rem 0 2rem;
+    @include for-tablet-landscape-up {
+      max-width: 70%;
+      padding: 2rem 0 4rem;
+    }
   }
   .tabs {
     padding: 0;
-    margin: 1rem 0 0 2rem;
+    margin: 0 0 0 1rem;
     list-style: none;
+    @include for-tablet-portrait-up {
+      margin-left: 2rem;
+    }
     li {
       display: inline-block;
       margin: 0;
@@ -22,6 +33,9 @@
         color: $dark-grey;
         &:hover {
           color: $dark;
+        }
+        @include for-phone-only {
+          font-size: 0.8rem;
         }
       }
     }
@@ -40,8 +54,11 @@
   }
   .inner {
     border: 1px solid $grey;
-    padding: 2rem;
+    padding: 2rem 1rem;
     background: #fff;
+    @include for-tablet-portrait-up {
+      padding: 2rem;
+    }
   }
   section {
     display: none;

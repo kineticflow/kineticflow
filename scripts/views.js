@@ -2,6 +2,14 @@
 
 $(document).ready(function() {
 
+  $(".menu-btn").click(function(){
+    $(".mobile-menu").fadeIn();
+  });
+
+  $(".close-menu-btn").click(function(){
+    $(".mobile-menu").fadeOut();
+  });
+
   $("#personalTab").click(function(){
     $(".tabs li").removeClass('active');
     $(this).parent("li").addClass('active');
@@ -22,5 +30,7 @@ $(document).ready(function() {
     $("section").hide();
     $("#favourites").fadeIn();
   });
+
+
 
 });
