@@ -2,6 +2,23 @@
 
 $(document).ready(function() {
 
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // Todo: Made a function and move to views.js
+      $(".user-logged-out").hide();
+      $(".user-logged-in").fadeIn();
+      var currentUser = user.uid;
+      console.log(currentUser);
+      $(".user-email").html(user.email);
+    } else {
+      $(".user-logged-in").hide();
+      $(".user-logged-out").fadeIn();
+      var currentUser = "Nobody!";
+      console.log(currentUser);
+      $(".user-email").html('');
+    }
+  });
+
   // Let people log in
   $("#logInForm").submit(function(e) {
     e.preventDefault();

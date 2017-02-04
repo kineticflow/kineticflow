@@ -59,6 +59,13 @@
   margin: 0;
   font-size: 0.9rem;
 }
+.highlight-span {
+  background: $dark;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0.33rem 0.66rem;
+  margin: 0 0.2rem;
+}
 .row {
   display: flex;
   align-items: center;

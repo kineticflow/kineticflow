@@ -63,23 +63,44 @@
         <ul class="tabs">
           <li class="active"><button id="workTab"><i class="fa fa-id-badge icon-left-close"></i>Work</button></li>
           <li><button id="personalTab"><i class="fa fa-sun-o icon-left-close"></i>Personal</button></li>
-          <li><button id="favouritesTab"><i class="fa fa-heart icon-left-close"></i>Favourites</button></li>
+          <li><button id="analyticsTab"><i class="fa fa-braille icon-left-close"></i>Analytics</button></li>
         </ul>
         <div class="inner">
 
           <section id="work">
-            <h3>This is the work tab!</h3>
-            <p>There will be a list of work related activities.</p>
+            <h3>Mindfulness for Work</h3>
+            <p>What would you like to achieve?</p>
+            <ul class="list-unstyled task-list" id="work-task-list">
+              <!-- app.js puts tasks here -->
+            </ul>
           </section>
 
           <section id="personal">
             <h3>Personal tab here!</h3>
             <p>Instead of work stuff, you'll see personal activities.</p>
+            <ul class="list-unstyled task-list" id="personal-task-list">
+              <!-- app.js puts personal tasks here -->
+            </ul>
           </section>
 
-          <section id="favourites">
-            <h3>Favourites</h3>
-            <p>You haven't saved any audio as a favourite yet.</p>
+          <section id="analytics">
+            <h3>Analytics</h3>
+            <p>Get ready to see some rad stats about your usage ;)</p>
+          </section>
+
+          <section id="moods">
+            <h3>You're about to <span class="upcoming-task highlight-span"></span></h3>
+            <p>What mood are you in right now?</p>
+            <ul class="list-unstyled task-list" id="moods-list">
+              <!-- app.js puts moods here -->
+            </ul>
+            <button class="btn" id="moodsBack"><i class="fa fa-arrow-left icon-left-close"></i> Back</button>
+          </section>
+
+          <section id="audio">
+            <h3>You're about to <span class="upcoming-task highlight-span"></span> and you're feeling <span class="current-mood highlight-span"></span></h3>
+            <p>Listen to this!</p>
+            <p class="audio-name"></p>
           </section>
 
         </div>

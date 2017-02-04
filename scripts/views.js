@@ -24,13 +24,20 @@ $(document).ready(function() {
     $("#work").fadeIn();
   });
 
-  $("#favouritesTab").click(function(){
+  $("#analyticsTab").click(function(){
     $(".tabs li").removeClass('active');
     $(this).parent("li").addClass('active');
     $("section").hide();
-    $("#favourites").fadeIn();
+    $("#analytics").fadeIn();
   });
 
-
+  $("#moodsBack").click(function(){
+    $("section").hide();
+    if ($(this).attr('data-destination') === "work") {
+      $("#work").fadeIn();
+    } else {
+      $("#personal").fadeIn();
+    }
+  });
 
 });
