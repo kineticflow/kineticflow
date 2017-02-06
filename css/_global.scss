@@ -50,6 +50,19 @@
   margin: 0;
   list-style: none;
 }
+.list-inline {
+  @extend .list-unstyled;
+  li {
+    display: inline-block;
+    margin: 0 1rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
 .text-center {
   text-align: center;
 }

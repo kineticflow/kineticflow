@@ -11,7 +11,7 @@
       "title" : "Reenergise and get productive"
     },
     "relaxSleep" : {
-      "id" : "relaxSleep",
+      "id" : "sleep",
       "tags" : ["public", "ey", "personal"],
       "title" : "Put your day down and relax into sleep"
     }
@@ -39,25 +39,61 @@
       "id" : "audio1",
       "title" : "Feeling happy and ready to start the day with intention",
       "tags" : ["startWork", "happy"],
-      "fileName" : "audio1_startYourDayWithIntentionHappy.m4a"
+      "fileName" : "audio1_startYourDayWithIntentionHappy.mp3"
     },
     "audio2" : {
       "id" : "audio2",
       "title" : "Feeling sad but ready to start the day with intention",
       "tags" : ["startWork", "sad"],
-      "fileName" : "audio2_startYourDayWithIntentionSad.m4a"
+      "fileName" : "audio2_startYourDayWithIntentionSad.mp3"
     },
     "audio3" : {
       "id" : "audio3",
       "title" : "Feeling stressed and wanting to start the day with intention",
       "tags" : ["startWork", "stressed"],
-      "fileName" : "audio3_startYourDayWithIntentionStressed.m4a"
+      "fileName" : "audio3_startYourDayWithIntentionStressed.mp3"
     },
     "audio4" : {
       "id" : "audio4",
       "title" : "Feeling tired and wanting to start the day with intention",
       "tags" : ["startWork", "tired"],
-      "fileName" : "audio4_startYourDayWithIntentionTired.m4a"
+      "fileName" : "audio4_startYourDayWithIntentionTired.mp3"
+    },
+    "audio5" : {
+      "id" : "audio5",
+      "title" : "Feeling stressed while preparing to go to sleep",
+      "tags" : ["sleep", "stressed"],
+      "fileName" : "audio5_sleepStressed.mp3"
+    },
+    "audio6" : {
+      "id" : "audio6",
+      "title" : "Feeling sad and preparing to go to sleep",
+      "tags" : ["sleep", "sad"],
+      "fileName" : "audio6_sleepSad.mp3"
+    },
+    "audio7" : {
+      "id" : "audio7",
+      "title" : "Feeling happy and ready to reenergize and focus",
+      "tags" : ["reenergize", "happy"],
+      "fileName" : "audio7_focusEnergiseHappy.mp3"
+    },
+    "audio8" : {
+      "id" : "audio8",
+      "title" : "Feeling sad and wanting to reenergize and focus",
+      "tags" : ["reenergize", "sad"],
+      "fileName" : "audio8_focusEnergiseSad.mp3"
+    },
+    "audio9" : {
+      "id" : "audio9",
+      "title" : "Feeling stressed and needing to reenergize and focus",
+      "tags" : ["reenergize", "stressed"],
+      "fileName" : "audio9_focusEnergiseStressed.mp3"
+    },
+    "audio10" : {
+      "id" : "audio10",
+      "title" : "Feeling tired and wanting to reenergize and focus",
+      "tags" : ["reenergize", "tired"],
+      "fileName" : "audio10_focusEnergiseTired.mp3"
     }
   }
 }

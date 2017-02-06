@@ -37,6 +37,7 @@ $(document).ready(function() {
       taskName = $(this).attr('name');
       origin = $(this).attr('data-origin');
       $("section").hide();
+      $(".tabs").hide();
       $("#moods").fadeIn();
       $("#moodsBack").attr('data-destination', origin);
       $(".upcoming-task").html(taskName);
@@ -44,18 +45,45 @@ $(document).ready(function() {
       $(".mood-btn").click(function(){
         moodId = $(this).attr('id');
         moodName = $(this).attr('name');
+        var audio;
         $("section").hide();
         $("#audio").fadeIn();
         $(".current-mood").html(moodName);
         $.each(data.audios, function(key, value){
-          console.log("user selected " + taskId + " and " + moodId + ", this line has " + value.tags);
           if ($.inArray(taskId, value.tags) > -1 && $.inArray(moodId, value.tags) > -1) {
             $(".audio-name").html(value.title);
+            audio = $("#kfAudio");
+            audio.attr('src', '/audio/' + value.fileName);
+            audio.on("canplay", function(event){
+              event.stopImmediatePropagation();
+              // Build the audio player
+            });
             return false;
           } else {
             $(".audio-name").html("Oops, we haven't uploaded an appropriate audio yet!");
           }
         });
+
+        audio.on('timeupdate', function(){
+          $('#seekbar').attr("value", this.currentTime / this.duration * 100);
+        });
+
+        audio.on('ended', function(){
+          console.log("Audio Ended");
+        });
+
+        // // Progress bar, try something like:
+        // $( "#progressbar" ).click(function(e) {
+        //   var playingSound = soundManager.getSoundById(_.keys(soundManager.sounds)[0]),
+        //   x               = e.pageX - $(this).offset().left,
+        //   width           = $(this).width(),
+        //   duration        = playingSound.durationEstimate;
+        //   playingSound.setPosition((x / width) * duration);
+        // });
+        //
+        // $( "#progressbar" ).mouseover(function(){
+        //   $(this).css("cursor","pointer");
+        // });
 
       });
 

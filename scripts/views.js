@@ -38,6 +38,16 @@ $(document).ready(function() {
     } else {
       $("#personal").fadeIn();
     }
+    $(".tabs").show();
+  });
+
+  $("#cancelAudio").click(function(){
+    $("section").hide();
+    $("#kfAudio").attr('src', '');
+    $(".tabs li").removeClass('active');
+    $("#workTab").parent("li").addClass('active');
+    $("#work").fadeIn();
+    $(".tabs").show();
   });
 
 });
