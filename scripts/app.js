@@ -74,6 +74,7 @@ $(document).ready(function() {
           if (audio.get(0).paused == false) {
             audio.get(0).pause();
             $(".play-pause i").removeClass("fa-pause").addClass("fa-play");
+            $('.audio-progress').stop();
           } else {
             audio.get(0).play();
             $(".play-pause i").removeClass("fa-play").addClass("fa-pause");
@@ -81,26 +82,26 @@ $(document).ready(function() {
         });
 
         audio.on('timeupdate', function(){
-          $('.audio-progress').css("width", this.currentTime / this.duration * 100);
           $("#audioPlayedTime").html(formatSeconds(this.currentTime));
+          $('.audio-progress').width(audio.get(0).currentTime/audio.get(0).duration * 100 + '%');
         });
 
         audio.on('ended', function(){
           console.log("Audio Ended");
+          $(".play-pause i").removeClass("fa-pause").addClass("fa-play");
         });
 
-        // // Progress bar, try something like:
-        // $( "#progressbar" ).click(function(e) {
-        //   var playingSound = soundManager.getSoundById(_.keys(soundManager.sounds)[0]),
-        //   x               = e.pageX - $(this).offset().left,
-        //   width           = $(this).width(),
-        //   duration        = playingSound.durationEstimate;
-        //   playingSound.setPosition((x / width) * duration);
-        // });
-        //
-        // $( "#progressbar" ).mouseover(function(){
-        //   $(this).css("cursor","pointer");
-        // });
+        // Progress bar, try something like:
+        $(".seekbar").click(function(e) {
+          var x               = e.pageX - $(this).offset().left;
+          var width           = $(this).width();
+          var duration        = audio.get(0).duration;
+          audio.get(0).currentTime = x / width * duration;
+        });
+
+        $( ".seekbar" ).mouseover(function(){
+          $(this).css("cursor","pointer");
+        });
 
       });
 
