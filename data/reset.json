@@ -95,5 +95,26 @@
       "tags" : ["reenergize", "tired"],
       "fileName" : "audio10_focusEnergiseTired.mp3"
     }
+  },
+  "users" : {
+    "mDqocTkHMrX5oquiPHUgNvreTMg1" : {
+      "name" : "Sam Mead",
+      "superDuper" : "yes",
+      "organisation" : "ey",
+      "streak" : "1",
+      "totalAudioTime" : 240000,
+      "history" : {
+        "1486457665039" : {
+          "preMood" : "tired",
+          "activity" : "Reenergise and get productive",
+          "activityID" : "reenergize",
+          "postMood" : "happy"
+        }
+      }
+    },
+    "BiGjXaqAArevxkrtkZKe1OZxk302" : {
+      "name" : "Sarah Rollins",
+      "superDuper" : "yes"
+    }
   }
 }

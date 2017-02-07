@@ -86,12 +86,21 @@
           <section id="analytics">
             <h3>Analytics</h3>
             <p>Get ready to see some rad stats about your usage ;)</p>
+            <ul class="list-unstyled">
+              <li>Total time listening: <span id="totalAudioTime"></span></li>
+              <li>Streak: <span id="streak"></span> days</li>
+              <li>History:
+                <ul id="historyList">
+
+                </ul>
+              </li>
+            </ul>
           </section>
 
           <section id="moods">
             <h3>You're about to <span class="upcoming-task highlight-span"></span></h3>
             <p>What mood are you in right now?</p>
-            <ul class="list-unstyled list-inline task-list" id="moods-list">
+            <ul class="list-unstyled list-inline mood-list" id="moodList">
               <!-- app.js puts moods here -->
             </ul>
             <hr />
@@ -110,9 +119,7 @@
               </div>
               <div class="audio-meta">
                 <div class="seekbar">
-                  <div class="audio-progress">
-
-                  </div>
+                  <div class="audio-progress"></div>
                 </div>
                 <div class="audio-timings">
                   <span id="audioPlayedTime">00:00</span>
@@ -123,6 +130,14 @@
 
             <hr />
             <button class="btn" id="cancelAudio"><i class="fa fa-times icon-left-close"></i> Cancel Audio</button>
+          </section>
+
+          <section id="postAudioMood">
+            <p>Audio session completed!</p>
+            <h3>What is your mood?</h3>
+            <ul class="list-unstyled list-inline mood-list" id="postAudioMoodList">
+              <!-- app.js puts moods here -->
+            </ul>
           </section>
 
         </div>
@@ -163,9 +178,17 @@
     };
     firebase.initializeApp(config);
   </script>
-  <script src="./scripts/scripts.js" ></script>
-  <script src="./scripts/app.js" ></script>
-  <script src="./scripts/auth.js" ></script>
-  <script src="./scripts/views.js" ></script>
+
+  <!-- Production JS
+  <script src="./scripts/prod/scripts.min.js" type="text/javascript"></script>
+  <script src="./scripts/prod/auth.min.js" type="text/javascript"></script>
+  <script src="./scripts/prod/views.min.js" type="text/javascript"></script>
+  <script src="./scripts/prod/app.min.js" type="text/javascript"></script>
+  -->
+
+  <script src="./scripts/scripts.js" type="text/javascript"></script>
+  <script src="./scripts/auth.js" type="text/javascript"></script>
+  <script src="./scripts/views.js" type="text/javascript"></script>
+  <script src="./scripts/app.js" type="text/javascript"></script>
 
 </html>

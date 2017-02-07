@@ -1,53 +1,47 @@
 // Views JS
 
-$(document).ready(function() {
+$(".menu-btn").click(function(){
+  $(".mobile-menu").fadeIn();
+});
 
-  $(".menu-btn").click(function(){
-    $(".mobile-menu").fadeIn();
-  });
+$(".close-menu-btn").click(function(){
+  $(".mobile-menu").fadeOut();
+});
 
-  $(".close-menu-btn").click(function(){
-    $(".mobile-menu").fadeOut();
-  });
-
-  $("#personalTab").click(function(){
-    $(".tabs li").removeClass('active');
-    $(this).parent("li").addClass('active');
-    $("section").hide();
-    $("#personal").fadeIn();
-  });
-
-  $("#workTab").click(function(){
-    $(".tabs li").removeClass('active');
-    $(this).parent("li").addClass('active');
-    $("section").hide();
-    $("#work").fadeIn();
-  });
-
-  $("#analyticsTab").click(function(){
-    $(".tabs li").removeClass('active');
-    $(this).parent("li").addClass('active');
-    $("section").hide();
-    $("#analytics").fadeIn();
-  });
-
-  $("#moodsBack").click(function(){
-    $("section").hide();
-    if ($(this).attr('data-destination') === "work") {
-      $("#work").fadeIn();
-    } else {
-      $("#personal").fadeIn();
-    }
+function changeView(newView){
+  $("section").hide();
+  $(".tabs li").removeClass('active');
+  if (newView === "#personal" || newView === "#work" || newView === "#analytics") {
+    $(newView).fadeIn();
     $(".tabs").show();
-  });
+    $(newView + "Tab").parent("li").addClass('active');
+  } else {
+    $(".tabs").hide();
+    $(newView).fadeIn();
+  }
+}
 
-  $("#cancelAudio").click(function(){
-    $("section").hide();
-    $("#kfAudio").attr('src', '');
-    $(".tabs li").removeClass('active');
-    $("#workTab").parent("li").addClass('active');
-    $("#work").fadeIn();
-    $(".tabs").show();
-  });
+$("#personalTab").click(function(){
+  changeView("#personal");
+});
 
+$("#workTab").click(function(){
+  changeView("#work");
+});
+
+$("#analyticsTab").click(function(){
+  changeView("#analytics");
+});
+
+$("#moodsBack").click(function(){
+  if ($(this).attr('data-destination') === "work") {
+    changeView("#work");
+  } else {
+    changeView("#personal");
+  }
+});
+
+$("#cancelAudio").click(function(){
+  changeView("#work");
+  $("#kfAudio").attr('src', '');
 });

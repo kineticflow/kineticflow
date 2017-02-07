@@ -13,7 +13,8 @@ $(document).ready(function() {
     return date.toTimeString().replace(/.*(\d{2}:\d{2}).*/, "$1");
   }
 
-  // Display work tasks
+  // Step 1 load tasks , moods and analytics
+
   const dbRef = firebase.database().ref();
   dbRef.on('value', function(snapshot) {
 
@@ -28,8 +29,21 @@ $(document).ready(function() {
     });
 
     $.each(data.moods, function (key, value){
-      $("#moods-list").append("<li><button class='btn btn-outline mood-btn' id='" + value.id + "' name='" + value.name + "'>" + value.name + "</button></li>");
+      $(".mood-list").append("<li><button class='btn btn-outline mood-btn' id='" + value.id + "' name='" + value.name + "'>" + value.name + "</button></li>");
     });
+
+    console.log(currentUser);
+
+    $.each(data.users, function (key, value){
+      if (key === currentUser) {
+        console.log(value.name);
+        $("#totalAudioTime").html(value.totalAudioTime);
+        $("#streak").html(value.streak);
+        return false;
+      }
+    });
+
+    // Step 2 follow the clicks!
 
     var taskId;
     var taskName;
@@ -41,18 +55,14 @@ $(document).ready(function() {
       taskId = $(this).attr('id');
       taskName = $(this).attr('name');
       origin = $(this).attr('data-origin');
-      $("section").hide();
-      $(".tabs").hide();
-      $("#moods").fadeIn();
+      changeView("#moods");
       $("#moodsBack").attr('data-destination', origin);
       $(".upcoming-task").html(taskName);
-
-      $(".mood-btn").click(function(){
+      $("#moodList .mood-btn").click(function(){
         moodId = $(this).attr('id');
         moodName = $(this).attr('name');
         var audio;
-        $("section").hide();
-        $("#audio").fadeIn();
+        changeView("#audio")
         $(".current-mood").html(moodName);
         $.each(data.audios, function(key, value){
           if ($.inArray(taskId, value.tags) > -1 && $.inArray(moodId, value.tags) > -1) {
@@ -81,26 +91,62 @@ $(document).ready(function() {
           }
         });
 
+        $( ".seekbar" ).mouseover(function(){
+          $(this).css("cursor","pointer");
+        });
+
+        $(".seekbar").click(function(e) {
+          var x = e.pageX - $(this).offset().left;
+          var width = $(this).width();
+          var duration = audio.get(0).duration;
+          audio.get(0).currentTime = x / width * duration;
+        });
+
         audio.on('timeupdate', function(){
           $("#audioPlayedTime").html(formatSeconds(this.currentTime));
           $('.audio-progress').width(audio.get(0).currentTime/audio.get(0).duration * 100 + '%');
         });
 
         audio.on('ended', function(){
-          console.log("Audio Ended");
           $(".play-pause i").removeClass("fa-pause").addClass("fa-play");
-        });
+          changeView("#postAudioMood");
 
-        // Progress bar, try something like:
-        $(".seekbar").click(function(e) {
-          var x               = e.pageX - $(this).offset().left;
-          var width           = $(this).width();
-          var duration        = audio.get(0).duration;
-          audio.get(0).currentTime = x / width * duration;
-        });
+          $("#postAudioMoodList .mood-btn").click(function(){
 
-        $( ".seekbar" ).mouseover(function(){
-          $(this).css("cursor","pointer");
+            // // First profile info
+            // var profileName = $('#profileName').val();
+            // var profileBio = $('#profileBio').val();
+            //
+            // // var uid = firebase.auth().currentUser.uid;
+            // var updates = {};
+            //
+            // updates['/userProfile/' + uid + '/name'] = profileName;
+            // updates['/userProfile/' + uid + '/bio'] = profileBio;
+            // updates['/userProfile/' + uid + '/ig'] = profileIg;
+            // updates['/userProfile/' + uid + '/age'] = profileAge;
+            // updates['/userProfile/' + uid + '/gender'] = profileGender;
+            // updates['/userProfile/' + uid + '/from'] = profileFrom;
+            // updates['/userProfile/' + uid + '/occupation'] = profileOccupation;
+            // updates['/userProfile/' + uid + '/favourite'] = profileFavourite;
+            // updates['/userProfile/' + uid + '/style'] = profileStyle;
+            // updates['/userProfile/' + uid + '/dealbreaker'] = profileDealbreaker;
+            // updates['/userProfile/' + uid + '/continent'] = profileContinent;
+            //
+            // try {
+            //   firebase.database().ref().update(updates);
+            //   $("#profile-alert-error").hide()
+            //   $(".view").fadeOut("fast");
+            //   $(".modal-alert").hide();
+            //   $(".modal-container").fadeOut("fast");
+            //   $("#mainAlert").html("Profile changes saved!").fadeIn("fast").delay(3000).fadeOut("slow");
+            // } catch(error){
+            //   $("#profile-alert-error").show().html("<strong>Hold up!</strong> Make sure that you've answered each question, then try saving again.");
+            // }
+
+            changeView("#analytics");
+
+          });
+
         });
 
       });
