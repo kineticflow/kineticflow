@@ -102,8 +102,25 @@
             <h3>You're about to <span class="upcoming-task highlight-span"></span> and you're feeling <span class="current-mood highlight-span"></span></h3>
             <p>Listen to this!</p>
             <p class="audio-name"></p>
-            <audio id="kfAudio" src="" controls="controls"></audio>
-            <progress id="seekbar" max='100' value="10"><span>0</span>%</progress>
+
+            <audio id="kfAudio"></audio>
+            <div class="audio-player">
+              <div class="play-pause">
+                <i class="fa fa-play fa-2x"></i>
+              </div>
+              <div class="audio-meta">
+                <div class="seekbar">
+                  <div class="audio-progress">
+
+                  </div>
+                </div>
+                <div class="audio-timings">
+                  <span id="audioPlayedTime">00:00</span>
+                  <span id="audioTotalTime">X:XX</span>
+                </div>
+              </div>
+            </div>
+
             <hr />
             <button class="btn" id="cancelAudio"><i class="fa fa-times icon-left-close"></i> Cancel Audio</button>
           </section>

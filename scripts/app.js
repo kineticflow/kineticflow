@@ -5,8 +5,13 @@ $(document).ready(function() {
   // Firebase is initialised in index.html
 
   // But what day is it?!
-  var date  = new Date();
-  var today = (date.toDateString());
+  var today  = new Date();
+  var todayString = (today.toDateString());
+  function formatSeconds(seconds){
+    var date  = new Date(1970,0,1);
+    date.setSeconds(seconds);
+    return date.toTimeString().replace(/.*(\d{2}:\d{2}).*/, "$1");
+  }
 
   // Display work tasks
   const dbRef = firebase.database().ref();
@@ -54,18 +59,30 @@ $(document).ready(function() {
             $(".audio-name").html(value.title);
             audio = $("#kfAudio");
             audio.attr('src', '/audio/' + value.fileName);
-            audio.on("canplay", function(event){
-              event.stopImmediatePropagation();
-              // Build the audio player
-            });
             return false;
           } else {
             $(".audio-name").html("Oops, we haven't uploaded an appropriate audio yet!");
           }
         });
 
+        audio.on("canplay", function(event){
+          event.stopImmediatePropagation();
+          $("#audioTotalTime").html(formatSeconds(this.duration));
+        });
+
+        $(".play-pause").click(function(){
+          if (audio.get(0).paused == false) {
+            audio.get(0).pause();
+            $(".play-pause i").removeClass("fa-pause").addClass("fa-play");
+          } else {
+            audio.get(0).play();
+            $(".play-pause i").removeClass("fa-play").addClass("fa-pause");
+          }
+        });
+
         audio.on('timeupdate', function(){
-          $('#seekbar').attr("value", this.currentTime / this.duration * 100);
+          $('.audio-progress').css("width", this.currentTime / this.duration * 100);
+          $("#audioPlayedTime").html(formatSeconds(this.currentTime));
         });
 
         audio.on('ended', function(){

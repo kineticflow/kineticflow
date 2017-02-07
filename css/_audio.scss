@@ -1,0 +1,37 @@
+// main: main.scss
+.audio-player {
+  width: 100%;
+  margin: 2rem 0;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  display: flex;
+  align-items: stretch;
+  .play-pause {
+    display: inline-block;
+    border-right: 1px solid $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 15%;
+    i {
+      color: $brand;
+    }
+  }
+  .audio-meta {
+    flex: 0 0 85%;
+    .seekbar {
+      height: 2rem;
+      display: flex;
+      align-items: stretch;
+      .audio-progress {
+        background: $success;
+        width: 0%;
+      }
+    }
+    .audio-timings {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.66rem;
+    }
+  }
+}
