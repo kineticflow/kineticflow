@@ -40,8 +40,3 @@ $("#moodsBack").click(function(){
     changeView("#personal");
   }
 });
-
-$("#cancelAudio").click(function(){
-  changeView("#work");
-  $("#kfAudio").attr('src', '');
-});

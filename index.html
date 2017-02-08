@@ -87,8 +87,13 @@
             <h3>Analytics</h3>
             <p>Get ready to see some rad stats about your usage ;)</p>
             <ul class="list-unstyled">
+              <li>Total Kinetic Flow sessions: <span id="totalSessions"></span></li>
               <li>Total time listening: <span id="totalAudioTime"></span></li>
               <li>Streak: <span id="streak"></span> days</li>
+              <li>Activity you most often prepare for: <span id="frequentActivity"></span></li>
+              <li>Mood you most often start in: <span id="startingMood"></span></li>
+              <li>Mood you most often finish in: <span id="endingMood"></span></li>
+              <hr />
               <li>History:
                 <ul id="historyList">
 
@@ -187,6 +192,7 @@
   -->
 
   <script src="./scripts/scripts.js" type="text/javascript"></script>
+  <script src="./scripts/config.js" type="text/javascript"></script>
   <script src="./scripts/auth.js" type="text/javascript"></script>
   <script src="./scripts/views.js" type="text/javascript"></script>
   <script src="./scripts/app.js" type="text/javascript"></script>

@@ -15,3 +15,15 @@ Content - https://drive.google.com/drive/folders/0B1TgHAAvV7b7eXFERVR5RzFub0U
 5. Put your day down and relax into sleep
 6. Kick off a group meeting (group, no mood)
 7. Prioritise and get things finished (need to confirm title)
+
+### The App
+
+The app is build using JavaScript and jQuery. It is a frameworkless single page app.
+
+Some basic, global functions (like `formatSeconds()`, for example) are in config.js.
+
+Authentication and user profile things are handled in auth.js.
+
+Functions that change the users view (like `changeView()`) are stored in views.js.
+
+Finally the things that control the app itself are in app.js. 

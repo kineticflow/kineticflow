@@ -1,99 +1,101 @@
 {
-  "tasks" : {
-    "startWork" : {
-      "id" : "startWork",
-      "tags" : ["public", "ey", "work"],
-      "title" : "Start work calm and focused"
+  "data" : {
+    "tasks" : {
+      "startWork" : {
+        "id" : "startWork",
+        "tags" : ["public", "ey", "work"],
+        "title" : "Start work calm and focused"
+      },
+      "reenergize" : {
+        "id" : "reenergize",
+        "tags" : ["public", "ey", "work"],
+        "title" : "Reenergise and get productive"
+      },
+      "relaxSleep" : {
+        "id" : "sleep",
+        "tags" : ["public", "ey", "personal"],
+        "title" : "Put your day down and relax into sleep"
+      }
     },
-    "reenergize" : {
-      "id" : "reenergize",
-      "tags" : ["public", "ey", "work"],
-      "title" : "Reenergise and get productive"
+    "moods" : {
+      "happy" : {
+        "id" : "happy",
+        "name" : "Happy"
+      },
+      "sad" : {
+        "id" : "sad",
+        "name" : "Sad"
+      },
+      "tired" : {
+        "id" : "tired",
+        "name" : "Tired"
+      },
+      "stressed" : {
+        "id" : "stressed",
+        "name" : "Stressed"
+      }
     },
-    "relaxSleep" : {
-      "id" : "sleep",
-      "tags" : ["public", "ey", "personal"],
-      "title" : "Put your day down and relax into sleep"
-    }
-  },
-  "moods" : {
-    "happy" : {
-      "id" : "happy",
-      "name" : "Happy"
-    },
-    "sad" : {
-      "id" : "sad",
-      "name" : "Sad"
-    },
-    "tired" : {
-      "id" : "tired",
-      "name" : "Tired"
-    },
-    "stressed" : {
-      "id" : "stressed",
-      "name" : "Stressed"
-    }
-  },
-  "audios" : {
-    "audio1" : {
-      "id" : "audio1",
-      "title" : "Feeling happy and ready to start the day with intention",
-      "tags" : ["startWork", "happy"],
-      "fileName" : "audio1_startYourDayWithIntentionHappy.mp3"
-    },
-    "audio2" : {
-      "id" : "audio2",
-      "title" : "Feeling sad but ready to start the day with intention",
-      "tags" : ["startWork", "sad"],
-      "fileName" : "audio2_startYourDayWithIntentionSad.mp3"
-    },
-    "audio3" : {
-      "id" : "audio3",
-      "title" : "Feeling stressed and wanting to start the day with intention",
-      "tags" : ["startWork", "stressed"],
-      "fileName" : "audio3_startYourDayWithIntentionStressed.mp3"
-    },
-    "audio4" : {
-      "id" : "audio4",
-      "title" : "Feeling tired and wanting to start the day with intention",
-      "tags" : ["startWork", "tired"],
-      "fileName" : "audio4_startYourDayWithIntentionTired.mp3"
-    },
-    "audio5" : {
-      "id" : "audio5",
-      "title" : "Feeling stressed while preparing to go to sleep",
-      "tags" : ["sleep", "stressed"],
-      "fileName" : "audio5_sleepStressed.mp3"
-    },
-    "audio6" : {
-      "id" : "audio6",
-      "title" : "Feeling sad and preparing to go to sleep",
-      "tags" : ["sleep", "sad"],
-      "fileName" : "audio6_sleepSad.mp3"
-    },
-    "audio7" : {
-      "id" : "audio7",
-      "title" : "Feeling happy and ready to reenergize and focus",
-      "tags" : ["reenergize", "happy"],
-      "fileName" : "audio7_focusEnergiseHappy.mp3"
-    },
-    "audio8" : {
-      "id" : "audio8",
-      "title" : "Feeling sad and wanting to reenergize and focus",
-      "tags" : ["reenergize", "sad"],
-      "fileName" : "audio8_focusEnergiseSad.mp3"
-    },
-    "audio9" : {
-      "id" : "audio9",
-      "title" : "Feeling stressed and needing to reenergize and focus",
-      "tags" : ["reenergize", "stressed"],
-      "fileName" : "audio9_focusEnergiseStressed.mp3"
-    },
-    "audio10" : {
-      "id" : "audio10",
-      "title" : "Feeling tired and wanting to reenergize and focus",
-      "tags" : ["reenergize", "tired"],
-      "fileName" : "audio10_focusEnergiseTired.mp3"
+    "audios" : {
+      "audio1" : {
+        "id" : "audio1",
+        "title" : "Feeling happy and ready to start the day with intention",
+        "tags" : ["startWork", "happy"],
+        "fileName" : "audio1_startYourDayWithIntentionHappy.mp3"
+      },
+      "audio2" : {
+        "id" : "audio2",
+        "title" : "Feeling sad but ready to start the day with intention",
+        "tags" : ["startWork", "sad"],
+        "fileName" : "audio2_startYourDayWithIntentionSad.mp3"
+      },
+      "audio3" : {
+        "id" : "audio3",
+        "title" : "Feeling stressed and wanting to start the day with intention",
+        "tags" : ["startWork", "stressed"],
+        "fileName" : "audio3_startYourDayWithIntentionStressed.mp3"
+      },
+      "audio4" : {
+        "id" : "audio4",
+        "title" : "Feeling tired and wanting to start the day with intention",
+        "tags" : ["startWork", "tired"],
+        "fileName" : "audio4_startYourDayWithIntentionTired.mp3"
+      },
+      "audio5" : {
+        "id" : "audio5",
+        "title" : "Prepare for the best night's sleep of your life",
+        "tags" : ["sleep", "stressed", "happy", "tired"],
+        "fileName" : "audio5_sleepStressed.mp3"
+      },
+      "audio6" : {
+        "id" : "audio6",
+        "title" : "Feeling sad and preparing to go to sleep",
+        "tags" : ["sleep", "sad"],
+        "fileName" : "audio6_sleepSad.mp3"
+      },
+      "audio7" : {
+        "id" : "audio7",
+        "title" : "Feeling happy and ready to reenergize and focus",
+        "tags" : ["reenergize", "happy"],
+        "fileName" : "audio7_focusEnergiseHappy.mp3"
+      },
+      "audio8" : {
+        "id" : "audio8",
+        "title" : "Feeling sad and wanting to reenergize and focus",
+        "tags" : ["reenergize", "sad"],
+        "fileName" : "audio8_focusEnergiseSad.mp3"
+      },
+      "audio9" : {
+        "id" : "audio9",
+        "title" : "Feeling stressed and needing to reenergize and focus",
+        "tags" : ["reenergize", "stressed"],
+        "fileName" : "audio9_focusEnergiseStressed.mp3"
+      },
+      "audio10" : {
+        "id" : "audio10",
+        "title" : "Feeling tired and wanting to reenergize and focus",
+        "tags" : ["reenergize", "tired"],
+        "fileName" : "audio10_focusEnergiseTired.mp3"
+      }
     }
   },
   "users" : {
@@ -101,14 +103,43 @@
       "name" : "Sam Mead",
       "superDuper" : "yes",
       "organisation" : "ey",
-      "streak" : "1",
+      "streak" : 1,
+      "streakDate" : 1486457978274,
       "totalAudioTime" : 240000,
+      "totalSessions" : 2,
       "history" : {
-        "1486457665039" : {
-          "preMood" : "tired",
+        "Tue Feb 07 2017 16:54:25" : {
+          "date" : 1486457665039,
+          "preMood" : "Stressed",
           "activity" : "Reenergise and get productive",
           "activityID" : "reenergize",
-          "postMood" : "happy"
+          "postMood" : "Happy"
+        },
+        "Tue Feb 07 2017 16:59:38" : {
+          "date" : 1486457978274,
+          "preMood" : "Tired",
+          "activity" : "Reenergise and get productive",
+          "activityID" : "reenergize",
+          "postMood" : "Happy"
+        }
+      },
+      "stats" : {
+        "startingMood" : {
+          "Happy" : 0,
+          "Stressed" : 1,
+          "Sad" : 0,
+          "Tired" : 1
+        },
+        "activity" : {
+          "Start work calm and focused" : 0,
+          "Reenergise and get productive" : 2,
+          "Put your day down and relax into sleep" : 0
+        },
+        "endingMood" : {
+          "Happy" : 2,
+          "Stressed" : 0,
+          "Sad" : 0,
+          "Tired" : 0
         }
       }
     },
