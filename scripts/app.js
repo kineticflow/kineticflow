@@ -48,7 +48,7 @@ $(document).ready(function() {
       $.each(data.audios, function(key, value){
         if ($.inArray(taskId, value.tags) > -1 && $.inArray(moodId, value.tags) > -1) {
           $(".audio-name").html(value.title);
-          audio.attr('src', '/audio/' + value.fileName);
+          audio.attr('src', '../audio/' + value.fileName);
           return false;
         } else {
           $(".audio-name").html("Oops, we haven't uploaded an appropriate audio yet!");
