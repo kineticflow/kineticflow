@@ -27,7 +27,6 @@ $(".log-out-button").click(function() {
   firebase.auth().signOut().then(function() {
       // The user logs out!
       $(".mobile-menu").fadeOut();
-      console.log(outboundUser + "logged out");
     }, function(error) {
       // An error happened.
       console.log("Error! "+ errorMessage);
@@ -72,6 +71,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Functions and things
 function checkFrequency(stat){
   n = undefined;
+  var l = Object.keys(stat).length;
   Object.keys(stat).forEach(function(q) {
     if (!n)
       n = stat[q];
@@ -82,7 +82,9 @@ function checkFrequency(stat){
   j = Object.keys(stat).filter(function(q) {
     return stat[q] == n
   })
-  if (j.length > 1) {
+  if (j.length == l) {
+    var a = "N/A";
+  } else if (j.length > 1) {
     var a = "";
     for (var i = 0; i < j.length; i++) {
       a += j[i];
