@@ -102,41 +102,25 @@
     "mDqocTkHMrX5oquiPHUgNvreTMg1" : {
       "name" : "Sam Mead",
       "superDuper" : "yes",
-      "organisation" : "ey",
-      "streak" : 1,
-      "streakDate" : 1486457978274,
-      "totalAudioTime" : 240000,
-      "totalSessions" : 2,
-      "history" : {
-        "Tue Feb 07 2017 16:54:25" : {
-          "date" : 1486457665039,
-          "preMood" : "Stressed",
-          "activity" : "Reenergise and get productive",
-          "activityID" : "reenergize",
-          "postMood" : "Happy"
-        },
-        "Tue Feb 07 2017 16:59:38" : {
-          "date" : 1486457978274,
-          "preMood" : "Tired",
-          "activity" : "Reenergise and get productive",
-          "activityID" : "reenergize",
-          "postMood" : "Happy"
-        }
-      },
+      "organisation" : "Kinetic Flow",
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "totalAudioTime" : 0,
+      "totalSessions" : 0,
       "stats" : {
         "startingMood" : {
           "Happy" : 0,
-          "Stressed" : 1,
+          "Stressed" : 0,
           "Sad" : 0,
-          "Tired" : 1
+          "Tired" : 0
         },
         "activity" : {
           "Start work calm and focused" : 0,
-          "Reenergise and get productive" : 2,
+          "Reenergise and get productive" : 0,
           "Put your day down and relax into sleep" : 0
         },
         "endingMood" : {
-          "Happy" : 2,
+          "Happy" : 0,
           "Stressed" : 0,
           "Sad" : 0,
           "Tired" : 0
@@ -145,7 +129,59 @@
     },
     "BiGjXaqAArevxkrtkZKe1OZxk302" : {
       "name" : "Sarah Rollins",
-      "superDuper" : "yes"
+      "superDuper" : "yes",
+      "organisation" : "Kinetic Flow",
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "totalAudioTime" : 0,
+      "totalSessions" : 0,
+      "stats" : {
+        "startingMood" : {
+          "Happy" : 0,
+          "Stressed" : 0,
+          "Sad" : 0,
+          "Tired" : 0
+        },
+        "activity" : {
+          "Start work calm and focused" : 0,
+          "Reenergise and get productive" : 0,
+          "Put your day down and relax into sleep" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Stressed" : 0,
+          "Sad" : 0,
+          "Tired" : 0
+        }
+      }
+    },
+    "pjlwGfKTzyOFUS3nvFnNbAZkc373" : {
+      "name" : "Hello @ Kinetic Flow",
+      "superDuper" : "yes",
+      "organisation" : "Kinetic Flow",
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "totalAudioTime" : 0,
+      "totalSessions" : 0,
+      "stats" : {
+        "startingMood" : {
+          "Happy" : 0,
+          "Stressed" : 0,
+          "Sad" : 0,
+          "Tired" : 0
+        },
+        "activity" : {
+          "Start work calm and focused" : 0,
+          "Reenergise and get productive" : 0,
+          "Put your day down and relax into sleep" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Stressed" : 0,
+          "Sad" : 0,
+          "Tired" : 0
+        }
+      }
     }
   }
 }
