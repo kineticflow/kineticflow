@@ -40,61 +40,61 @@
         "id" : "audio1",
         "title" : "Feeling happy and ready to start the day with intention",
         "tags" : ["startWork", "happy"],
-        "fileName" : "audio1_startYourDayWithIntentionHappy.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio1_startYourDayWithIntentionHappy.mp3?alt=media&token=2d8bfe93-44f8-4a01-9bd0-687481bcfe30"
       },
       "audio2" : {
         "id" : "audio2",
         "title" : "Feeling sad but ready to start the day with intention",
         "tags" : ["startWork", "sad"],
-        "fileName" : "audio2_startYourDayWithIntentionSad.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio2_startYourDayWithIntentionSad.mp3?alt=media&token=edb29dd8-2c26-401c-b2ef-602bc97f8970"
       },
       "audio3" : {
         "id" : "audio3",
         "title" : "Feeling stressed and wanting to start the day with intention",
         "tags" : ["startWork", "stressed"],
-        "fileName" : "audio3_startYourDayWithIntentionStressed.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio3_startYourDayWithIntentionStressed.mp3?alt=media&token=39867082-397d-4ad6-b4af-19c169ed1d96"
       },
       "audio4" : {
         "id" : "audio4",
         "title" : "Feeling tired and wanting to start the day with intention",
         "tags" : ["startWork", "tired"],
-        "fileName" : "audio4_startYourDayWithIntentionTired.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio4_startYourDayWithIntentionTired.mp3?alt=media&token=6f96dac9-e378-4f8a-bc19-38e6d20c56f9"
       },
       "audio5" : {
         "id" : "audio5",
         "title" : "Prepare for the best night's sleep of your life",
         "tags" : ["sleep", "stressed", "happy", "tired"],
-        "fileName" : "audio5_sleepStressed.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio5_sleepStressed.mp3?alt=media&token=b2ab970c-fe0a-4b4e-973c-c65593544a7e"
       },
       "audio6" : {
         "id" : "audio6",
         "title" : "Feeling sad and preparing to go to sleep",
         "tags" : ["sleep", "sad"],
-        "fileName" : "audio6_sleepSad.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio6_sleepSad.mp3?alt=media&token=4f5f0458-64c5-4862-9907-66bc48e17118"
       },
       "audio7" : {
         "id" : "audio7",
         "title" : "Feeling happy and ready to reenergize and focus",
         "tags" : ["reenergize", "happy"],
-        "fileName" : "audio7_focusEnergiseHappy.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_focusEnergiseHappy.mp3?alt=media&token=2d0cf6ee-08e6-4f1d-881f-120ade03d2f9"
       },
       "audio8" : {
         "id" : "audio8",
         "title" : "Feeling sad and wanting to reenergize and focus",
         "tags" : ["reenergize", "sad"],
-        "fileName" : "audio8_focusEnergiseSad.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio8_focusEnergiseSad.mp3?alt=media&token=0c599f14-c584-4226-90f2-81c373ccd806"
       },
       "audio9" : {
         "id" : "audio9",
         "title" : "Feeling stressed and needing to reenergize and focus",
         "tags" : ["reenergize", "stressed"],
-        "fileName" : "audio9_focusEnergiseStressed.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio9_focusEnergiseStressed.mp3?alt=media&token=268e8fcb-be70-4500-affb-661bf1696728"
       },
       "audio10" : {
         "id" : "audio10",
         "title" : "Feeling tired and wanting to reenergize and focus",
         "tags" : ["reenergize", "tired"],
-        "fileName" : "audio10_focusEnergiseTired.mp3"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio10_focusEnergiseTired.mp3?alt=media&token=a79b3190-b137-4142-8446-27b45c9873cb"
       }
     }
   },

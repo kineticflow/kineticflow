@@ -48,7 +48,8 @@ $(document).ready(function() {
       $.each(data.audios, function(key, value){
         if ($.inArray(taskId, value.tags) > -1 && $.inArray(moodId, value.tags) > -1) {
           $(".audio-name").html(value.title);
-          audio.attr('src', '/kineticflow/audio/' + value.fileName);
+          $("#audioTotalTime").html("<i class='fa fa-sun-o fa-spin'></i>");
+          audio.attr('src', value.link);
           return false;
         } else {
           $(".audio-name").html("Oops, we haven't uploaded an appropriate audio yet!");
