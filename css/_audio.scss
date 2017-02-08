@@ -2,36 +2,48 @@
 .audio-player {
   width: 100%;
   margin: 2rem 0;
-  border: 1px solid $grey;
+  border: 1px solid $brand;
   border-radius: 5px;
   display: flex;
   align-items: stretch;
   .play-pause {
     display: inline-block;
-    border-right: 1px solid $grey;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 0 15%;
+    cursor: pointer;
+    background: $brand;
     i {
-      color: $brand;
+      color: #fff;
     }
   }
   .audio-meta {
     flex: 0 0 85%;
+    .audio-title {
+      padding: 0.5rem 1.2rem 0.33rem;
+      .audio-name {
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
     .seekbar {
       height: 2rem;
+      margin: 0 1rem;
       display: flex;
+      background: $grey;
+      border-radius: 5px;
       align-items: stretch;
       .audio-progress {
         background: $success;
         width: 0%;
+        border-radius: 5px;
       }
     }
     .audio-timings {
       display: flex;
+      padding: 0.33rem 1.2rem 0.66rem;
       justify-content: space-between;
-      padding: 0.66rem;
     }
   }
 }

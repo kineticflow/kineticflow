@@ -1,1 +1,21 @@
 // main: main.scss
+.card-holder {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .card {
+    flex: 0 0 30%;
+    padding: 2rem;
+    h2,
+    h3 {
+      color: $dark;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+.history {
+  text-align: left;
+}

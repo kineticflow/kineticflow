@@ -57,7 +57,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         var date = value.date;
         var dateString = new Date(date).toDateString();
         $("#historyList").append(
-          "<li>" + dateString + " " + value.preMood + " <i class='fa fa-plus icon-left icon-right'></i> " + value.activity + " <i class='fa fa-arrow-right icon-left icon-right'></i> " + value.postMood + "</li>"
+          "<li><p><em>" + dateString + "</em></p> " + value.preMood + " <i class='fa fa-plus icon-left icon-right'></i> " + value.activity + " <i class='fa fa-arrow-right icon-left icon-right'></i> " + value.postMood + "</li>"
         );
       });
     });

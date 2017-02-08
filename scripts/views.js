@@ -13,10 +13,10 @@ function changeView(newView){
   $(".tabs li").removeClass('active');
   if (newView === "#personal" || newView === "#work" || newView === "#analytics") {
     $(newView).fadeIn();
-    $(".tabs").show();
+    $(".tabs").css("visibility", "visible");
     $(newView + "Tab").parent("li").addClass('active');
   } else {
-    $(".tabs").hide();
+    $(".tabs").css("visibility", "hidden");
     $(newView).fadeIn();
   }
 }

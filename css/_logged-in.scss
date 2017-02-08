@@ -54,16 +54,46 @@
   }
   .inner {
     border: 1px solid $grey;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 3rem;
     background: #fff;
     @include for-tablet-portrait-up {
-      padding: 2rem;
+      padding: 2rem 2rem 3rem;
     }
   }
   section {
     display: none;
+    text-align: center;
+    h2,
+    h3 {
+      color: $secondary;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin: 0 0 1rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin: 0 0 1.5rem;
+    }
+    hr {
+      margin: 1.5rem 0;
+    }
+    .task-list {
+      padding: 1rem 0;
+    }
+    .mood-list {
+      padding: 1rem 0;
+    }
   }
   #work {
     display: block;
+  }
+  #historyList {
+    li {
+      margin-bottom: 1.5rem;
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }

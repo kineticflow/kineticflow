@@ -68,38 +68,58 @@
         <div class="inner">
 
           <section id="work">
-            <h3>Mindfulness for Work</h3>
-            <p>What would you like to achieve?</p>
+            <h2>Mindfulness for Work</h2>
+            <p>What would you like to achieve today?</p>
             <ul class="list-unstyled list-inline task-list" id="work-task-list">
               <!-- app.js puts tasks here -->
+              <li><i class="fa fa-sun-o fa-spin fa-2x"></i></li>
             </ul>
           </section>
 
           <section id="personal">
-            <h3>Personal tab here!</h3>
-            <p>Instead of work stuff, you'll see personal activities.</p>
+            <h2>Personal Mindfulness</h2>
+            <p>What would you like to achieve today?</p>
             <ul class="list-unstyled list-inline task-list" id="personal-task-list">
               <!-- app.js puts personal tasks here -->
             </ul>
           </section>
 
           <section id="analytics">
-            <h3>Analytics</h3>
-            <p>Get ready to see some rad stats about your usage ;)</p>
-            <ul class="list-unstyled">
-              <li>Total Kinetic Flow sessions: <span id="totalSessions"></span></li>
-              <li>Total time listening: <span id="totalAudioTime"></span></li>
-              <li>Streak: <span id="streak"></span> days</li>
-              <li>Activity you most often prepare for: <span id="frequentActivity"></span></li>
-              <li>Mood you most often start in: <span id="startingMood"></span></li>
-              <li>Mood you most often finish in: <span id="endingMood"></span></li>
-              <hr />
-              <li>History:
-                <ul id="historyList">
+            <h2>Analytics</h2>
+            <p>Your mindfulness in numbers!</p>
+            <div class="card-holder">
+              <div class="card">
+                <h2 class="stat" id="totalSessions"></h2>
+                <p class="stat-title">Total Kinetic Flow Sessions</p>
+              </div>
+              <div class="card">
+                <h2 class="stat" id="totalAudioTime"></h2>
+                <p class="stat-title">Total Time Meditating</p>
+              </div>
+              <div class="card">
+                <h2 class="stat" id="streak"></h2>
+                <p class="stat-title">Consecutive Days</p>
+              </div>
+              <div class="card">
+                <h3 class="stat" id="frequentActivity"></h2>
+                <p class="stat-title">Favourite Activity</p>
+              </div>
+              <div class="card">
+                <h3 class="stat" id="startingMood"></h2>
+                <p class="stat-title">Usual Starting Mood</p>
+              </div>
+              <div class="card">
+                <h3 class="stat" id="endingMood"></h2>
+                <p class="stat-title">Usual Finishing Mood</p>
+              </div>
+            </div>
+            <hr />
+            <div class="history">
+              <h3>Your Mindfulness History:</h3>
+              <ul id="historyList" class="list-unstyled">
 
-                </ul>
-              </li>
-            </ul>
+              </ul>
+            </div>
           </section>
 
           <section id="moods">
@@ -109,20 +129,22 @@
               <!-- app.js puts moods here -->
             </ul>
             <hr />
-            <button class="btn" id="moodsBack"><i class="fa fa-arrow-left icon-left-close"></i> Back</button>
+            <div class="text-left">
+              <button class="btn btn-sm" id="moodsBack"><i class="fa fa-arrow-left icon-left-close"></i> Back</button>
+            </div>
           </section>
 
           <section id="audio">
             <h3>You're about to <span class="upcoming-task highlight-span"></span> and you're feeling <span class="current-mood highlight-span"></span></h3>
-            <p>Listen to this!</p>
-            <p class="audio-name"></p>
-
             <audio id="kfAudio"></audio>
             <div class="audio-player">
               <div class="play-pause">
                 <i class="fa fa-play fa-2x"></i>
               </div>
               <div class="audio-meta">
+                <div class="audio-title">
+                  <p class="audio-name"></p>
+                </div>
                 <div class="seekbar">
                   <div class="audio-progress"></div>
                 </div>
@@ -134,12 +156,14 @@
             </div>
 
             <hr />
-            <button class="btn" id="cancelAudio"><i class="fa fa-times icon-left-close"></i> Cancel Audio</button>
+            <div class="text-left">
+              <button class="btn btn-sm btn-error-outline" id="cancelAudio"><i class="fa fa-times icon-left-close"></i> Cancel Audio</button>
+            </div>
           </section>
 
           <section id="postAudioMood">
-            <p>Audio session completed!</p>
-            <h3>What is your mood?</h3>
+            <h2>Mindfulness Session Complete</h2>
+            <p>How are you feeling?</p>
             <ul class="list-unstyled list-inline mood-list" id="postAudioMoodList">
               <!-- app.js puts moods here -->
             </ul>
