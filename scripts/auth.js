@@ -59,15 +59,15 @@ $("#forgotPasswordForm").submit(function(e) {
   $("#forgotPasswordButton").html('<i class="fa fa-spinner fa-spin"></i>');
   var emailAddress = $.trim($('#forgotPasswordEmail').val());
   firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
-  $("#forgotPasswordAlert").stop(true, true);
-  $("#forgotPasswordAlert .alert-message").html("Forgot password email sent to " + emailAddress);
-  $("#forgotPasswordButton").html('<i class="fa fa-check"></i>');
-  $("#forgotPasswordAlert").addClass("alert-success").fadeIn();
-}, function(error) {
-  var errorMessage = error.message;
-  $("#forgotPasswordAlert").stop(true, true);
-  $("#forgotPasswordButton").html('Reset Password');
-  $("#forgotPasswordAlert .alert-message").html(errorMessage);
-  $("#forgotPasswordAlert").fadeIn("fast").delay(6000).fadeOut("slow");
-});
+    $("#forgotPasswordAlert").stop(true, true);
+    $("#forgotPasswordAlert .alert-message").html("Forgot password email sent to " + emailAddress);
+    $("#forgotPasswordButton").html('<i class="fa fa-check"></i>');
+    $("#forgotPasswordAlert").addClass("alert-success").fadeIn();
+  }, function(error) {
+    var errorMessage = error.message;
+    $("#forgotPasswordAlert").stop(true, true);
+    $("#forgotPasswordButton").html('Reset Password');
+    $("#forgotPasswordAlert .alert-message").html(errorMessage);
+    $("#forgotPasswordAlert").fadeIn("fast").delay(6000).fadeOut("slow");
+  });
 });

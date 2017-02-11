@@ -22,8 +22,8 @@ The app is build using JavaScript and jQuery. It is a frameworkless single page 
 
 Some basic, global functions (like `formatSeconds()`, for example) are in config.js.
 
-Authentication and user profile things are handled in auth.js.
+Authentication is handled in auth.js.
 
 Functions that change the users view (like `changeView()`) are stored in views.js.
 
-Finally the things that control the app itself are in app.js. 
+Finally the things that control the app itself are in app.js.

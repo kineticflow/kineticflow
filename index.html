@@ -82,32 +82,23 @@
 
       <div class="wrapper">
         <ul class="tabs">
-          <li class="active"><button id="workTab"><i class="fa fa-id-badge icon-left-close"></i>Work</button></li>
-          <li><button id="personalTab"><i class="fa fa-sun-o icon-left-close"></i>Personal</button></li>
+          <li class="active"><button id="mindfulnessTab"><i class="fa fa-sun-o icon-left-close"></i>Mindfulness</button></li>
           <li><button id="analyticsTab"><i class="fa fa-braille icon-left-close"></i>Analytics</button></li>
         </ul>
         <div class="inner">
 
-          <section id="work">
-            <h2>Mindfulness for Work</h2>
+          <section id="mindfulness">
+            <h2>Kinetic Flow Mindfulness</h2>
             <p>What would you like to achieve today?</p>
-            <ul class="list-unstyled list-inline task-list" id="work-task-list">
-              <!-- app.js puts tasks here -->
+            <ul class="list-unstyled list-inline activity-list" id="work-activity-list">
+              <!-- app.js puts activitys here -->
               <li><i class="fa fa-sun-o fa-spin fa-2x"></i></li>
-            </ul>
-          </section>
-
-          <section id="personal">
-            <h2>Personal Mindfulness</h2>
-            <p>What would you like to achieve today?</p>
-            <ul class="list-unstyled list-inline task-list" id="personal-task-list">
-              <!-- app.js puts personal tasks here -->
             </ul>
           </section>
 
           <section id="analytics">
             <h2>Analytics</h2>
-            <p>Your mindfulness in numbers!</p>
+            <p>Your Kinetic Flow mindfulness in numbers!</p>
             <div class="card-holder">
               <div class="card">
                 <h2 class="stat" id="totalSessions"></h2>
@@ -136,15 +127,15 @@
             </div>
             <hr />
             <div class="history">
-              <h3>Your Mindfulness History:</h3>
+              <h3>Your Kinetic Flow Mindfulness History:</h3>
               <ul id="historyList" class="list-unstyled">
-
+                <!-- app.js puts analytics here -->
               </ul>
             </div>
           </section>
 
           <section id="moods">
-            <h3>You're about to <span class="upcoming-task highlight-span"></span></h3>
+            <h3>You're about to <span class="upcoming-activity highlight-span"></span></h3>
             <p>What mood are you in right now?</p>
             <ul class="list-unstyled list-inline mood-list" id="moodList">
               <!-- app.js puts moods here -->
@@ -156,7 +147,7 @@
           </section>
 
           <section id="audio">
-            <h3>You're about to <span class="upcoming-task highlight-span"></span> and you're feeling <span class="current-mood highlight-span"></span></h3>
+            <h3>Guided Mindfulness Session</h3>
             <audio id="kfAudio"></audio>
             <div class="audio-player">
               <div class="play-pause">
@@ -171,7 +162,7 @@
                 </div>
                 <div class="audio-timings">
                   <span id="audioPlayedTime">00:00</span>
-                  <span id="audioTotalTime">X:XX</span>
+                  <span id="audioTotalTime">00:00</span>
                 </div>
               </div>
             </div>
@@ -201,10 +192,9 @@
       <div>
         <ul>
           <li><h3>Kinetic Flow</h3></li>
-          <li><a href="#">Home</a></li>
+          <li><a href="http://kineticflow.com.au" target="_blank">Home</a></li>
           <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="http://www.kineticflow.com.au/contactus/" target="_blank">Contact</a></li>
         </ul>
       </div>
       <div>
