@@ -1,34 +1,46 @@
 {
   "data" : {
-    "tasks" : {
+    "activities" : {
       "startWork" : {
         "id" : "startWork",
-        "tags" : ["public", "ey", "work"],
-        "title" : "Start work calm and focused"
+        "tags" : ["public", "EY", "work", "Kinetic Flow"],
+        "title" : "Start your work day calm and focused"
       },
       "reenergize" : {
         "id" : "reenergize",
-        "tags" : ["public", "ey", "work"],
-        "title" : "Reenergise and get productive"
+        "tags" : ["public", "EY", "work", "Kinetic Flow"],
+        "title" : "Reenergise to get back on track"
       },
       "relaxSleep" : {
         "id" : "sleep",
-        "tags" : ["public", "ey", "personal"],
+        "tags" : ["public", "EY", "personal", "Kinetic Flow"],
         "title" : "Put your day down and relax into sleep"
       }
     },
     "moods" : {
+      "tired" : {
+        "id" : "tired",
+        "name" : "Tired"
+      },
       "happy" : {
         "id" : "happy",
         "name" : "Happy"
+      },
+      "anxious" : {
+        "id" : "anxious",
+        "name" : "Anxious"
       },
       "sad" : {
         "id" : "sad",
         "name" : "Sad"
       },
-      "tired" : {
-        "id" : "tired",
-        "name" : "Tired"
+      "irritated" : {
+        "id" : "irritated",
+        "name" : "Irritated"
+      },
+      "ok" : {
+        "id" : "ok",
+        "name" : "Ok"
       },
       "stressed" : {
         "id" : "stressed",
@@ -38,63 +50,51 @@
     "audios" : {
       "audio1" : {
         "id" : "audio1",
-        "title" : "Feeling happy and ready to start the day with intention",
-        "tags" : ["startWork", "happy"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio1_startYourDayWithIntentionHappy.mp3?alt=media&token=2d8bfe93-44f8-4a01-9bd0-687481bcfe30"
+        "title" : "Find calm purpose for your shift",
+        "tags" : ["startWork", "tired"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio1_audio1_findCalmPurposeForWork_tired.mp3?alt=media&token=5bf7234f-db8b-48ab-819c-97f6dd01bd1d"
       },
       "audio2" : {
         "id" : "audio2",
-        "title" : "Feeling sad but ready to start the day with intention",
-        "tags" : ["startWork", "sad"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio2_startYourDayWithIntentionSad.mp3?alt=media&token=edb29dd8-2c26-401c-b2ef-602bc97f8970"
+        "title" : "Start your shift calm and happy",
+        "tags" : ["startWork", "happy"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio2_startWorkCalm_happy.mp3?alt=media&token=04db6db1-cfe2-4a6b-800c-c456acad38e2"
       },
       "audio3" : {
         "id" : "audio3",
-        "title" : "Feeling stressed and wanting to start the day with intention",
-        "tags" : ["startWork", "stressed"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio3_startYourDayWithIntentionStressed.mp3?alt=media&token=39867082-397d-4ad6-b4af-19c169ed1d96"
+        "title" : "Put it down and start your shift feeling good",
+        "tags" : ["startWork", "anxious"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio3_startWorkFeelingGood_anxious.mp3?alt=media&token=fe5e0b42-0a49-4566-8bf1-1af7879026a0"
       },
       "audio4" : {
         "id" : "audio4",
-        "title" : "Feeling tired and wanting to start the day with intention",
-        "tags" : ["startWork", "tired"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio4_startYourDayWithIntentionTired.mp3?alt=media&token=6f96dac9-e378-4f8a-bc19-38e6d20c56f9"
+        "title" : "Start your shift calm and uplifted",
+        "tags" : ["startWork", "sad"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio4_startWorkCalmUplifted_sad.mp3?alt=media&token=150e8322-4078-4aab-b588-89845a85341a"
       },
       "audio5" : {
         "id" : "audio5",
-        "title" : "Prepare for the best night's sleep of your life",
-        "tags" : ["sleep", "stressed", "happy", "tired"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio5_sleepStressed.mp3?alt=media&token=b2ab970c-fe0a-4b4e-973c-c65593544a7e"
+        "title" : "Find the patience to let go and be present where youre at",
+        "tags" : ["startWork", "irritated"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio5_findPatienceBePresentForWork_irritated.mp3?alt=media&token=09c857d6-9d9a-4ae1-997e-a3b47ed219ff"
       },
       "audio6" : {
         "id" : "audio6",
-        "title" : "Feeling sad and preparing to go to sleep",
-        "tags" : ["sleep", "sad"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio6_sleepSad.mp3?alt=media&token=4f5f0458-64c5-4862-9907-66bc48e17118"
+        "title" : "Get in the right head space for your shift",
+        "tags" : ["startWork", "ok"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio6_startWorkRightHeadspace_ok.mp3?alt=media&token=6a7aae26-1a69-4cf0-b811-ca53279613c5"
       },
       "audio7" : {
         "id" : "audio7",
-        "title" : "Feeling happy and ready to reenergize and focus",
-        "tags" : ["reenergize", "happy"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_focusEnergiseHappy.mp3?alt=media&token=2d0cf6ee-08e6-4f1d-881f-120ade03d2f9"
+        "title" : "Unwind to start your shift right",
+        "tags" : ["startWork", "stressed"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
       },
       "audio8" : {
         "id" : "audio8",
-        "title" : "Feeling sad and wanting to reenergize and focus",
-        "tags" : ["reenergize", "sad"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio8_focusEnergiseSad.mp3?alt=media&token=0c599f14-c584-4226-90f2-81c373ccd806"
-      },
-      "audio9" : {
-        "id" : "audio9",
-        "title" : "Feeling stressed and needing to reenergize and focus",
-        "tags" : ["reenergize", "stressed"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio9_focusEnergiseStressed.mp3?alt=media&token=268e8fcb-be70-4500-affb-661bf1696728"
-      },
-      "audio10" : {
-        "id" : "audio10",
-        "title" : "Feeling tired and wanting to reenergize and focus",
+        "title" : "Shake off tiredness and get moving",
         "tags" : ["reenergize", "tired"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio10_focusEnergiseTired.mp3?alt=media&token=a79b3190-b137-4142-8446-27b45c9873cb"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
       }
     }
   },

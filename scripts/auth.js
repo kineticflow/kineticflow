@@ -15,7 +15,17 @@ $("#logInForm").submit(function(e) {
     function(error) {
       $("#logInButton").html('Log In');
       var errorCode = error.code;
-      var errorMessage = error.message;
+      var errorMessage;
+      if (errorCode == "auth/invalid-email") {
+        errorMessage = "Email address incorrectly formatted";
+      } else if (errorCode == "auth/wrong-password") {
+        errorMessage = "Incorrect password. Please try again.";
+      } else if (errorCode == "auth/user-not-found") {
+        errorMessage = "A user with email " + email + " does not exist.";
+      }
+      $("#logInAlert").stop(true, true);
+      $("#logInAlert .alert-message").html(errorMessage);
+      $("#logInAlert").fadeIn("fast").delay(6000).fadeOut("slow");
       console.log(errorCode + " " + errorMessage);
     }
   );
@@ -33,69 +43,31 @@ $(".log-out-button").click(function() {
   });
 });
 
-// Get the user's profile and show them the logged in screens
-var currentUser;
-var userProfile;
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    $(".user-logged-out").hide();
-    $(".user-logged-in").fadeIn();
-    currentUser = user.uid;
-    var userRef = firebase.database().ref("users/" + currentUser);
-    userRef.on('value', function(snapshot) {
-      userProfile = snapshot.val();
-      $("#historyList").empty();
-      $(".user-email").html(userProfile.name);
-      $("#totalAudioTime").html(formatMilliseconds(userProfile.totalAudioTime));
-      $("#totalSessions").html(userProfile.totalSessions);
-      $("#streak").html(userProfile.streak);
-      $("#frequentActivity").html(checkFrequency(userProfile.stats.activity));
-      $("#startingMood").html(checkFrequency(userProfile.stats.startingMood));
-      $("#endingMood").html(checkFrequency(userProfile.stats.endingMood));
-      $.each(userProfile.history, function (key, value){
-        var date = value.date;
-        var dateString = new Date(date).toDateString();
-        $("#historyList").append(
-          "<li><p><em>" + dateString + "</em></p> " + value.preMood + " <i class='fa fa-plus icon-left icon-right'></i> " + value.activity + " <i class='fa fa-arrow-right icon-left icon-right'></i> " + value.postMood + "</li>"
-        );
-      });
-    });
-  } else {
-    $(".user-logged-in").hide();
-    $(".user-logged-out").fadeIn();
-    currentUser = "Nobody!";
-    $(".user-email").html('');
-  }
+// Let people reset a forgotten password
+$("#forgotPasswordLink").click(function(){
+  $("#logInForm").hide();
+  $("#forgotPasswordForm").fadeIn();
 });
 
-// Functions and things
-function checkFrequency(stat){
-  n = undefined;
-  var l = Object.keys(stat).length;
-  Object.keys(stat).forEach(function(q) {
-    if (!n)
-      n = stat[q];
-    else if (n < stat[q]){
-      n = stat[q];
-    }
-  });
-  j = Object.keys(stat).filter(function(q) {
-    return stat[q] == n
-  })
-  if (j.length == l) {
-    var a = "N/A";
-  } else if (j.length > 1) {
-    var a = "";
-    for (var i = 0; i < j.length; i++) {
-      a += j[i];
-      if (i === j.length - 1) {
-        break;
-      } else {
-        a += ", ";
-      }
-    }
-  } else {
-    var a = j;
-  }
-  return a;
-}
+$("#forgotBack").click(function(){
+  $("#forgotPasswordForm").hide();
+  $("#logInForm").fadeIn();
+});
+
+$("#forgotPasswordForm").submit(function(e) {
+  e.preventDefault();
+  $("#forgotPasswordButton").html('<i class="fa fa-spinner fa-spin"></i>');
+  var emailAddress = $.trim($('#forgotPasswordEmail').val());
+  firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
+  $("#forgotPasswordAlert").stop(true, true);
+  $("#forgotPasswordAlert .alert-message").html("Forgot password email sent to " + emailAddress);
+  $("#forgotPasswordButton").html('<i class="fa fa-check"></i>');
+  $("#forgotPasswordAlert").addClass("alert-success").fadeIn();
+}, function(error) {
+  var errorMessage = error.message;
+  $("#forgotPasswordAlert").stop(true, true);
+  $("#forgotPasswordButton").html('Reset Password');
+  $("#forgotPasswordAlert .alert-message").html(errorMessage);
+  $("#forgotPasswordAlert").fadeIn("fast").delay(6000).fadeOut("slow");
+});
+});

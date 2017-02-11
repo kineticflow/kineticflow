@@ -39,3 +39,7 @@ function streakCalc(point){
     return newStreak = 1;
   }
 }
+
+$(".alert-dismiss").click(function(){
+  $(this).parent().fadeOut();
+});

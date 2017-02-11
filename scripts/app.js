@@ -4,6 +4,41 @@ $(document).ready(function() {
 
   // Firebase is initialised in index.html
 
+  // Get the user's profile and show them the logged in screens
+  var currentUser;
+  var userProfile;
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      $(".user-logged-out").hide();
+      $(".user-logged-in").fadeIn();
+      currentUser = user.uid;
+      var userRef = firebase.database().ref("users/" + currentUser);
+      userRef.on('value', function(snapshot) {
+        userProfile = snapshot.val();
+        $("#historyList").empty();
+        $(".user-email").html(userProfile.name);
+        $("#totalAudioTime").html(formatMilliseconds(userProfile.totalAudioTime));
+        $("#totalSessions").html(userProfile.totalSessions);
+        $("#streak").html(userProfile.streak);
+        $("#frequentActivity").html(checkFrequency(userProfile.stats.activity));
+        $("#startingMood").html(checkFrequency(userProfile.stats.startingMood));
+        $("#endingMood").html(checkFrequency(userProfile.stats.endingMood));
+        $.each(userProfile.history, function (key, value){
+          var date = value.date;
+          var dateString = new Date(date).toDateString();
+          $("#historyList").append(
+            "<li><p><em>" + dateString + "</em></p> " + value.preMood + " <i class='fa fa-plus icon-left icon-right'></i> " + value.activity + " <i class='fa fa-arrow-right icon-left icon-right'></i> " + value.postMood + "</li>"
+          );
+        });
+      });
+    } else {
+      $(".user-logged-in").hide();
+      $(".user-logged-out").fadeIn();
+      currentUser = "Nobody!";
+      $(".user-email").html('');
+    }
+  });
+
   var data;
 
   const dataRef = firebase.database().ref('/data');
@@ -162,5 +197,38 @@ $(document).ready(function() {
     });
 
   }); // End of value
+
+  // Functions and things
+  function checkFrequency(stat){
+    n = undefined;
+    var l = Object.keys(stat).length;
+    Object.keys(stat).forEach(function(q) {
+      if (!n)
+        n = stat[q];
+      else if (n < stat[q]){
+        n = stat[q];
+      }
+    });
+    j = Object.keys(stat).filter(function(q) {
+      return stat[q] == n
+    })
+    if (j.length == l) {
+      var a = "N/A";
+    } else if (j.length > 1) {
+      var a = "";
+      for (var i = 0; i < j.length; i++) {
+        a += j[i];
+        if (i === j.length - 1) {
+          break;
+        } else {
+          a += ", ";
+        }
+      }
+    } else {
+      var a = j;
+    }
+    return a;
+  }
+
 
 }); // End document.ready

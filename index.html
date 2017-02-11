@@ -13,13 +13,19 @@
 
   <body>
 
+    <div class="alert" id="globalAlert">
+      <div class="alert-dismiss">
+        <i class="fa fa-times"></i>
+      </div>
+      <span class="alert-message">Something went wrong. Sorry.</span>
+    </div>
+
     <!-- Initial state: nobody logged in -->
     <div class="user-logged-out">
 
       <div class="log-in-wrapper">
         <h1>Kinetic Flow</h1>
         <div class="log-in-box">
-          <h3>Log in to get prepared for life</h3>
           <form id="logInForm">
             <div class="input-group">
               <label for="logInEmail">Email</label>
@@ -29,7 +35,22 @@
               <label for="logInPassword">Password</label>
               <input type="password" id="logInPassword" />
             </div>
+            <div class="block-alert" id="logInAlert">
+              <span class="alert-message"></span>
+            </div>
             <button class="btn" id="logInButton">Log In</button>
+            <p><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+          </form>
+          <form id="forgotPasswordForm">
+            <div class="input-group">
+              <label for="forgotPasswordEmail">Email</label>
+              <input type="email" id="forgotPasswordEmail" />
+            </div>
+            <div class="block-alert" id="forgotPasswordAlert">
+              <span class="alert-message"></span>
+            </div>
+            <button class="btn" id="forgotPasswordButton">Reset Password</button>
+            <p><a href="#" id="forgotBack">Back</a></p>
           </form>
         </div>
         <p><em>Don't have an account? <br /><a href="mailto:hello@kineticflow.com.au" target="_blank">Request one!</a></em></p>
