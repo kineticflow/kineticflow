@@ -125,10 +125,10 @@ $(document).ready(function() {
         var a = audio.get(0);
         if (a.paused == false) {
           a.pause();
-          $(".play-pause i").removeClass("fa-pause").addClass("fa-play");
+          $(".play-pause i").removeClass("fa-pause fa-rotate-left").addClass("fa-play");
         } else {
           a.play();
-          $(".play-pause i").removeClass("fa-play").addClass("fa-pause");
+          $(".play-pause i").removeClass("fa-play fa-rotate-left").addClass("fa-pause");
         }
       });
 
@@ -150,8 +150,10 @@ $(document).ready(function() {
       });
 
       audio.on('ended', function(){
-        if (activityID != "groupMeeting") {
+        if (activityId != "groupMeeting") {
           changeView("#postAudioMood");
+        } else {
+          $(".play-pause i").removeClass("fa-play").addClass("fa-rotate-left");
         }
       });
 
@@ -191,7 +193,6 @@ $(document).ready(function() {
           firebase.database().ref('/users/' + currentUser + '/stats/').set(stats);
           changeView("#analytics");
           resetAudioPlayer();
-          // $("#mainAlert").html("Profile changes saved!").fadeIn("fast").delay(3000).fadeOut("slow");
         } catch(error){
           console.log(error);
         }
@@ -212,8 +213,8 @@ function resetAudioPlayer(){
 }
 
 function checkFrequency(stat){
-  n = undefined;
-  var l = Object.keys(stat).length;
+  var n;
+  var statLength = Object.keys(stat).length;
   Object.keys(stat).forEach(function(q) {
     if (!n)
       n = stat[q];
@@ -221,23 +222,23 @@ function checkFrequency(stat){
       n = stat[q];
     }
   });
-  j = Object.keys(stat).filter(function(q) {
+  filteredKeys = Object.keys(stat).filter(function(q) {
     return stat[q] == n
   })
-  if (j.length == l) {
+  if (filteredKeys.length == statLength) {
     var a = "N/A";
-  } else if (j.length > 1) {
+  } else if (filteredKeys.length > 1) {
     var a = "";
-    for (var i = 0; i < j.length; i++) {
-      a += j[i];
-      if (i === j.length - 1) {
+    for (var i = 0; i < filteredKeys.length; i++) {
+      a += filteredKeys[i];
+      if (i === filteredKeys.length - 1) {
         break;
       } else {
         a += ", ";
       }
     }
   } else {
-    var a = j;
+    var a = filteredKeys;
   }
   return a;
 }
