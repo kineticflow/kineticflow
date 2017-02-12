@@ -32,7 +32,7 @@
         background: transparent;
         color: $dark-grey;
         &:hover {
-          color: $dark;
+          color: $secondary;
         }
         @include for-phone-only {
           font-size: 0.8rem;
@@ -48,7 +48,7 @@
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         background: #fff;
-        color: $dark;
+        color: $secondary;
       }
     }
   }
@@ -85,7 +85,7 @@
       padding: 1rem 0;
     }
   }
-  #work {
+  #mindfulness {
     display: block;
   }
   #historyList {

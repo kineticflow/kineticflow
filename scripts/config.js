@@ -25,15 +25,15 @@ function getMsSinceMidnight(d) {
   return d - e.setHours(0,0,0,0);
 }
 
-function streakCalc(point){
-  if (userProfile.streakDate > point - getMsSinceMidnight(point)) {
+function streakCalc(point, oldDate, oldStreak){
+  if (oldDate > point - getMsSinceMidnight(point)) {
     // The user already did an audio today
     console.log("You already did one today");
-     return newStreak = userProfile.streak;
-  } else if (userProfile.streakDate > (point - getMsSinceMidnight(point) - 86400000)) {
+     return newStreak = oldStreak;
+  } else if (oldDate > (point - getMsSinceMidnight(point) - 86400000)) {
     // The user did an audio yesterday
     console.log("Streak ++");
-     return newStreak = userProfile.streak + 1;
+     return newStreak = oldStreak + 1;
   } else {
     // The user did not do an audio yesterday
     return newStreak = 1;

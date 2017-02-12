@@ -33,9 +33,11 @@ $("#logInForm").submit(function(e) {
 
 // Let people log out
 $(".log-out-button").click(function() {
+  resetAudioPlayer();
   var outboundUser = firebase.auth().currentUser.email;
   firebase.auth().signOut().then(function() {
       // The user logs out!
+      changeView('#mindfulness');
       $(".mobile-menu").fadeOut();
     }, function(error) {
       // An error happened.

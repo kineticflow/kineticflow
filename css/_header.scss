@@ -47,7 +47,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: $dark;
+  background: $secondary;
   color: #fff;
   text-align: center;
   padding-bottom: 2rem;
@@ -66,7 +66,7 @@ header {
     @extend .menu-text;
     &:hover {
       background: #fff;
-      color: $dark;
+      color: $secondary;
     }
   }
 }

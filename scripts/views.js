@@ -11,7 +11,7 @@ $(".close-menu-btn").click(function(){
 function changeView(newView){
   $("section").hide();
   $(".tabs li").removeClass('active');
-  if (newView === "#personal" || newView === "#work" || newView === "#analytics") {
+  if (newView === "#mindfulness" || newView === "#analytics") {
     $(newView).fadeIn();
     $(".tabs").css("visibility", "visible");
     $(newView + "Tab").parent("li").addClass('active');
@@ -21,12 +21,8 @@ function changeView(newView){
   }
 }
 
-$("#personalTab").click(function(){
-  changeView("#personal");
-});
-
-$("#workTab").click(function(){
-  changeView("#work");
+$("#mindfulnessTab").click(function(){
+  changeView("#mindfulness");
 });
 
 $("#analyticsTab").click(function(){
@@ -34,9 +30,5 @@ $("#analyticsTab").click(function(){
 });
 
 $("#moodsBack").click(function(){
-  if ($(this).attr('data-destination') === "work") {
-    changeView("#work");
-  } else {
-    changeView("#personal");
-  }
+  changeView("#mindfulness");
 });

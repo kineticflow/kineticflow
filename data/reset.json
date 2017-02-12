@@ -110,20 +110,15 @@
       "stats" : {
         "startingMood" : {
           "Happy" : 0,
-          "Stressed" : 0,
-          "Sad" : 0,
-          "Tired" : 0
+          "Sad" : 0
         },
         "activity" : {
-          "Start work calm and focused" : 0,
-          "Reenergise and get productive" : 0,
-          "Put your day down and relax into sleep" : 0
+          "Start your work day calm and focused" : 0,
+          "Reenergise to get back on track" : 0
         },
         "endingMood" : {
           "Happy" : 0,
-          "Stressed" : 0,
-          "Sad" : 0,
-          "Tired" : 0
+          "Sad" : 0
         }
       }
     },
@@ -138,20 +133,15 @@
       "stats" : {
         "startingMood" : {
           "Happy" : 0,
-          "Stressed" : 0,
-          "Sad" : 0,
-          "Tired" : 0
+          "Sad" : 0
         },
         "activity" : {
-          "Start work calm and focused" : 0,
-          "Reenergise and get productive" : 0,
-          "Put your day down and relax into sleep" : 0
+          "Start your work day calm and focused" : 0,
+          "Reenergise to get back on track" : 0
         },
         "endingMood" : {
           "Happy" : 0,
-          "Stressed" : 0,
-          "Sad" : 0,
-          "Tired" : 0
+          "Sad" : 0
         }
       }
     },
@@ -166,20 +156,15 @@
       "stats" : {
         "startingMood" : {
           "Happy" : 0,
-          "Stressed" : 0,
-          "Sad" : 0,
-          "Tired" : 0
+          "Sad" : 0
         },
         "activity" : {
-          "Start work calm and focused" : 0,
-          "Reenergise and get productive" : 0,
-          "Put your day down and relax into sleep" : 0
+          "Start your work day calm and focused" : 0,
+          "Reenergise to get back on track" : 0
         },
         "endingMood" : {
           "Happy" : 0,
-          "Stressed" : 0,
-          "Sad" : 0,
-          "Tired" : 0
+          "Sad" : 0
         }
       }
     }
