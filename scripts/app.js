@@ -70,7 +70,24 @@ $(document).ready(function() {
       $(".activity-list").on('click', '.activity-btn', function(){
         activityId = $(this).attr('id');
         activityName = $(this).html();
-        changeView("#moods");
+        if (activityId == "groupMeeting"){
+          changeView("#audio");
+          $.each(data.audios, function(key, value){
+            if ($.inArray(activityId, value.tags) > -1) {
+              $(".audio-name").html(value.title);
+              $(".audio-total-time").html("<i class='fa fa-sun-o fa-spin'></i>");
+              $(".play-pause i").removeClass("fa-pause fa-play fa-times").addClass("fa-sun-o fa-spin");
+              audio.attr('src', value.link);
+              $(".finish-audio").fadeIn();
+              return false;
+            } else {
+              $(".audio-name").html("Sorry, we've made an error! Try refreshing the page.");
+              $(".play-pause i").removeClass("fa-pause fa-play fa-sun-o fa-spin").addClass("fa-times");
+            }
+          });
+        } else {
+          changeView("#moods");
+        }
         $(".upcoming-activity").html(activityName);
       });
 
@@ -81,7 +98,8 @@ $(document).ready(function() {
         $.each(data.audios, function(key, value){
           if ($.inArray(activityId, value.tags) > -1 && $.inArray(moodId, value.tags) > -1) {
             $(".audio-name").html(value.title);
-            $("#audioTotalTime").html("<i class='fa fa-sun-o fa-spin'></i>");
+            $(".audio-total-time").html("<i class='fa fa-sun-o fa-spin'></i>");
+            $(".play-pause i").removeClass("fa-pause fa-play fa-times").addClass("fa-sun-o fa-spin");
             audio.attr('src', value.link);
             return false;
           } else {
@@ -91,14 +109,14 @@ $(document).ready(function() {
         });
       });
 
-      $("#cancelAudio").click(function(){
+      $(".cancel-audio").click(function(){
         changeView("#mindfulness");
         resetAudioPlayer();
       });
 
       audio.on("canplay", function(event){
         event.stopImmediatePropagation();
-        $("#audioTotalTime").html(formatSeconds(this.duration));
+        $(".audio-total-time").html(formatSeconds(this.duration));
         $(".play-pause i").removeClass("fa-sun-o fa-spin fa-pause").addClass("fa-play");
       });
 
@@ -127,12 +145,14 @@ $(document).ready(function() {
       });
 
       audio.on('timeupdate', function(){
-        $("#audioPlayedTime").html(formatSeconds(this.currentTime));
+        $(".audio-played-time").html(formatSeconds(this.currentTime));
         $('.audio-progress').width(this.currentTime/this.duration * 100 + '%');
       });
 
       audio.on('ended', function(){
-        changeView("#postAudioMood");
+        if (activityID != "groupMeeting") {
+          changeView("#postAudioMood");
+        }
       });
 
       $("#postAudioMoodList").on('click', '.mood-btn', function(){
@@ -184,10 +204,11 @@ $(document).ready(function() {
 function resetAudioPlayer(){
   $("#kfAudio").get(0).pause();
   $("#kfAudio").attr('src', '');
-  $("#audioPlayedTime").html("00:00");
+  $(".audio-played-time").html("00:00");
   $("#audioTotalTime").html("00:00");
   $(".audio-progress").css('width', '0%');
   $(".play-pause i").removeClass("fa-pause fa-play fa-times").addClass("fa-sun-o fa-spin");
+  $(".finish-audio").hide();
 }
 
 function checkFrequency(stat){

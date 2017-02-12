@@ -5,8 +5,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   .card {
-    flex: 0 0 30%;
+    flex: 0 0 100%;
     padding: 2rem;
+    @include for-tablet-portrait-up {
+      flex-basis: 50%;
+    }
+    @include for-tablet-landscape-up {
+      flex-basis: 30%;
+    }
     h2,
     h3 {
       color: $tertiary;

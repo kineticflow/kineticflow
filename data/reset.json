@@ -12,9 +12,24 @@
         "title" : "Reenergise to get back on track"
       },
       "relaxSleep" : {
-        "id" : "sleep",
+        "id" : "relaxSleep",
         "tags" : ["public", "EY", "personal", "Kinetic Flow"],
         "title" : "Put your day down and relax into sleep"
+      },
+      "prepareMeeting" : {
+        "id" : "prepareMeeting",
+        "tags" : ["public", "EY", "work", "Kinetic Flow"],
+        "title" : "Prepare for an important meeting"
+      },
+      "decompressWork" : {
+        "id" : "decompressWork",
+        "tags" : ["public", "EY", "personal", "Kinetic Flow"],
+        "title" : "Decompress from your work day"
+      },
+      "groupMeeting" : {
+        "id" : "groupMeeting",
+        "tags" : ["public", "EY", "groupWork", "Kinetic Flow"],
+        "title" : "Kick off a group meeting"
       }
     },
     "moods" : {
@@ -95,6 +110,12 @@
         "title" : "Shake off tiredness and get moving",
         "tags" : ["reenergize", "tired"],
         "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
+      },
+      "audio15" : {
+        "id" : "audio15",
+        "title" : "Kick off a group meeting",
+        "tags" : ["groupMeeting"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
       }
     }
   },

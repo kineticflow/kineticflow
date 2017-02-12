@@ -54,7 +54,7 @@
   }
   .inner {
     border: 1px solid $grey;
-    padding: 2rem 1rem 3rem;
+    padding: 2rem 0.66rem 3rem;
     background: #fff;
     @include for-tablet-portrait-up {
       padding: 2rem 2rem 3rem;
@@ -78,8 +78,15 @@
     hr {
       margin: 1.5rem 0;
     }
-    .task-list {
-      padding: 1rem 0;
+    .activity-list {
+      padding: 0;
+      li {
+        margin: 0.66rem 0;
+        @include for-tablet-portrait-up {
+          margin: 1rem;
+        }
+      }
+
     }
     .mood-list {
       padding: 1rem 0;
@@ -87,6 +94,9 @@
   }
   #mindfulness {
     display: block;
+  }
+  .finish-audio {
+    display: none;
   }
   #historyList {
     li {
