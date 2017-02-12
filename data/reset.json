@@ -11,20 +11,20 @@
         "tags" : ["public", "EY", "work", "Kinetic Flow"],
         "title" : "Reenergise to get back on track"
       },
-      "relaxSleep" : {
+      "bestSleep" : {
         "id" : "relaxSleep",
         "tags" : ["public", "EY", "personal", "Kinetic Flow"],
-        "title" : "Put your day down and relax into sleep"
+        "title" : "Get the best nights sleep of your life"
       },
-      "prepareMeeting" : {
-        "id" : "prepareMeeting",
+      "meetingPrep" : {
+        "id" : "meetingPrep",
         "tags" : ["public", "EY", "work", "Kinetic Flow"],
         "title" : "Prepare for an important meeting"
       },
-      "decompressWork" : {
-        "id" : "decompressWork",
+      "leaveWork" : {
+        "id" : "leaveWork",
         "tags" : ["public", "EY", "personal", "Kinetic Flow"],
-        "title" : "Decompress from your work day"
+        "title" : "Leave work at work and move on with your day"
       },
       "groupMeeting" : {
         "id" : "groupMeeting",
@@ -63,58 +63,184 @@
       }
     },
     "audios" : {
-      "audio1" : {
-        "id" : "audio1",
+      "1_kfa" : {
+        "id" : "1_kfa",
         "title" : "Find calm purpose for your shift",
         "tags" : ["startWork", "tired"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio1_audio1_findCalmPurposeForWork_tired.mp3?alt=media&token=5bf7234f-db8b-48ab-819c-97f6dd01bd1d"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/1_audio1_findCalmPurposeForWork_tired.mp3?alt=media&token=e63970e7-c990-4093-a18d-bd4c4441897a"
       },
-      "audio2" : {
-        "id" : "audio2",
+      "2_kfa" : {
+        "id" : "2_kfa",
         "title" : "Start your shift calm and happy",
         "tags" : ["startWork", "happy"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio2_startWorkCalm_happy.mp3?alt=media&token=04db6db1-cfe2-4a6b-800c-c456acad38e2"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/2_startWorkCalm_happy.mp3?alt=media&token=616cbad9-190f-42fa-b6c1-6b350ffa2099"
       },
-      "audio3" : {
-        "id" : "audio3",
+      "3_kfa" : {
+        "id" : "3_kfa",
         "title" : "Put it down and start your shift feeling good",
         "tags" : ["startWork", "anxious"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio3_startWorkFeelingGood_anxious.mp3?alt=media&token=fe5e0b42-0a49-4566-8bf1-1af7879026a0"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/3_startWorkFeelingGood_anxious.mp3?alt=media&token=d951dfab-6429-44fe-a1dc-47b8602a3d32"
       },
-      "audio4" : {
-        "id" : "audio4",
+      "4_kfa" : {
+        "id" : "4_kfa",
         "title" : "Start your shift calm and uplifted",
         "tags" : ["startWork", "sad"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio4_startWorkCalmUplifted_sad.mp3?alt=media&token=150e8322-4078-4aab-b588-89845a85341a"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/4_startWorkCalmUplifted_sad.mp3?alt=media&token=c5bede92-5b1f-4f04-8898-b7b3a86a4bb2"
       },
-      "audio5" : {
-        "id" : "audio5",
+      "5_kfa" : {
+        "id" : "5_kfa",
         "title" : "Find the patience to let go and be present where youre at",
         "tags" : ["startWork", "irritated"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio5_findPatienceBePresentForWork_irritated.mp3?alt=media&token=09c857d6-9d9a-4ae1-997e-a3b47ed219ff"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/5_findPatienceBePresentForWork_irritated.mp3?alt=media&token=35748a4b-5e37-4755-9871-62afe9324ed2"
       },
-      "audio6" : {
-        "id" : "audio6",
+      "6_kfa" : {
+        "id" : "6_kfa",
         "title" : "Get in the right head space for your shift",
         "tags" : ["startWork", "ok"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio6_startWorkRightHeadspace_ok.mp3?alt=media&token=6a7aae26-1a69-4cf0-b811-ca53279613c5"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/6_startWorkRightHeadspace_ok.mp3?alt=media&token=0df8b7df-7817-4c87-9d2e-68df7eae48e4"
       },
-      "audio7" : {
-        "id" : "audio7",
+      "7_kfa" : {
+        "id" : "7_kfa",
         "title" : "Unwind to start your shift right",
         "tags" : ["startWork", "stressed"],
-        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/7_unwindStartWork_stressed.mp3?alt=media&token=020cf1c0-adf5-4a45-b605-a95ac4515909"
       },
-      "audio8" : {
-        "id" : "audio8",
+      "8_kfa" : {
+        "id" : "8_kfa",
         "title" : "Shake off tiredness and get moving",
         "tags" : ["reenergize", "tired"],
         "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
       },
-      "audio15" : {
-        "id" : "audio15",
+      "9_kfa" : {
+        "id" : "9_kfa",
+        "title" : "Feel good, feel energised, feel focused",
+        "tags" : ["reenergize", "happy"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
+      },
+      "10_kfa" : {
+        "id" : "10_kfa",
+        "title" : "Unwind to focus",
+        "tags" : ["reenergize", "anxious"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
+      },
+      "11_kfa" : {
+        "id" : "11_kfa",
+        "title" : "Feel calm and inspired again",
+        "tags" : ["reenergize", "sad"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
+      },
+      "12_kfa" : {
+        "id" : "12_kfa",
+        "title" : "Chill out and get in the zone",
+        "tags" : ["reenergize", "irritated"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
+      },
+      "13_kfa" : {
+        "id" : "13_kfa",
+        "title" : "Cruise into energised",
+        "tags" : ["reenergize", "ok"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
+      },
+      "14_kfa" : {
+        "id" : "14_kfa",
+        "title" : "Decompress and feel energised",
+        "tags" : ["reenergize", "stressed"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/audio7_unwindStartWork_stressed.mp3?alt=media&token=7380b7b5-a4cf-4069-93ae-34fcf844d3cf"
+      },
+      "15_kfa" : {
+        "id" : "15_kfa",
         "title" : "Kick off a group meeting",
         "tags" : ["groupMeeting"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "16_kfa" : {
+        "id" : "16_kfa",
+        "title" : "Uplift and get ready",
+        "tags" : ["meetingPrep", "tired"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "17_kfa" : {
+        "id" : "17_kfa",
+        "title" : "Cruise into your meeting with control",
+        "tags" : ["meetingPrep", "happy"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "18_kfa" : {
+        "id" : "18_kfa",
+        "title" : "Become refreshed and grounded",
+        "tags" : ["meetingPrep", "anxious"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "19_kfa" : {
+        "id" : "19_kfa",
+        "title" : "Get centered and ready for your meeting",
+        "tags" : ["meetingPrep", "sad"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "20_kfa" : {
+        "id" : "20_kfa",
+        "title" : "Focus your intention for your meeting",
+        "tags" : ["meetingPrep", "irritated"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "21_kfa" : {
+        "id" : "21_kfa",
+        "title" : "Clear your head for a meeting",
+        "tags" : ["meetingPrep", "ok"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "22_kfa" : {
+        "id" : "22_kfa",
+        "title" : "Become clear and calm for your meeting",
+        "tags" : ["meetingPrep", "stressed"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "23_kfa" : {
+        "id" : "23_kfa",
+        "title" : "Get going in the right headspace",
+        "tags" : ["leaveWork", "tired"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "24_kfa" : {
+        "id" : "24_kfa",
+        "title" : "Kick on with your day",
+        "tags" : ["leaveWork", "happy"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "25_kfa" : {
+        "id" : "25_kfa",
+        "title" : "Set it down calmly and get back into your day",
+        "tags" : ["leaveWork", "anxious"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "26_kfa" : {
+        "id" : "26_kfa",
+        "title" : "Uplift and move forward with purpose",
+        "tags" : ["leaveWork", "sad"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "27_kfa" : {
+        "id" : "27_kfa",
+        "title" : "Clear your head after work",
+        "tags" : ["leaveWork", "irritated"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "28_kfa" : {
+        "id" : "28_kfa",
+        "title" : "Pick up and move forward",
+        "tags" : ["leaveWork", "ok"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "29_kfa" : {
+        "id" : "29_kfa",
+        "title" : "Leave work at work and move on",
+        "tags" : ["leaveWork", "stressed"],
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
+      },
+      "30_kfa" : {
+        "id" : "30_kfa",
+        "title" : "Find tiredness and deep rest",
+        "tags" : ["bestSleep", "tired", "happy", "anxious", "sad", "irritated", "ok", "stressed"],
         "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c"
       }
     }
