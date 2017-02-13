@@ -101,6 +101,7 @@ $(document).ready(function() {
             $(".audio-total-time").html("<i class='fa fa-sun-o fa-spin'></i>");
             $(".play-pause i").removeClass("fa-pause fa-play fa-times").addClass("fa-sun-o fa-spin");
             audio.attr('src', value.link);
+            audio.load(); // Force iOS Safari to load audio
             return false;
           } else {
             $(".audio-name").html("Sorry, we've made an error! Try refreshing the page.");
