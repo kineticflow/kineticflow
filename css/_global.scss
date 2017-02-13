@@ -94,11 +94,15 @@
   font-size: 0.9rem;
 }
 .highlight-span {
-  background: $tertiary;
-  border-radius: 5px;
-  color: #fff;
-  padding: 0.33rem 0.66rem;
-  margin: 0 0.2rem;
+  font-style: italic;
+  @include for-tablet-landscape-up {
+    font-style: normal;
+    background: $tertiary;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.33rem 0.66rem;
+    margin: 0 0.2rem;
+  }
 }
 .row {
   display: flex;

@@ -58,7 +58,7 @@ $(document).ready(function() {
           var date = value.date;
           var dateString = new Date(date).toDateString();
           $("#historyList").append(
-            "<li><p><em>" + dateString + "</em></p> " + value.preMood + " <i class='fa fa-plus icon-left icon-right'></i> " + value.activity + " <i class='fa fa-arrow-right icon-left icon-right'></i> " + value.postMood + "</li>"
+            "<tr><td colspan='3'><span class='date-row'>" + dateString + "</span></td></tr><tr><td>" + value.preMood + "</td><td class='activity-cell'>" + value.activity + "</td><td>" + value.postMood + "</td></tr>"
           );
         });
       });

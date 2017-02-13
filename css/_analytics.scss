@@ -24,4 +24,27 @@
 }
 .history {
   text-align: left;
+  table {
+    border-collapse: collapse;
+    @include for-tablet-landscape-up {
+      max-width: 60%;
+    }
+    @include for-desktop-up {
+      max-width: 50%;
+    }
+    td {
+      vertical-align: top;
+      padding: 0.66rem 0.33rem;
+    }
+    .date-row {
+      padding: 0.33rem 0.66rem;
+      font-style: italic;
+      background: $secondary;
+      border-radius: 5px;
+      color: #fff;
+    }
+    .activity-cell {
+      padding-bottom: 1rem;
+    }
+  }
 }
