@@ -44,7 +44,7 @@ $(document).ready(function() {
             }
           });
           $.each(data.moods, function (key, value){
-            $(".mood-list").append("<li id='" + value.id + "Item'><button class='btn btn-outline mood-btn' id='" + value.id + "'>" + value.name + "</button></li>");
+            $(".mood-list").append("<button class='mood-btn' id='" + value.id + "'>" + value.name + "</button>");
           });
         });
       });

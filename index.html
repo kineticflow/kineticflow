@@ -91,17 +91,17 @@
             <h2>Kinetic Flow Mindfulness</h2>
             <p>What would you like to achieve today?</p>
             <div class="text-left">
-              <p class="list-header">Work</p>
+              <p class="list-header">Work <i class="fa fa-briefcase icon-right"></i></p>
               <ul class="list-unstyled list-inline activity-list" id="workActivities">
                 <!-- app.js puts activitys here -->
                 <li><i class="fa fa-sun-o fa-spin fa-2x"></i></li>
               </ul>
-              <p class="list-header">Group (For the whole team to listen together)</p>
+              <p class="list-header">Group (For the whole team to listen together)  <i class="fa fa-users icon-right"></i></p>
               <ul class="list-unstyled list-inline activity-list" id="groupActivities">
                 <!-- app.js puts activitys here -->
                 <li><i class="fa fa-sun-o fa-spin fa-2x"></i></li>
               </ul>
-              <p class="list-header">Lifestyle</p>
+              <p class="list-header">Lifestyle  <i class="fa fa-user icon-right"></i></p>
               <ul class="list-unstyled list-inline activity-list" id="personalActivities">
                 <!-- app.js puts activitys here -->
                 <li><i class="fa fa-sun-o fa-spin fa-2x"></i></li>
@@ -143,7 +143,7 @@
               <h3>Your Kinetic Flow History:</h3>
               <table>
                 <tbody id="historyList">
-
+                  <!-- App.js puts history here -->
                 </tbody>
               </table>
             </div>
@@ -152,9 +152,9 @@
           <section id="moods">
             <h3>You're about to: <span class="upcoming-activity highlight-span"></span></h3>
             <p>What mood are you in right now?</p>
-            <ul class="list-unstyled list-inline mood-list" id="preMoodList">
-              <!-- app.js puts moods here -->
-            </ul>
+            <div class="mood-list" id="preMoodList">
+              <!-- App.js puts moods here -->
+            </div>
             <hr />
             <div class="text-left">
               <button class="btn btn-sm" id="moodsBack"><i class="fa fa-arrow-left icon-left-close"></i> Back</button>
@@ -193,9 +193,9 @@
           <section id="postAudioMood">
             <h2>Mindfulness Session Complete</h2>
             <p>How are you feeling now?</p>
-            <ul class="list-unstyled list-inline mood-list" id="postAudioMoodList">
+            <div class="mood-list" id="postAudioMoodList">
               <!-- app.js puts moods here -->
-            </ul>
+            </div>
           </section>
 
         </div>

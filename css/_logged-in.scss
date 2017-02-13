@@ -95,10 +95,25 @@
     }
     .mood-list {
       padding: 1rem 0;
-    }
-    #preMoodList {
-      #calmItem {
-        display: none;
+      display: flex;
+      flex-flow: wrap;
+      align-items: stretch;
+      justify-content: space-between;
+      .mood-btn {
+        flex: 0 0 48%;
+        padding: 2rem 0;
+        background: $brand;
+        color: #fff;
+        transition: 0.4s ease;
+        @include for-tablet-portrait-up {
+          flex-basis: 24.25%;
+        }
+        @include for-desktop-up {
+          padding: 3rem 0;
+        }
+        &:hover {
+          background: $dark;
+        }
       }
     }
   }
