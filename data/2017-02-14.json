@@ -1,0 +1,747 @@
+{
+  "data" : {
+    "activities" : {
+      "bestSleep" : {
+        "id" : "bestSleep",
+        "tags" : [ "public", "EY", "personal", "Kinetic Flow" ],
+        "title" : "Get the best nights sleep of your life"
+      },
+      "groupMeeting" : {
+        "id" : "groupMeeting",
+        "tags" : [ "public", "EY", "groupWork", "Kinetic Flow" ],
+        "title" : "Kick off a group meeting"
+      },
+      "leaveWork" : {
+        "id" : "leaveWork",
+        "tags" : [ "public", "EY", "personal", "Kinetic Flow" ],
+        "title" : "Leave work at work and move on with your day"
+      },
+      "meetingPrep" : {
+        "id" : "meetingPrep",
+        "tags" : [ "public", "EY", "work", "Kinetic Flow" ],
+        "title" : "Prepare for an important meeting"
+      },
+      "reenergize" : {
+        "id" : "reenergize",
+        "tags" : [ "public", "EY", "work", "Kinetic Flow" ],
+        "title" : "Reenergise to get back on track"
+      },
+      "startWork" : {
+        "id" : "startWork",
+        "tags" : [ "public", "EY", "work", "Kinetic Flow" ],
+        "title" : "Start your work day calm and focused"
+      }
+    },
+    "audios" : {
+      "10_kfa" : {
+        "id" : "10_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/10_unwindFocus_anxious.mp3?alt=media&token=01a4b849-f606-4a27-8a9c-6d088aa0de1c",
+        "tags" : [ "reenergize", "anxious" ],
+        "title" : "Unwind to focus"
+      },
+      "11_kfa" : {
+        "id" : "11_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/11_feelCalmInspired_sad.mp3?alt=media&token=a1f12122-bc6e-4c85-b075-4ba99334ad6d",
+        "tags" : [ "reenergize", "sad" ],
+        "title" : "Feel calm and inspired again"
+      },
+      "12_kfa" : {
+        "id" : "12_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/12_chillGetZone_irritated.mp3?alt=media&token=845a5902-d3ea-4d20-9ebc-9a522b8834ff",
+        "tags" : [ "reenergize", "irritated" ],
+        "title" : "Chill out and get in the zone"
+      },
+      "13_kfa" : {
+        "id" : "13_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/13_cruiseIntoEnergised_ok.mp3?alt=media&token=e40c991d-78d9-42f3-b18f-2eb908dab1a4",
+        "tags" : [ "reenergize", "ok", "calm" ],
+        "title" : "Cruise into energised"
+      },
+      "14_kfa" : {
+        "id" : "14_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/14_decompressEnergised_stressed.mp3?alt=media&token=c54fd849-8488-4253-a891-b178dc766fbd",
+        "tags" : [ "reenergize", "stressed" ],
+        "title" : "Decompress and feel energised"
+      },
+      "15_kfa" : {
+        "id" : "15_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/15_beginTeamMeeting.mp3?alt=media&token=b105d0b7-325c-4786-9545-c8654404f16c",
+        "tags" : [ "groupMeeting" ],
+        "title" : "Kick off a group meeting"
+      },
+      "16_kfa" : {
+        "id" : "16_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/16_upliftGetReady_tired.mp3?alt=media&token=af156003-1914-44a8-a621-066e5ae41525",
+        "tags" : [ "meetingPrep", "tired" ],
+        "title" : "Uplift and get ready"
+      },
+      "17_kfa" : {
+        "id" : "17_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/17_cruiseMeetingControl_happy.mp3?alt=media&token=943dfcb6-bca2-456e-b3cf-21fea0157181",
+        "tags" : [ "meetingPrep", "happy" ],
+        "title" : "Cruise into your meeting with control"
+      },
+      "18_kfa" : {
+        "id" : "18_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/18_becomeRefreshedGrounded_anxious.mp3?alt=media&token=8793e6a1-6384-456c-ac55-2f78a27b03cb",
+        "tags" : [ "meetingPrep", "anxious" ],
+        "title" : "Become refreshed and grounded"
+      },
+      "19_kfa" : {
+        "id" : "19_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/19_getCenteredReadyMeeting_sad.mp3?alt=media&token=c8302bec-55a3-4aa5-98ad-1e864c4948d1",
+        "tags" : [ "meetingPrep", "sad" ],
+        "title" : "Get centered and ready for your meeting"
+      },
+      "1_kfa" : {
+        "id" : "1_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/1_audio1_findCalmPurposeForWork_tired.mp3?alt=media&token=e63970e7-c990-4093-a18d-bd4c4441897a",
+        "tags" : [ "startWork", "tired" ],
+        "title" : "Find calm purpose for your shift"
+      },
+      "20_kfa" : {
+        "id" : "20_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/20_focusIntentionMeeting_irritated.mp3?alt=media&token=346f0795-10d6-4898-a186-285b828e1006",
+        "tags" : [ "meetingPrep", "irritated" ],
+        "title" : "Focus your intention for your meeting"
+      },
+      "21_kfa" : {
+        "id" : "21_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/21_clearHeadMeeting_ok.mp3?alt=media&token=d8f9c4f3-5e04-46a2-8d0f-035a780fbff9",
+        "tags" : [ "meetingPrep", "ok", "calm" ],
+        "title" : "Clear your head for a meeting"
+      },
+      "22_kfa" : {
+        "id" : "22_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/22_clearCalmMeeting_stressed.mp3?alt=media&token=5be0e035-e7ef-4fbb-8716-023284681c58",
+        "tags" : [ "meetingPrep", "stressed" ],
+        "title" : "Become clear and calm for your meeting"
+      },
+      "23_kfa" : {
+        "id" : "23_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/23_getRightHeadspace_tired.mp3?alt=media&token=78472e61-65d4-4c03-9eb9-a758e00be296",
+        "tags" : [ "leaveWork", "tired" ],
+        "title" : "Get going in the right headspace"
+      },
+      "24_kfa" : {
+        "id" : "24_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/23_getRightHeadspace_tired.mp3?alt=media&token=78472e61-65d4-4c03-9eb9-a758e00be296",
+        "tags" : [ "leaveWork", "happy" ],
+        "title" : "Kick on with your day"
+      },
+      "25_kfa" : {
+        "id" : "25_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/23_getRightHeadspace_tired.mp3?alt=media&token=78472e61-65d4-4c03-9eb9-a758e00be296",
+        "tags" : [ "leaveWork", "anxious" ],
+        "title" : "Set it down calmly and get back into your day"
+      },
+      "26_kfa" : {
+        "id" : "26_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/23_getRightHeadspace_tired.mp3?alt=media&token=78472e61-65d4-4c03-9eb9-a758e00be296",
+        "tags" : [ "leaveWork", "sad" ],
+        "title" : "Uplift and move forward with purpose"
+      },
+      "27_kfa" : {
+        "id" : "27_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/27_clearHeadAfterWork_irritated.mp3?alt=media&token=48f14fae-e271-423d-b259-05d31a987fe5",
+        "tags" : [ "leaveWork", "irritated" ],
+        "title" : "Clear your head after work"
+      },
+      "28_kfa" : {
+        "id" : "28_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/27_clearHeadAfterWork_irritated.mp3?alt=media&token=48f14fae-e271-423d-b259-05d31a987fe5",
+        "tags" : [ "leaveWork", "ok", "calm" ],
+        "title" : "Pick up and move forward"
+      },
+      "29_kfa" : {
+        "id" : "29_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/29_leaveWorkMoveOn_stressed.mp3?alt=media&token=8a028fda-a1f3-47ef-973c-3da2df20159a",
+        "tags" : [ "leaveWork", "stressed" ],
+        "title" : "Leave work at work and move on"
+      },
+      "2_kfa" : {
+        "id" : "2_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/2_startWorkCalm_happy.mp3?alt=media&token=616cbad9-190f-42fa-b6c1-6b350ffa2099",
+        "tags" : [ "startWork", "happy" ],
+        "title" : "Start your shift calm and happy"
+      },
+      "30_kfa" : {
+        "id" : "30_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/30_findTirednessDeepRest.mp3?alt=media&token=dd5c2876-3ce1-48fa-a463-d000e2609666",
+        "tags" : [ "bestSleep", "tired", "happy", "anxious", "sad", "irritated", "ok", "calm", "stressed" ],
+        "title" : "Find tiredness and deep rest"
+      },
+      "3_kfa" : {
+        "id" : "3_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/3_startWorkFeelingGood_anxious.mp3?alt=media&token=d951dfab-6429-44fe-a1dc-47b8602a3d32",
+        "tags" : [ "startWork", "anxious" ],
+        "title" : "Put it down and start your shift feeling good"
+      },
+      "4_kfa" : {
+        "id" : "4_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/4_startWorkCalmUplifted_sad.mp3?alt=media&token=c5bede92-5b1f-4f04-8898-b7b3a86a4bb2",
+        "tags" : [ "startWork", "sad" ],
+        "title" : "Start your shift calm and uplifted"
+      },
+      "5_kfa" : {
+        "id" : "5_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/5_findPatienceBePresentForWork_irritated.mp3?alt=media&token=35748a4b-5e37-4755-9871-62afe9324ed2",
+        "tags" : [ "startWork", "irritated" ],
+        "title" : "Find the patience to let go and be present where youre at"
+      },
+      "6_kfa" : {
+        "id" : "6_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/6_startWorkRightHeadspace_ok.mp3?alt=media&token=0df8b7df-7817-4c87-9d2e-68df7eae48e4",
+        "tags" : [ "startWork", "ok", "calm" ],
+        "title" : "Get in the right head space for your shift"
+      },
+      "7_kfa" : {
+        "id" : "7_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/7_unwindStartWork_stressed.mp3?alt=media&token=020cf1c0-adf5-4a45-b605-a95ac4515909",
+        "tags" : [ "startWork", "stressed" ],
+        "title" : "Unwind to start your shift right"
+      },
+      "8_kfa" : {
+        "id" : "8_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/8_shakeOffTiredness_tired.mp3?alt=media&token=71f6689c-e173-47f3-851f-4a29cbc6cc0f",
+        "tags" : [ "reenergize", "tired" ],
+        "title" : "Shake off tiredness and get moving"
+      },
+      "9_kfa" : {
+        "id" : "9_kfa",
+        "link" : "https://firebasestorage.googleapis.com/v0/b/kinetic-flow.appspot.com/o/9_feelGoodEnergisedFocused_happy.mp3?alt=media&token=92cb9675-418c-42c4-add2-815e9b48cc1d",
+        "tags" : [ "reenergize", "happy" ],
+        "title" : "Feel good, feel energised, feel focused"
+      }
+    },
+    "moods" : {
+      "anxious" : {
+        "id" : "anxious",
+        "name" : "Anxious"
+      },
+      "calm" : {
+        "id" : "calm",
+        "name" : "Calm"
+      },
+      "happy" : {
+        "id" : "happy",
+        "name" : "Happy"
+      },
+      "irritated" : {
+        "id" : "irritated",
+        "name" : "Irritated"
+      },
+      "ok" : {
+        "id" : "ok",
+        "name" : "Ok"
+      },
+      "sad" : {
+        "id" : "sad",
+        "name" : "Sad"
+      },
+      "stressed" : {
+        "id" : "stressed",
+        "name" : "Stressed"
+      },
+      "tired" : {
+        "id" : "tired",
+        "name" : "Tired"
+      }
+    }
+  },
+  "users" : {
+    "4vYIma9xztPfDpYpGy70F2duvFA3" : {
+      "name" : "Georgia Davies",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "6QqdvpVM0TPTl5lGkq8Ke4tcEeI3" : {
+      "name" : "Ross Rugdee",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "8r7pEJFej8X166cvMUC6vMAYe493" : {
+      "name" : "Stephanie Reynolds",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "yes",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "BiGjXaqAArevxkrtkZKe1OZxk302" : {
+      "history" : {
+        "Mon Feb 13 2017 09:55:02 GMT+0800 (AWST)" : {
+          "activity" : "Get the best nights sleep of your life",
+          "activityID" : "bestSleep",
+          "date" : 1486950902479,
+          "postMood" : "Anxious",
+          "preMood" : "Anxious"
+        },
+        "Mon Feb 13 2017 10:16:06 GMT+0800 (AWST)" : {
+          "activity" : "Prepare for an important meeting",
+          "activityID" : "meetingPrep",
+          "date" : 1486952166270,
+          "postMood" : "Stressed",
+          "preMood" : "Irritated"
+        },
+        "Mon Feb 13 2017 10:17:06 GMT+0800 (AWST)" : {
+          "activity" : "Start your work day calm and focused",
+          "activityID" : "startWork",
+          "date" : 1486952226367,
+          "postMood" : "Tired",
+          "preMood" : "Stressed"
+        },
+        "Mon Feb 13 2017 10:25:32 GMT+0800 (AWST)" : {
+          "activity" : "Leave work at work and move on with your day",
+          "activityID" : "leaveWork",
+          "date" : 1486952732676,
+          "postMood" : "Irritated",
+          "preMood" : "Sad"
+        },
+        "Mon Feb 13 2017 10:41:49 GMT+0800 (AWST)" : {
+          "activity" : "Get the best nights sleep of your life",
+          "activityID" : "bestSleep",
+          "date" : 1486953709294,
+          "postMood" : "Anxious",
+          "preMood" : "Anxious"
+        },
+        "Mon Feb 13 2017 21:41:14 GMT+0800 (AWST)" : {
+          "activity" : "Reenergise to get back on track",
+          "activityID" : "reenergize",
+          "date" : 1486993274278,
+          "postMood" : "Ok",
+          "preMood" : "Stressed"
+        }
+      },
+      "name" : "Sarah Rollins",
+      "organisation" : "Kinetic Flow",
+      "stats" : {
+        "activity" : {
+          "Get the best nights sleep of your life" : 2,
+          "Leave work at work and move on with your day" : 1,
+          "Prepare for an important meeting" : 1,
+          "Reenergise to get back on track" : 1,
+          "Start your work day calm and focused" : 1
+        },
+        "endingMood" : {
+          "Anxious" : 2,
+          "Happy" : 0,
+          "Irritated" : 1,
+          "Ok" : 1,
+          "Sad" : 0,
+          "Stressed" : 1,
+          "Tired" : 1
+        },
+        "startingMood" : {
+          "Anxious" : 2,
+          "Happy" : 0,
+          "Irritated" : 1,
+          "Sad" : 1,
+          "Stressed" : 2
+        }
+      },
+      "streak" : 1,
+      "streakDate" : 1486993274278,
+      "superDuper" : "yes",
+      "totalAudioTime" : 1891918.3680408162,
+      "totalSessions" : 6
+    },
+    "BiKxGfuMOxb0ffCEDTQOwe7WCgn1" : {
+      "name" : "Sam's Guest",
+      "organisation" : "Kinetic Flow",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "FEB8AZ4RuLTUF1LSKV6Byz6d6BX2" : {
+      "name" : "Melvin Tan",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "JAeEPjvbjbY8rXI5MgIw6PJtGlr1" : {
+      "name" : "JP Voon",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "OTVzHH4UtZXZ3AElvY9oDEQmh082" : {
+      "name" : "Jacob Boehm",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "UgfBp6JazkXcUOvvreS5uoB0RRB3" : {
+      "name" : "Trevor Hammond",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "bXbxEMTuJYe9HjgKtKBdD0CDI9X2" : {
+      "name" : "David Slotar",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "J03nBo5HWcYLdITf6kDxHDDQFiR2" : {
+      "name" : "Kushir Naidoo",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "kWGaTBG54SQ94q2qpbgudmxPoZG3" : {
+      "name" : "Andrew Simpson",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "mDqocTkHMrX5oquiPHUgNvreTMg1" : {
+      "history" : {
+        "Mon Feb 13 2017 10:54:10 GMT+0800 (AWST)" : {
+          "activity" : "Prepare for an important meeting",
+          "activityID" : "meetingPrep",
+          "date" : 1486954450067,
+          "postMood" : "Calm",
+          "preMood" : "Happy"
+        },
+        "Mon Feb 13 2017 11:25:20 GMT+0800 (AWST)" : {
+          "activity" : "Prepare for an important meeting",
+          "activityID" : "meetingPrep",
+          "date" : 1486956320786,
+          "postMood" : "Calm",
+          "preMood" : "Calm"
+        },
+        "Sun Feb 12 2017 22:27:52 GMT+0800 (AWST)" : {
+          "activity" : "Get the best nights sleep of your life",
+          "activityID" : "bestSleep",
+          "date" : 1486909672340,
+          "postMood" : "Ok",
+          "preMood" : "Tired"
+        },
+        "Sun Feb 12 2017 22:29:00 GMT+0800 (AWST)" : {
+          "activity" : "Reenergise to get back on track",
+          "activityID" : "reenergize",
+          "date" : 1486909740877,
+          "postMood" : "Happy",
+          "preMood" : "Happy"
+        }
+      },
+      "name" : "Sam Mead",
+      "organisation" : "Kinetic Flow",
+      "stats" : {
+        "activity" : {
+          "Get the best nights sleep of your life" : 1,
+          "Prepare for an important meeting" : 2,
+          "Reenergise to get back on track" : 1,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Calm" : 2,
+          "Happy" : 1,
+          "Ok" : 1,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Calm" : 1,
+          "Happy" : 2,
+          "Sad" : 0,
+          "Tired" : 1
+        }
+      },
+      "streak" : 2,
+      "streakDate" : 1486956320786,
+      "superDuper" : "yes",
+      "totalAudioTime" : 1273051.4285714286,
+      "totalSessions" : 4
+    },
+    "pjlwGfKTzyOFUS3nvFnNbAZkc373" : {
+      "name" : "Hello @ Kinetic Flow",
+      "organisation" : "Kinetic Flow",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "yes",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "rKh6nvcOw6VVaUp0Wb8xjBof2Qn2" : {
+      "name" : "Kaitlin Roddy-Sewell",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "b9593BJUU3PGve7CJnDwzqd90Vg1" : {
+      "name" : "kristhel.anne.v.balbas@gmail.com",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    },
+    "zPJiW5zvmWOKKptj0rBoJixyZwQ2" : {
+      "history" : {
+        "Sun Feb 12 2017 22:46:07 GMT+0800 (AWST)" : {
+          "activity" : "Get the best nights sleep of your life",
+          "activityID" : "bestSleep",
+          "date" : 1486910767794,
+          "postMood" : "Happy",
+          "preMood" : "Irritated"
+        }
+      },
+      "name" : "Sam J A",
+      "organisation" : "public",
+      "stats" : {
+        "activity" : {
+          "Get the best nights sleep of your life" : 1,
+          "Reenergise to get back on track" : 0,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Happy" : 1,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Happy" : 0,
+          "Irritated" : 1,
+          "Sad" : 0
+        }
+      },
+      "streak" : 1,
+      "streakDate" : 1486910767794,
+      "superDuper" : "no",
+      "totalAudioTime" : 341838.367347,
+      "totalSessions" : 1
+    }
+  }
+}
