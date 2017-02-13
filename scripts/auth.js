@@ -62,7 +62,7 @@ $("#forgotPasswordForm").submit(function(e) {
   var emailAddress = $.trim($('#forgotPasswordEmail').val());
   firebase.auth().sendPasswordResetEmail(emailAddress).then(function() {
     $("#forgotPasswordAlert").stop(true, true);
-    $("#forgotPasswordAlert .alert-message").html("Forgot password email sent to " + emailAddress);
+    $("#forgotPasswordAlert .alert-message").html("Password reset email sent to " + emailAddress);
     $("#forgotPasswordButton").html('<i class="fa fa-check"></i>');
     $("#forgotPasswordAlert").addClass("alert-success").fadeIn();
   }, function(error) {
