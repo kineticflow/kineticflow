@@ -1,7 +1,7 @@
 // main: main.scss
 
 header {
-  background: transparent;
+  background: #fff;
   padding: 0px 1rem;
   border-bottom: 1px solid $brand;
   display: flex;
@@ -13,14 +13,11 @@ header {
   a {
     text-decoration: none;
   }
-  h1 {
-    color: $brand;
-    margin: 0;
-    line-height: 70px;
-    @include for-phone-only {
-      padding: 1rem 0;
-      font-size: 1.2rem;
-      line-height: 1.8rem;
+  img {
+    padding: 1.25rem 0;
+    max-width: 8rem;
+    @include for-tablet-portrait-up {
+      max-width: 13rem;
     }
   }
   .user-info {
