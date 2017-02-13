@@ -34,11 +34,17 @@ $(document).ready(function() {
           $(".mood-list").empty();
           $.each(data.activities, function (key, value){
             if ( $.inArray(organisation, value.tags) > -1 ) {
-              $(".activity-list").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
+              if ($.inArray("work", value.tags) > -1) {
+                $("#workActivities").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
+              } else if ($.inArray("groupWork", value.tags) > -1) {
+                $("#groupActivities").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
+              } else if ($.inArray("personal", value.tags) > -1) {
+                $("#personalActivities").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
+              }
             }
           });
           $.each(data.moods, function (key, value){
-            $(".mood-list").append("<li><button class='btn btn-outline mood-btn' id='" + value.id + "'>" + value.name + "</button></li>");
+            $(".mood-list").append("<li id='" + value.id + "Item'><button class='btn btn-outline mood-btn' id='" + value.id + "'>" + value.name + "</button></li>");
           });
         });
       });
