@@ -15,4 +15,4 @@ Finally the things that control the app itself are in app.js.
 
 ### To run
 
-Install browser-sync then run `browser-sync start --server --files='**/*.html, **/*.css, **/*.js`
+Install browser-sync then run `browser-sync start --server --files='**/*.html, **/*.css, **/*.js'`
