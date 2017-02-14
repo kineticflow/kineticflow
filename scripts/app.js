@@ -167,6 +167,20 @@ $(document).ready(function() {
       $("#postAudioMoodList").on('click', '.mood-btn', function(){
 
         var postMood = $(this).html();
+
+        var slackurl = "https://hooks.slack.com/services/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";
+        var payload = "*" + userProfile.name + "* (" + user.email + ") just listened to an audio. Activity: _" + activityName + "_, Starting Mood: _" + moodName + "_, Finishing mood: _" + postMood + "_";
+
+        $.ajax({
+          data: 'payload=' + JSON.stringify({
+              "text": payload
+          }),
+          dataType: 'json',
+          processData: false,
+          type: 'POST',
+          url: slackurl
+        });
+
         var updates = {};
 
         var a = audio.get(0);
