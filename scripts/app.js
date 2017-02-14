@@ -216,6 +216,16 @@ $(document).ready(function() {
           resetAudioPlayer();
         } catch(error){
           console.log(error);
+          var payload2 = "*" + userProfile.name + "* (" + user.email + ") encountered the following error: _" + error + "_";
+          $.ajax({
+            data: 'payload=' + JSON.stringify({
+                "text": payload2
+            }),
+            dataType: 'json',
+            processData: false,
+            type: 'POST',
+            url: slackurl
+          });
         }
 
       });
