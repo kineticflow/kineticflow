@@ -189,7 +189,6 @@ $(document).ready(function() {
         var newStreak = streakCalc(newStreakDate, userProfile.streakDate, userProfile.streak);
         var newTotalTime = userProfile.totalAudioTime + a.duration * 1000;
         var newTotalSessions = userProfile.totalSessions + 1;
-        var newHistoryKey = new Date;
         var newHistoryObj = {
           "date" : newStreakDate,
           "preMood" : moodName,
@@ -202,7 +201,7 @@ $(document).ready(function() {
         updates['/users/' + currentUser + '/streakDate'] = newStreakDate;
         updates['/users/' + currentUser + '/totalAudioTime'] = newTotalTime;
         updates['/users/' + currentUser + '/totalSessions'] = newTotalSessions;
-        updates['/users/' + currentUser + '/history/' + newHistoryKey] = newHistoryObj;
+        updates['/users/' + currentUser + '/history/' + newStreakDate] = newHistoryObj;
 
         var stats = userProfile.stats;
         stats.startingMood[moodName] = (stats.startingMood[moodName] || 0) + 1;
