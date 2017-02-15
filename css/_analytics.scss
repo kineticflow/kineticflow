@@ -46,5 +46,11 @@
     .activity-cell {
       padding-bottom: 1rem;
     }
+    .icon-cell {
+      display: none;
+      @include for-tablet-portrait-up {
+        display: table-cell;
+      }
+    }
   }
 }

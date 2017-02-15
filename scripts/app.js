@@ -64,7 +64,7 @@ $(document).ready(function() {
           var date = value.date;
           var dateString = new Date(date).toDateString();
           $("#historyList").append(
-            "<tr><td colspan='3'><span class='date-row'>" + dateString + "</span></td></tr><tr><td>" + value.preMood + "</td><td class='activity-cell'>" + value.activity + "</td><td>" + value.postMood + "</td></tr>"
+            "<tr><td colspan='3'><span class='date-row'>" + dateString + "</span></td></tr><tr><td>" + value.preMood + "</td><td class='icon-cell'><i class='fa fa-plus'></i></td><td class='activity-cell'>" + value.activity + "</td><td class='icon-cell'><i class='fa fa-arrow-right'></i></td><td>" + value.postMood + "</td></tr>"
           );
         });
       });

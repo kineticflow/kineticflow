@@ -362,6 +362,20 @@
           "date" : 1486993274278,
           "postMood" : "Ok",
           "preMood" : "Stressed"
+        },
+        "Tue Feb 14 2017 16:47:02 GMT+0800 (AWST)" : {
+          "activity" : "Reenergise to get back on track",
+          "activityID" : "reenergize",
+          "date" : 1487062022087,
+          "postMood" : "Calm",
+          "preMood" : "Anxious"
+        },
+        "Tue Feb 14 2017 20:28:55 GMT+1100 (Norfolk Standard Time)" : {
+          "activity" : "Reenergise to get back on track",
+          "activityID" : "reenergize",
+          "date" : 1487064535766,
+          "postMood" : "Calm",
+          "preMood" : "Anxious"
         }
       },
       "name" : "Sarah Rollins",
@@ -371,11 +385,12 @@
           "Get the best nights sleep of your life" : 2,
           "Leave work at work and move on with your day" : 1,
           "Prepare for an important meeting" : 1,
-          "Reenergise to get back on track" : 1,
+          "Reenergise to get back on track" : 3,
           "Start your work day calm and focused" : 1
         },
         "endingMood" : {
           "Anxious" : 2,
+          "Calm" : 2,
           "Happy" : 0,
           "Irritated" : 1,
           "Ok" : 1,
@@ -384,44 +399,90 @@
           "Tired" : 1
         },
         "startingMood" : {
-          "Anxious" : 2,
+          "Anxious" : 4,
           "Happy" : 0,
           "Irritated" : 1,
           "Sad" : 1,
           "Stressed" : 2
         }
       },
-      "streak" : 1,
-      "streakDate" : 1486993274278,
+      "streak" : 2,
+      "streakDate" : 1487064535766,
       "superDuper" : "yes",
-      "totalAudioTime" : 1891918.3680408162,
-      "totalSessions" : 6
+      "totalAudioTime" : 2497750.204340816,
+      "totalSessions" : 8
     },
     "BiKxGfuMOxb0ffCEDTQOwe7WCgn1" : {
+      "history" : {
+        "Tue Feb 14 2017 17:06:47 GMT+0800 (AWST)" : {
+          "activity" : "Prepare for an important meeting",
+          "activityID" : "meetingPrep",
+          "date" : 1487063207598,
+          "postMood" : "Ok",
+          "preMood" : "Anxious"
+        }
+      },
       "name" : "Sam's Guest",
       "organisation" : "Kinetic Flow",
       "stats" : {
         "activity" : {
+          "Prepare for an important meeting" : 1,
           "Reenergise to get back on track" : 0,
           "Start your work day calm and focused" : 0
         },
         "endingMood" : {
           "Happy" : 0,
+          "Ok" : 1,
           "Sad" : 0
         },
         "startingMood" : {
+          "Anxious" : 1,
           "Happy" : 0,
           "Sad" : 0
         }
       },
-      "streak" : 0,
-      "streakDate" : 1483228800000,
+      "streak" : 1,
+      "streakDate" : 1487063207598,
       "superDuper" : "no",
-      "totalAudioTime" : 0,
-      "totalSessions" : 0
+      "totalAudioTime" : 316368.97959183675,
+      "totalSessions" : 1
     },
     "FEB8AZ4RuLTUF1LSKV6Byz6d6BX2" : {
+      "history" : {
+        "Tue Feb 14 2017 17:23:19 GMT+0800 (AWST)" : {
+          "activity" : "Reenergise to get back on track",
+          "activityID" : "reenergize",
+          "date" : 1487064199118,
+          "postMood" : "Calm",
+          "preMood" : "Anxious"
+        }
+      },
       "name" : "Melvin Tan",
+      "organisation" : "EY",
+      "stats" : {
+        "activity" : {
+          "Reenergise to get back on track" : 1,
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Calm" : 1,
+          "Happy" : 0,
+          "Sad" : 0
+        },
+        "startingMood" : {
+          "Anxious" : 1,
+          "Happy" : 0,
+          "Sad" : 0
+        }
+      },
+      "streak" : 1,
+      "streakDate" : 1487064199118,
+      "superDuper" : "no",
+      "totalAudioTime" : 303046.5306122449,
+      "totalSessions" : 1
+    },
+    "J03nBo5HWcYLdITf6kDxHDDQFiR2" : {
+      "name" : "Kushir Naidoo",
       "organisation" : "EY",
       "stats" : {
         "activity" : {
@@ -443,7 +504,7 @@
       "totalAudioTime" : 0,
       "totalSessions" : 0
     },
-    "JAeEPjvbjbY8rXI5MgIw6PJtGlr1" : {
+    "tsPalTjPo5d9FapFYlJaHT0T0t33" : {
       "name" : "JP Voon",
       "organisation" : "EY",
       "stats" : {
@@ -512,8 +573,8 @@
       "totalAudioTime" : 0,
       "totalSessions" : 0
     },
-    "bXbxEMTuJYe9HjgKtKBdD0CDI9X2" : {
-      "name" : "David Slotar",
+    "b9593BJUU3PGve7CJnDwzqd90Vg1" : {
+      "name" : "kristhel.anne.v.balbas@gmail.com",
       "organisation" : "EY",
       "stats" : {
         "activity" : {
@@ -535,8 +596,8 @@
       "totalAudioTime" : 0,
       "totalSessions" : 0
     },
-    "J03nBo5HWcYLdITf6kDxHDDQFiR2" : {
-      "name" : "Kushir Naidoo",
+    "bXbxEMTuJYe9HjgKtKBdD0CDI9X2" : {
+      "name" : "David Slotar",
       "organisation" : "EY",
       "stats" : {
         "activity" : {
@@ -610,35 +671,66 @@
           "date" : 1486909740877,
           "postMood" : "Happy",
           "preMood" : "Happy"
+        },
+        "Tue Feb 14 2017 13:12:11 GMT+0800 (AWST)" : {
+          "activity" : "Prepare for an important meeting",
+          "activityID" : "meetingPrep",
+          "date" : 1487049131007,
+          "postMood" : "Happy",
+          "preMood" : "Anxious"
+        },
+        "Tue Feb 14 2017 13:15:17 GMT+0800 (AWST)" : {
+          "activity" : "Leave work at work and move on with your day",
+          "activityID" : "leaveWork",
+          "date" : 1487049317290,
+          "postMood" : "Calm",
+          "preMood" : "Happy"
+        },
+        "Tue Feb 14 2017 13:18:13 GMT+0800 (AWST)" : {
+          "activity" : "Prepare for an important meeting",
+          "activityID" : "meetingPrep",
+          "date" : 1487049493540,
+          "postMood" : "Happy",
+          "preMood" : "Anxious"
+        },
+        "Tue Feb 14 2017 17:19:32 GMT+0800 (AWST)" : {
+          "activity" : "Get the best nights sleep of your life",
+          "activityID" : "bestSleep",
+          "date" : 1487063972718,
+          "postMood" : "Happy",
+          "preMood" : "Ok"
         }
       },
       "name" : "Sam Mead",
       "organisation" : "Kinetic Flow",
       "stats" : {
         "activity" : {
-          "Get the best nights sleep of your life" : 1,
-          "Prepare for an important meeting" : 2,
+          "Get the best nights sleep of your life" : 2,
+          "Leave work at work and move on with your day" : 1,
+          "Prepare for an important meeting" : 5,
           "Reenergise to get back on track" : 1,
           "Start your work day calm and focused" : 0
         },
         "endingMood" : {
-          "Calm" : 2,
-          "Happy" : 1,
+          "Calm" : 4,
+          "Happy" : 4,
           "Ok" : 1,
           "Sad" : 0
         },
         "startingMood" : {
+          "Anxious" : 3,
           "Calm" : 1,
-          "Happy" : 2,
+          "Happy" : 3,
+          "Ok" : 1,
           "Sad" : 0,
           "Tired" : 1
         }
       },
-      "streak" : 2,
-      "streakDate" : 1486956320786,
+      "streak" : 3,
+      "streakDate" : 1487063972718,
       "superDuper" : "yes",
-      "totalAudioTime" : 1273051.4285714286,
-      "totalSessions" : 4
+      "totalAudioTime" : 2490044.0816326533,
+      "totalSessions" : 8
     },
     "pjlwGfKTzyOFUS3nvFnNbAZkc373" : {
       "name" : "Hello @ Kinetic Flow",
@@ -665,29 +757,6 @@
     },
     "rKh6nvcOw6VVaUp0Wb8xjBof2Qn2" : {
       "name" : "Kaitlin Roddy-Sewell",
-      "organisation" : "EY",
-      "stats" : {
-        "activity" : {
-          "Reenergise to get back on track" : 0,
-          "Start your work day calm and focused" : 0
-        },
-        "endingMood" : {
-          "Happy" : 0,
-          "Sad" : 0
-        },
-        "startingMood" : {
-          "Happy" : 0,
-          "Sad" : 0
-        }
-      },
-      "streak" : 0,
-      "streakDate" : 1483228800000,
-      "superDuper" : "no",
-      "totalAudioTime" : 0,
-      "totalSessions" : 0
-    },
-    "b9593BJUU3PGve7CJnDwzqd90Vg1" : {
-      "name" : "kristhel.anne.v.balbas@gmail.com",
       "organisation" : "EY",
       "stats" : {
         "activity" : {
