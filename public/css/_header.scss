@@ -1,0 +1,69 @@
+// main: main.scss
+
+header {
+  background: #fff;
+  padding: 0px 1rem;
+  border-bottom: 1px solid $brand;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include for-tablet-portrait-up {
+    padding: 0px 2rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    padding: 1.25rem 0;
+    max-width: 8rem;
+    @include for-tablet-portrait-up {
+      max-width: 13rem;
+    }
+  }
+  .user-info {
+    display: none;
+    @include for-tablet-portrait-up {
+      display: block;
+    }
+  }
+  .menu-btn {
+    display: block;
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+  .log-out-button {
+    @include for-tablet-portrait-up {
+      margin-left: 2rem;
+    }
+  }
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $secondary;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2rem;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  .menu-text {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    padding: 2rem 0;
+    margin: 0;
+  }
+  button {
+    @extend .menu-text;
+    &:hover {
+      background: #fff;
+      color: $secondary;
+    }
+  }
+}

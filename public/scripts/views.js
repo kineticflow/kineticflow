@@ -11,7 +11,7 @@ $(".close-menu-btn").click(function(){
 function changeView(newView){
   $("section").hide();
   $(".tabs li").removeClass('active');
-  if (newView === "#mindfulness" || newView === "#analytics" || newView === "#info" || newView === "#admin") {
+  if (newView === "#mindfulness" || newView === "#analytics") {
     $(newView).fadeIn();
     $(".tabs").css("visibility", "visible");
     $(newView + "Tab").parent("li").addClass('active');
@@ -27,14 +27,6 @@ $("#mindfulnessTab").click(function(){
 
 $("#analyticsTab").click(function(){
   changeView("#analytics");
-});
-
-$("#infoTab").click(function(){
-  changeView("#info");
-});
-
-$("#adminTab").click(function(){
-  changeView("#admin");
 });
 
 $("#moodsBack").click(function(){

@@ -34,8 +34,6 @@ $(document).ready(function() {
           $(".mood-list").empty();
           $.each(data.activities, function (key, value){
             if ( $.inArray(organisation, value.tags) > -1 ) {
-
-              // First fill mindfulness tab
               if ($.inArray("work", value.tags) > -1) {
                 $("#workActivities").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
               } else if ($.inArray("groupWork", value.tags) > -1) {
@@ -43,9 +41,6 @@ $(document).ready(function() {
               } else if ($.inArray("personal", value.tags) > -1) {
                 $("#personalActivities").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
               }
-
-              // Then fill info tab
-              $("#infoDescriptions").append("<dt>"+ value.title +"</dt><dd>" + value.description + "</dl>");
             }
           });
           $.each(data.moods, function (key, value){
@@ -59,10 +54,6 @@ $(document).ready(function() {
         userProfile = snapshot.val();
         $("#historyList").empty();
         $(".user-email").html(userProfile.name);
-        // Is the user an admin?
-        if (userProfile.superDuper == "yes") {
-          $(".admin-tabs").show();
-        }
         $("#totalAudioTime").html(formatMilliseconds(userProfile.totalAudioTime));
         $("#totalSessions").html(userProfile.totalSessions);
         $("#streak").html(userProfile.streak);

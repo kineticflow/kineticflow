@@ -16,7 +16,6 @@
     }
   }
   .tabs {
-    display: inline-block;
     padding: 0;
     margin: 0 0 0 1rem;
     list-style: none;
@@ -30,7 +29,6 @@
         padding: 0.66rem 1rem;
         margin: 0;
         border: 1px solid transparent;
-        border-top: 4px solid transparent;
         background: transparent;
         color: $dark-grey;
         &:hover {
@@ -53,11 +51,6 @@
         color: $secondary;
       }
     }
-  }
-  .admin-tabs {
-    float: right;
-    margin-right: 1rem;
-    display: none;
   }
   .inner {
     border: 1px solid $grey;
@@ -127,25 +120,6 @@
   }
   #mindfulness {
     display: block;
-  }
-  #info {
-    .info-wrapper {
-      max-width: 35rem;
-      margin: 0px auto;
-    }
-    dl {
-      padding: 1rem 0;
-      dt {
-        font-weight: 600;
-        font-size: 1.2rem;
-        margin-bottom: 0.66rem;
-        color: $secondary;
-        font-style: italic;
-      }
-      dd {
-        margin-bottom: 2rem;
-      }
-    }
   }
   .finish-audio {
     display: none;

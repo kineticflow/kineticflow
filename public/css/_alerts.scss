@@ -1,0 +1,40 @@
+// main: main.scss
+.block-alert {
+  width: 100%;
+  background: $error; // Our most frequent alert is an error so by default alerts are error themed
+  color: #fff;
+  text-align: left;
+  display: none;
+}
+.alert {
+  @extend .block-alert;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: left;
+  @include for-tablet-landscape-up {
+    padding: 0 1rem;
+  }
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+.alert-success {
+  background: $success;
+}
+.alert-dismiss,
+.alert-message {
+  padding: 1rem;
+}
+.alert-dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.alert-message {
+  display: inline-block;
+  clear: both;
+}
