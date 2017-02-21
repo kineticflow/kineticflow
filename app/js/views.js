@@ -1,10 +1,10 @@
 // Views JS
 
-$(".menu-btn").click(function(){
+$(".menu-btn").on("click", function(){
   $(".mobile-menu").fadeIn();
 });
 
-$(".close-menu-btn").click(function(){
+$(".close-menu-btn").on("click", function(){
   $(".mobile-menu").fadeOut();
 });
 
@@ -21,22 +21,49 @@ function changeView(newView){
   }
 }
 
-$("#mindfulnessTab").click(function(){
+function changeAdminView(newAdminView){
+  $(".admin-view").hide();
+  $("#" + newAdminView + "View").fadeIn();
+  $(".admin-nav .btn").removeClass('active');
+  $("#" + newAdminView + "Btn").addClass('active');
+}
+
+$("#mindfulnessTab").on("click", function(){
   changeView("#mindfulness");
 });
 
-$("#analyticsTab").click(function(){
+$("#analyticsTab").on("click", function(){
   changeView("#analytics");
 });
 
-$("#infoTab").click(function(){
+$("#infoTab").on("click", function(){
   changeView("#info");
 });
 
-$("#adminTab").click(function(){
+$("#adminTab").on("click", function(){
   changeView("#admin");
 });
 
-$("#moodsBack").click(function(){
+$("#moodsBack").on("click", function(){
   changeView("#mindfulness");
+});
+
+$("#adminAnalyticsBtn").on("click", function(){
+  changeAdminView("adminAnalytics");
+});
+
+$("#adminActivitiesBtn").on("click", function(){
+  changeAdminView("adminActivities");
+});
+
+$("#adminAudiosBtn").on("click", function(){
+  changeAdminView("adminAudios");
+});
+
+$("#adminGroupsBtn").on("click", function(){
+  changeAdminView("adminGroups");
+});
+
+$("#adminUsersBtn").on("click", function(){
+  changeAdminView("adminUsers");
 });

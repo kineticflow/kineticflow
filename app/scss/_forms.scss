@@ -4,3 +4,13 @@ form,
 .input-group {
   margin-bottom: 1rem;
 }
+.help-text {
+  color: $error;
+  font-style: italic;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.help-text-black {
+  @extend .help-text;
+  color: $text-colour;
+}

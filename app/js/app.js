@@ -62,6 +62,8 @@ $(document).ready(function() {
         // Is the user an admin?
         if (userProfile.superDuper == "yes") {
           $(".admin-tabs").show();
+        } else {
+          $("#admin").html('');
         }
         $("#totalAudioTime").html(formatMilliseconds(userProfile.totalAudioTime));
         $("#totalSessions").html(userProfile.totalSessions);
@@ -205,12 +207,25 @@ $(document).ready(function() {
           "activityID" : activityId,
           "postMood" : postMood
         }
+        var newAdminHistoryObj = {
+          "date" : newStreakDate,
+          "uid" : currentUser,
+          "name" : userProfile.name,
+          "organisation" : userProfile.organisation,
+          "preMood" : moodName,
+          "activity" : activityName,
+          "activityID" : activityId,
+          "postMood" : postMood,
+          "audioDuration" : a.duration * 1000 // Vanity metric calcs!
+        }
 
         updates['/users/' + currentUser + '/streak'] = newStreak;
         updates['/users/' + currentUser + '/streakDate'] = newStreakDate;
         updates['/users/' + currentUser + '/totalAudioTime'] = newTotalTime;
         updates['/users/' + currentUser + '/totalSessions'] = newTotalSessions;
         updates['/users/' + currentUser + '/history/' + newStreakDate] = newHistoryObj;
+        updates['/admin/history/' + newStreakDate] = newAdminHistoryObj;
+
 
         var stats = userProfile.stats;
         stats.startingMood[moodName] = (stats.startingMood[moodName] || 0) + 1;
@@ -237,48 +252,6 @@ $(document).ready(function() {
         }
 
       }); // End of post audio mood on click
-
-      // Let an admin upload a new audio
-      var storageRef = firebase.storage().ref();
-      var file;
-      $("#newFile").on("change", function(){
-        file = this.files[0];
-        return file;
-      });
-
-      $("#newAudioForm").on("submit", function(event) {
-        var uploadTask = storageRef.child(file.name).put(file);
-        uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
-          function(snapshot) {
-            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            console.log('Upload is ' + progress + '% done');
-            switch (snapshot.state) {
-              case firebase.storage.TaskState.progress: // or 'paused'
-                console.log('Upload is ' + progress + '% done');
-                break;
-              case firebase.storage.TaskState.PAUSED: // or 'paused'
-                console.log('Upload is paused');
-                break;
-              case firebase.storage.TaskState.RUNNING: // or 'running'
-                console.log('Upload is running');
-            }
-          }, function(error) {
-          switch (error.code) {
-            case 'storage/unauthorized':
-              console.log("User doesn't have permission to access the object");
-              break;
-            case 'storage/canceled':
-              console.log("User canceled the upload");
-              break;
-            case 'storage/unknown':
-              console.log("Unknown error occurred, inspect error.serverResponse");
-          }
-        }, function() {
-          var downloadURL = uploadTask.snapshot.downloadURL;
-          console.log("Successful upload: " + downloadURL);          
-        });
-        return false;
-      });
 
     } // End of else from `if(user)`
   }); // End of Auth State Changed

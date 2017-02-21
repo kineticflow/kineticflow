@@ -87,12 +87,6 @@
 .text-right {
   text-align: right;
 }
-.help-text {
-  color: $error;
-  font-style: italic;
-  margin: 0;
-  font-size: 0.9rem;
-}
 .highlight-span {
   font-style: italic;
   @include for-tablet-landscape-up {

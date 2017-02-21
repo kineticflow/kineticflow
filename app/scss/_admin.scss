@@ -1,0 +1,38 @@
+// main: main.scss
+.admin-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #999;
+  .btn {
+    background: transparent;
+    color: #999;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .active {
+    color: $brand;
+  }
+}
+section {
+  .admin-view {
+    h3 {
+      color: $tertiary;
+    }
+  }
+}
+.admin-view {
+  padding: 2rem 0;
+  display: none;
+  text-align: left;
+  .tableWrapper {
+    padding: 1rem;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+}
+#adminAnalyticsView {
+  display: block;
+}

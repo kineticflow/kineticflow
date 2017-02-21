@@ -17,7 +17,8 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0;
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  color: #444; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
@@ -126,12 +127,6 @@ li {
 
 .text-right {
   text-align: right; }
-
-.help-text {
-  color: #e25835;
-  font-style: italic;
-  margin: 0;
-  font-size: 0.9rem; }
 
 .highlight-span {
   font-style: italic; }
@@ -442,6 +437,15 @@ form,
 .input-group {
   margin-bottom: 1rem; }
 
+.help-text, .help-text-black {
+  color: #e25835;
+  font-style: italic;
+  margin: 0;
+  font-size: 0.9rem; }
+
+.help-text-black {
+  color: #444; }
+
 .audio-player {
   width: 100%;
   margin: 2rem 0;
@@ -565,3 +569,32 @@ form,
 .alert-message {
   display: inline-block;
   clear: both; }
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #999; }
+  .admin-nav .btn {
+    background: transparent;
+    color: #999; }
+    .admin-nav .btn:first-child {
+      margin-left: 0; }
+  .admin-nav .active {
+    color: #4db8dd; }
+
+section .admin-view h3 {
+  color: #ff9b67; }
+
+.admin-view {
+  padding: 2rem 0;
+  display: none;
+  text-align: left; }
+  .admin-view .tableWrapper {
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    margin-bottom: 2rem; }
+
+#adminAnalyticsView {
+  display: block; }
