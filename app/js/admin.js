@@ -7,6 +7,8 @@
 
 // Get the admin data
 
+var adminApp = firebase.initializeApp(config, "Secondary");
+
 var adminDBRef = firebase.database().ref("admin");
 adminDBRef.on('value', function(snapshot) {
 
@@ -120,3 +122,56 @@ $("#addNewGroupForm").on("submit", function(event) {
   }
   return false;
 });
+
+$("#addNewUserForm").on("submit", function(event){
+  var email = $.trim($('#newUserEmail').val());
+  console.log(email);
+  var password = randomPassword();
+  var name = $.trim($('#newUserName').val());
+  var organisation = $.trim($('#newUserOrg').val());
+  var newUserUID;
+  adminApp.auth().createUserWithEmailAndPassword(email, password).then(function(snapshot) {
+    newUserUID = snapshot.uid;
+    adminApp.auth().signOut();
+    var profileData = {
+      "name" : name,
+      "organisation" : organisation,
+      "stats" : {
+        "activity" : {
+          "Start your work day calm and focused" : 0
+        },
+        "endingMood" : {
+          "Calm" : 0
+        },
+        "startingMood" : {
+          "Calm" : 0
+        }
+      },
+      "streak" : 0,
+      "streakDate" : 1483228800000,
+      "superDuper" : "no",
+      "totalAudioTime" : 0,
+      "totalSessions" : 0
+    };
+    try {
+      firebase.database().ref('/users/' + uid).set(profileData);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      $("#addNewUserForm").trigger("reset");
+      return false;
+    }
+  }, function(error){
+    console.log(error);
+  });
+});
+
+function randomPassword() {
+    var chars = "abcdefghjkmnpqrstuvwxyz23456789";
+    var password = "";
+    for (var i = 0; i < 8; i++) {
+        var x = Math.floor(Math.random() * chars.length);
+        password += chars.charAt(x);
+    }
+    return password;
+}
