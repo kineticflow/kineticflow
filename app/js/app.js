@@ -32,6 +32,7 @@ $(document).ready(function() {
           data = snapshot.val();
           $(".activity-list").empty();
           $(".mood-list").empty();
+          $("#infoDescriptions").empty();
           $.each(data.activities, function (key, value){
             if ( $.inArray(organisation, value.tags) > -1 ) {
 
@@ -195,10 +196,11 @@ $(document).ready(function() {
         var updates = {};
 
         var a = audio.get(0);
+        var duration = a.duration * 1000;
 
         var newStreakDate = Date.now();
         var newStreak = streakCalc(newStreakDate, userProfile.streakDate, userProfile.streak);
-        var newTotalTime = userProfile.totalAudioTime + a.duration * 1000;
+        var newTotalTime = userProfile.totalAudioTime + duration;
         var newTotalSessions = userProfile.totalSessions + 1;
         var newHistoryObj = {
           "date" : newStreakDate,
@@ -216,7 +218,7 @@ $(document).ready(function() {
           "activity" : activityName,
           "activityID" : activityId,
           "postMood" : postMood,
-          "audioDuration" : a.duration * 1000 // Vanity metric calcs!
+          "audioDuration" : duration // Vanity metric calcs!
         }
 
         updates['/users/' + currentUser + '/streak'] = newStreak;
@@ -226,7 +228,6 @@ $(document).ready(function() {
         updates['/users/' + currentUser + '/history/' + newStreakDate] = newHistoryObj;
         updates['/admin/history/' + newStreakDate] = newAdminHistoryObj;
 
-
         var stats = userProfile.stats;
         stats.startingMood[moodName] = (stats.startingMood[moodName] || 0) + 1;
         stats.activity[activityName] = (stats.activity[activityName] || 0) + 1;
@@ -235,8 +236,6 @@ $(document).ready(function() {
         try {
           firebase.database().ref().update(updates);
           firebase.database().ref('/users/' + currentUser + '/stats/').set(stats);
-          changeView("#analytics");
-          resetAudioPlayer();
         } catch(error){
           console.log(error);
           var payload2 = "*" + userProfile.name + "* (" + user.email + ") encountered the following error: _" + error + "_";
@@ -249,6 +248,9 @@ $(document).ready(function() {
             type: 'POST',
             url: slackurl
           });
+        } finally {
+          changeView("#analytics");
+          resetAudioPlayer();
         }
 
       }); // End of post audio mood on click

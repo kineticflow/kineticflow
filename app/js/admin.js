@@ -11,6 +11,7 @@ var adminDBRef = firebase.database().ref("admin");
 adminDBRef.on('value', function(snapshot) {
 
   $("#adminAnalyticsLists").empty();
+  $("#groupsList").empty();
 
   var adminData = snapshot.val();
 
@@ -18,14 +19,35 @@ adminDBRef.on('value', function(snapshot) {
 
   $.each(adminData.organisations, function(key, value){
     var organisation = value.replace(/\s+/g, '');
-    $("#adminAnalyticsLists").append('<div class="tableWrapper" id="'+ organisation +'Analytics"><h3>' + organisation + '</h3><table><tbody></tbody></table></div>');
+    $("#adminAnalyticsLists").append('<div class="tableWrapper" id="'+ organisation +'Analytics"><h3>' + value + '</h3><table><tbody></tbody></table></div>');
+    // Add to groups too
+    $("#groupsList").append('<li>'+ value +' <button class="delete-group btn btn-error btn-sm" id="'+key+'"><i class="fa fa-trash-o"></i></button></li>');
   });
 
   $.each(adminData.history, function(key, value){
     var historyDate = new Date(value.date).toDateString();
-    $("#" + value.organisation.replace(/\s+/g, '') + "Analytics table tbody").append('<tr><td>' + historyDate + '</td><td>' + value.organisation + '</td><td>' + value.name + '</td><td>' + value.preMood + '</td><td>' + value.activity + '</td><td>' + value.postMood + '</td></tr>');
+    var organisation = value.organisation;
+    $("#" + organisation.replace(/\s+/g, '') + "Analytics table tbody").append('<tr><td>' + historyDate + '</td><td>' + organisation + '</td><td>' + value.name + '</td><td>' + value.preMood + '</td><td>' + value.activity + '</td><td>' + value.postMood + '</td></tr>');
   });
 
+  $('.delete-group').on('click', function() {
+    var deleteRef = $(this).attr('id');
+    try {
+      firebase.database().ref('/admin/organisations/' + deleteRef).remove();
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
+});
+
+var adminDataRef = firebase.database().ref("data");
+adminDataRef.on('value', function(snapshot) {
+  $('#activitiesTable').empty();
+  var appData = snapshot.val();
+  $.each(appData.activities, function(key, value){
+    $('#activitiesTable').append('<tr><td>' + value.id + '</td><td>' + value.title + '</td><td>' + value.tags + '</td><td>' + value.description + '</td></tr>')
+  });
 });
 
 // Let an admin upload a new audio
@@ -84,5 +106,17 @@ $("#newAudioForm").on("submit", function(event) {
       $('#newAudioForm').trigger("reset");
     }
   });
+  return false;
+});
+
+$("#addNewGroupForm").on("submit", function(event) {
+  var newGroup = $('#newGroupId').val();
+  try {
+    firebase.database().ref('/admin/organisations').push(newGroup);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    $('#addNewGroupForm').trigger("reset");
+  }
   return false;
 });

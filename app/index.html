@@ -232,10 +232,18 @@
             </div>
             <div class="admin-view" id="adminActivitiesView">
               <h2>Activities</h2>
+              <form class="admin-form" id="addNewActivity">
+                <p><em>Form here</em></p>
+              </form>
+              <table>
+                <tbody id="activitiesTable">
+                  
+                </tbody>
+              </table>
             </div>
             <div class="admin-view" id="adminAudiosView">
               <h2>Audios</h2>
-              <form id="newAudioForm">
+              <form class="admin-form" id="newAudioForm">
                 <div class="input-group">
                   <label for="newAudioID">Audio ID</label>
                   <input type="text" id="newAudioID" />
@@ -256,7 +264,15 @@
               </form>
             </div>
             <div class="admin-view" id="adminGroupsView">
-              <h3>Groups</h3>
+              <h2>Groups</h2>
+              <form class="admin-form" id="addNewGroupForm">
+                <div class="input-group">
+                  <label for="newGroupId">New Organisation / Group Name:</label>
+                  <input type="text" id="newGroupId" />
+                </div>
+                <button type="submit" class="btn btn-success"><i class="fa fa-plus icon-left-close"></i> Add Group</button>
+              </form>
+              <ul class="list-unstyled" id="groupsList"></ul>
             </div>
             <div class="admin-view" id="adminUsersView">
               <h3>Users</h3>

@@ -215,8 +215,66 @@
           </section>
 
           <section class="text-left" id="admin">
-            <h2>Kinetic Flow Admin Jazz <i class="fa fa-music icon-right"></i></h2>
-            <p>Fireworks coming soon</p>
+            <div class="admin-nav">
+              <button class="btn active" id="adminAnalyticsBtn">Analytics</button>
+              <button class="btn" id="adminActivitiesBtn">Activities</button>
+              <button class="btn" id="adminAudiosBtn">Audios</button>
+              <button class="btn" id="adminGroupsBtn">Groups</button>
+              <button class="btn" id="adminUsersBtn">Users</button>
+            </div>
+            <div class="admin-view" id="adminAnalyticsView">
+              <h2>Analytics</h2>
+              <div id="adminAnalyticsLists">
+
+              </div>
+            </div>
+            <div class="admin-view" id="adminActivitiesView">
+              <h2>Activities</h2>
+              <form class="admin-form" id="addNewActivity">
+                <p><em>Form here</em></p>
+              </form>
+              <table>
+                <tbody id="activitiesTable">
+                  
+                </tbody>
+              </table>
+            </div>
+            <div class="admin-view" id="adminAudiosView">
+              <h2>Audios</h2>
+              <form class="admin-form" id="newAudioForm">
+                <div class="input-group">
+                  <label for="newAudioID">Audio ID</label>
+                  <input type="text" id="newAudioID" />
+                </div>
+                <div class="input-group">
+                  <label for="newAudioTitle">Audio Title</label>
+                  <input type="text" id="newAudioTitle" />
+                </div>
+                <div class="input-group">
+                  <label for="newAudioTags">Audio Tags</label>
+                  <input type="text" id="newAudioTags" />
+                  <p class="help-text-black">An audio's tags must be camelCase and comma separated: <em>mood ids</em> and <em>activity ids</em>.</p>
+                </div>
+                <div class="input-group">
+                  <input type="file" id="newFile" />
+                </div>
+                <button type="submit" class="btn btn-success"><i class="fa fa-plus icon-left-close"></i> Upload</button>
+              </form>
+            </div>
+            <div class="admin-view" id="adminGroupsView">
+              <h2>Groups</h2>
+              <form class="admin-form" id="addNewGroupForm">
+                <div class="input-group">
+                  <label for="newGroupId">New Organisation / Group Name:</label>
+                  <input type="text" id="newGroupId" />
+                </div>
+                <button type="submit" class="btn btn-success"><i class="fa fa-plus icon-left-close"></i> Add Group</button>
+              </form>
+              <ul class="list-unstyled" id="groupsList"></ul>
+            </div>
+            <div class="admin-view" id="adminUsersView">
+              <h3>Users</h3>
+            </div>
           </section>
 
         </div>
