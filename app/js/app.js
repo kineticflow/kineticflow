@@ -96,6 +96,7 @@ $(document).ready(function() {
               $(".audio-total-time").html("<i class='fa fa-sun-o fa-spin'></i>");
               $(".play-pause i").removeClass("fa-pause fa-play fa-times").addClass("fa-sun-o fa-spin");
               audio.attr('src', value.link);
+              audio.load(); // Force iOS Safari to load audio
               $(".finish-audio").fadeIn();
               return false;
             } else {
@@ -137,6 +138,11 @@ $(document).ready(function() {
         event.stopImmediatePropagation();
         $(".audio-total-time").html(formatSeconds(this.duration));
         $(".play-pause i").removeClass("fa-sun-o fa-spin fa-pause").addClass("fa-play");
+      });
+
+      audio.on("waiting", function(event){
+        event.stopImmediatePropagation();
+        $(".play-pause i").removeClass("fa-play fa-pause").addClass("fa-sun-o fa-spin");
       });
 
       $(".play-pause").click(function(e){
