@@ -451,6 +451,9 @@ form,
   border-radius: 5px;
   padding: 1rem; }
 
+.edit-activity-form input {
+  min-width: 50%; }
+
 .audio-player {
   width: 100%;
   margin: 2rem 0;
@@ -600,6 +603,23 @@ section .admin-view h3 {
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     margin-bottom: 2rem; }
+
+.admin-activity {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem; }
+  .admin-activity h4 button {
+    margin-left: 1rem; }
+  .admin-activity p:not(:last-child) {
+    display: inline-block;
+    margin-right: 1rem; }
+
+#editActivityForm {
+  display: none; }
+
+.cancel-activity-edit-btn {
+  display: none; }
 
 #adminAnalyticsView {
   display: block; }

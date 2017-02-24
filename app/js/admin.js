@@ -43,14 +43,86 @@ adminDBRef.on('value', function(snapshot) {
 
 });
 
+// All Activities
 var adminDataRef = firebase.database().ref("data");
 adminDataRef.on('value', function(snapshot) {
-  $('#activitiesTable').empty();
+  $('.activities-wrapper').empty();
   var appData = snapshot.val();
   $.each(appData.activities, function(key, value){
-    $('#activitiesTable').append('<tr><td>' + value.id + '</td><td>' + value.title + '</td><td>' + value.tags + '</td><td>' + value.description + '</td></tr>')
+
+    var displayTags = value.tags + ""; // Cheat to convert array to string.
+    displayTags = displayTags.replace(/,/g, ', ');
+
+    var holderTitle = '<div class="activity-holder-title"><h4>' + value.title + ' <button class="btn btn-sm btn-success edit-activity-btn" id="'+ value.id +'Edit">Edit</button><button class="btn btn-sm btn-error cancel-activity-edit-btn">Cancel</button></h4></div>';
+
+    var holderContent = '<div class="activity-holder-content"><p><strong>ID:</strong> ' + value.id + '</p><p><strong>Tags:</strong> ' + displayTags + '</p><p>' + value.description + '</p></div>';
+
+    var displayHolder = '<div class="admin-activity" id="'+ value.id +'Holder">' + holderTitle + holderContent + '</div>';
+
+    $('.activities-wrapper').append(displayHolder);
+
+    // Edit activities
+    $("#"+value.id+"Edit").on("click", function(){
+      $(".edit-activity-btn").hide();
+      $(this).next().show();
+      $("#activityKey").val(key);
+      $("#editActivityTitle").val(value.title);
+      $("#editActivityID").val(value.id);
+      $("#editActivityTags").val(value.tags);
+      $("#editActivityDescription").val(value.description);
+      $("#editActivityForm").detach().appendTo("#"+value.id+"Holder").fadeIn();
+    });
+    $(".cancel-activity-edit-btn").on("click", function(event){
+      event.stopImmediatePropagation();
+      $(this).hide();
+      $("#editActivityForm").hide().detach().appendTo("#adminActivitiesView");
+      $('#editActivityForm').trigger("reset");
+      $("#activityKey").val('');
+      $(".edit-activity-btn").show();
+    });
   });
 });
+
+// Submit Edits
+$("#editActivityForm").submit(function(event) {
+  event.preventDefault();
+  $("#editActivityForm").hide().detach().appendTo("#adminActivitiesView");
+  var activityKey = $('#activityKey').val();
+  var updateActivity = {
+    "title": $('#editActivityTitle').val(),
+    "id": $('#editActivityID').val(),
+    "tags": $('#editActivityTags').val().replace(/,\s+/g, '').split(','),
+    "description": $('#editActivityDescription').val()
+  };
+  try {
+    firebase.database().ref('/data/activities/' + activityKey).set(updateActivity);
+  } catch (error) {
+    console.log(error);
+  }
+  finally {
+    $('#editActivityForm').trigger("reset");
+  }
+  return false;
+});
+// Add new activities
+$("#addNewActivityForm").on("submit", function(event) {
+  var newActivity = {
+    "title": $('#newActivityTitle').val(),
+    "id": $('#newActivityID').val(),
+    "tags": $('#newActivityTags').val().replace(/,\s+/g, ',').split(','),
+    "description": $('#newActivityDescription').val()
+  };
+  try {
+    firebase.database().ref('/data/activities').push(newActivity);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    $('#addNewActivityForm').trigger("reset");
+  }
+  return false;
+});
+
+
 
 // Let an admin upload a new audio
 var storageRef = firebase.storage().ref();

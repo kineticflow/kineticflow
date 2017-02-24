@@ -33,6 +33,27 @@ section {
     margin-bottom: 2rem;
   }
 }
+.admin-activity {
+  border: 1px solid $grey;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  h4 {
+    button {
+      margin-left: 1rem;
+    }
+  }
+  p:not(:last-child) {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}
+#editActivityForm {
+  display: none;
+}
+.cancel-activity-edit-btn {
+  display: none;
+}
 #adminAnalyticsView {
   display: block;
 }

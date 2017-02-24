@@ -232,14 +232,50 @@
             </div>
             <div class="admin-view" id="adminActivitiesView">
               <h2>Activities</h2>
-              <form class="admin-form" id="addNewActivity">
-                <p><em>Form here</em></p>
+              <form class="admin-form" id="addNewActivityForm">
+                <h3>Add a New Activity</h3>
+                <div class="input-group">
+                  <label for="newActivityID">Activity ID</label>
+                  <input type="text" id="newActivityID" />
+                </div>
+                <div class="input-group">
+                  <label for="newActivityTitle">Activity Title</label>
+                  <input type="text" id="newActivityTitle" />
+                </div>
+                <div class="input-group">
+                  <label for="newActivityTags">Activity Tags</label>
+                  <input type="text" id="newActivityTags" />
+                  <p class="help-text-black">An activity's tags must be camelCase and comma separated.</p>
+                </div>
+                <div class="input-group">
+                  <label for="newActivityDescription">Activity Description</label>
+                  <input type="text" id="newActivityDescription" />
+                </div>
+                <button type="submit" class="btn btn-success"><i class="fa fa-plus icon-left-close"></i> Add New Activity</button>
               </form>
-              <table>
-                <tbody id="activitiesTable">
-
-                </tbody>
-              </table>
+              <div class="activities-wrapper">
+                <!-- Admin.js puts things here -->
+              </div>
+              <form id="editActivityForm">
+                <input type="hidden" id="activityKey" />
+                <div class="input-group">
+                  <label for="editActivityTitle">Activity Title: </label>
+                  <input type="text" id="editActivityTitle" />
+                </div>
+                <div class="input-group">
+                  <label for="editActivityID">Activity ID: </label>
+                  <input type="text" id="editActivityID" />
+                </div>
+                <div class="input-group">
+                  <label for="editActivityTags">Activity Tags: </label>
+                  <input type="text" id="editActivityTags" />
+                </div>
+                <div class="input-group">
+                  <label for="editActivityDescription">Activity Description: </label>
+                  <input type="text" id="editActivityDescription" />
+                </div>
+                <button type="submit" class="btn btn-success btn-sm">Save Edits</button>
+              </form>
             </div>
             <div class="admin-view" id="adminAudiosView">
               <h2>Audios</h2>
