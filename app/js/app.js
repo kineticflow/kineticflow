@@ -249,7 +249,7 @@ $(document).ready(function() {
           firebase.database().ref('/users/' + currentUser + '/stats/').set(stats);
           displayAlert("alert-success", "Great job! Your analytics have been updated. See you tomorrow!");
         } catch(error){
-          displayAlert("alert-warning", "Warning! Our database had a little issue handling what just happened. Don't worry, our team has been notified that there was an error and your data has been saved securely in our bunker. In case someone asks, this was the error: " + error);
+          displayAlert("alert-warning", "Warning! Our database had a little issue handling what just happened. Don't worry, our team has been notified that there was an error and your data has been saved securely in our bunker!");
           var payload2 = "*" + userProfile.name + "* (" + user.email + ") encountered the following error: _" + error + "_";
           $.ajax({
             data: 'payload=' + JSON.stringify({
