@@ -2,39 +2,66 @@
 
 header {
   background: #fff;
-  padding: 0px 1rem;
+  padding: 0 1rem;
   border-bottom: 1px solid $brand;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @include for-tablet-portrait-up {
-    padding: 0px 2rem;
-  }
-  a {
-    text-decoration: none;
-  }
-  img {
-    padding: 1.25rem 0;
-    max-width: 8rem;
+  transition: 0.3s ease;
+  overflow: hidden;
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     @include for-tablet-portrait-up {
-      max-width: 13rem;
+      padding: 0px 2rem;
     }
-  }
-  .user-info {
-    display: none;
-    @include for-tablet-portrait-up {
-      display: block;
+    a {
+      text-decoration: none;
     }
-  }
-  .menu-btn {
-    display: block;
-    @include for-tablet-portrait-up {
+    img {
+      padding: 1.25rem 0;
+      max-width: 8rem;
+      @include for-tablet-portrait-up {
+        max-width: 13rem;
+      }
+    }
+    .user-info {
       display: none;
+      @include for-tablet-portrait-up {
+        display: block;
+      }
+    }
+    .menu-btn {
+      display: none;
+      @include for-tablet-portrait-up {
+        display: inline-block;
+        background: transparent;
+        color: $dark;
+        margin-left: 1rem;
+        &:hover {
+          color: $brand;
+          background: transparent;
+        }
+      }
+    }
+    .mobile-menu-btn {
+      display: block;
+      @include for-tablet-portrait-up {
+        display: none;
+      }
     }
   }
-  .log-out-button {
-    @include for-tablet-portrait-up {
-      margin-left: 2rem;
+  .menu {
+    display: none;
+    text-align: right;
+    padding: 0rem 3rem 1rem;
+    width: 100%;
+    float: right;
+    button {
+      padding: 0.33rem 0;
+      background: transparent;
+      color: $dark;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

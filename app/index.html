@@ -17,13 +17,6 @@
 
   <body>
 
-    <div class="alert" id="globalAlert">
-      <div class="alert-dismiss">
-        <i class="fa fa-times"></i>
-      </div>
-      <span class="alert-message">Something went wrong. Sorry.</span>
-    </div>
-
     <!-- Initial state: nobody logged in -->
     <div class="user-logged-out">
 
@@ -67,17 +60,25 @@
 
       <header>
 
-        <a href="./"><img src="./images/logo.png" title="Kinetic Flow" alt="Kinetic Flow Logo" /></a>
-        <div class="user-info">
-          <span>Logged in as <span class="user-email"></span></span>
-          <button class="btn log-out-button">Log Out</button>
+        <div class="header-content">
+          <a href="./"><img src="./images/logo.png" title="Kinetic Flow" alt="Kinetic Flow Logo" /></a>
+          <div class="user-info">
+            <span>Logged in as <span class="user-email"></span></span>
+            <button class="btn menu-btn">Menu <i class="fa fa-chevron-down icon-right-close menu-icon"></i></button>
+          </div>
+          <button class="btn btn-outline mobile-menu-btn">Menu <i class="fa fa-bars icon-right"></i></button>
         </div>
-        <button class="btn btn-outline menu-btn">Menu <i class="fa fa-bars icon-right"></i></button>
+
+        <ul class="list-unstyled menu">
+          <li><button class="reset-password-button">Reset Password</button></li>
+          <li><button class="log-out-button">Log Out <i class="fa fa-sign-out icon-right"></i></button></li>
+        </ul>
 
         <div class="mobile-menu">
           <ul class="list-unstyled">
-            <li><button class="close-menu-btn">Close <i class="fa fa-times icon-right"></i></button></li>
+            <li><button class="close-mobile-menu-btn">Close <i class="fa fa-times icon-right"></i></button></li>
             <li class="menu-text"><span class="user-email"></span></li>
+            <li><button class="reset-password-button">Reset Password</button></li>
             <li><button class="log-out-button">Log Out <i class="fa fa-sign-out icon-right"></i></button></li>
           </ul>
         </div>
@@ -85,6 +86,11 @@
       </header>
 
       <div class="wrapper">
+
+        <div id="alertBox">
+          <!-- Alerts go here -->
+        </div>
+
         <ul class="tabs">
           <li class="active"><button id="mindfulnessTab"><i class="fa fa-sun-o icon-left-close"></i>Mindfulness</button></li>
           <li><button id="analyticsTab"><i class="fa fa-braille icon-left-close"></i>Analytics</button></li>
@@ -175,7 +181,7 @@
             </div>
             <hr />
             <div class="text-left">
-              <button class="btn btn-sm" id="moodsBack"><i class="fa fa-arrow-left icon-left-close"></i> Back</button>
+              <button class="btn btn-sm back-btn"><i class="fa fa-arrow-left icon-left-close"></i> Back</button>
             </div>
           </section>
 
@@ -327,6 +333,25 @@
                 </div>
                 <button type="submit" class="btn btn-success"><i class="fa fa-plus icon-left-close"></i> Add User</button>
               </form>
+            </div>
+          </section>
+
+          <section id="resetPassword">
+            <h2>Reset Your Password</h2>
+            <form id="passwordResetForm">
+              <div class="input-group">
+                <label for="oldPassword">Enter your old password:</label>
+                <input type="password" id="oldPassword" />
+              </div>
+              <div class="input-group">
+                <label for="newPassword">Enter your new password:</label>
+                <input type="password" id="newPassword" />
+              </div>
+              <button type="submit" class="btn btn-success btn-sm">Reset Password</button>
+            </form>
+            <hr />
+            <div class="text-left">
+              <button class="btn btn-error-outline btn-sm back-btn"><i class="fa fa-times icon-left-close"></i> Cancel Password Reset</button>
             </div>
           </section>
 

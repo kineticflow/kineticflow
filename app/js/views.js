@@ -1,12 +1,31 @@
 // Views JS
 
 $(".menu-btn").on("click", function(){
+  $('.menu-icon').toggleClass('rotate180');
+  $(".menu").toggle('fast');
+});
+
+$(".mobile-menu-btn").on("click", function(){
   $(".mobile-menu").fadeIn();
 });
 
-$(".close-menu-btn").on("click", function(){
+$(".close-mobile-menu-btn").on("click", function(){
   $(".mobile-menu").fadeOut();
 });
+
+$('.reset-password-button').on("click", function(){
+  $(".menu").hide('fast');
+  $('.menu-icon').toggleClass('rotate180');
+  $(".mobile-menu").fadeOut();
+  changeView('#resetPassword');
+});
+
+function displayAlert(type, message) {
+  $("#alertBox").append('<div class="alert '+ type +'"><div class="message">'+ message +'</div><button class="alert-dismiss-btn"><i class="fa fa-times"></i></button></div>');
+  $('.alert-dismiss-btn').on('click', function(){
+    $(this).parent().remove();
+  });
+}
 
 function changeView(newView){
   $("section").hide();
@@ -44,7 +63,7 @@ $("#adminTab").on("click", function(){
   changeView("#admin");
 });
 
-$("#moodsBack").on("click", function(){
+$(".back-btn").on("click", function(){
   changeView("#mindfulness");
 });
 

@@ -1,4 +1,8 @@
 // main: main.scss
+
+// ===========================================
+// Logged out Alert stuff
+//============================================
 .block-alert {
   width: 100%;
   background: $error; // Our most frequent alert is an error so by default alerts are error themed
@@ -6,35 +10,45 @@
   text-align: left;
   display: none;
 }
-.alert {
-  @extend .block-alert;
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: left;
-  @include for-tablet-landscape-up {
-    padding: 0 1rem;
-  }
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+.alert-message {
+  padding: 1rem;
+  display: inline-block;
+  clear: both;
 }
 .alert-success {
   background: $success;
 }
-.alert-dismiss,
-.alert-message {
-  padding: 1rem;
-}
-.alert-dismiss {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.alert-message {
-  display: inline-block;
-  clear: both;
+
+// ===========================================
+// Logged in Alert stuff
+//============================================
+#alertBox {
+  .alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 5px;
+    background: $error;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  .alert-success {
+    background: $success;
+  }
+  .alert-warning {
+    background: $warning;
+  }
+  .message,
+  .alert-dismiss-btn {
+    padding: 1rem;
+  }
+  .alert-dismiss-btn {
+    margin: 0 0 0 1rem;
+    background: transparent;
+    color: #fff;
+    @include for-tablet-portrait-up {
+      margin-left: 2rem;
+    }
+  }
 }

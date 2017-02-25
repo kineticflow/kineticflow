@@ -57,8 +57,20 @@
 .icon-left-close {
   margin-right: 0.33rem;
 }
+.icon-right-close {
+  margin-left: 0.33rem;
+  transition: 0.3s ease;
+}
+.rotate180 {
+  transform: rotate(180deg);
+}
 .fa-spin {
   color: $warning;
+}
+.btn {
+  .fa-spin {
+    color: #fff;
+  }
 }
 .list-unstyled {
   padding: 0;

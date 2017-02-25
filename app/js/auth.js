@@ -39,6 +39,8 @@ $(".log-out-button").click(function() {
   firebase.auth().signOut().then(function() {
       // The user logs out!
       changeView('#mindfulness');
+      $(".menu").hide('fast');
+      $('.menu-icon').toggleClass('rotate180');
       $(".mobile-menu").fadeOut();
     }, function(error) {
       // An error happened.
@@ -72,5 +74,30 @@ $("#forgotPasswordForm").submit(function(e) {
     $("#forgotPasswordButton").html('Reset Password');
     $("#forgotPasswordAlert .alert-message").html(errorMessage);
     $("#forgotPasswordAlert").fadeIn("fast").delay(6000).fadeOut("slow");
+  });
+});
+
+// Let folks reset their password from within the app
+$("#passwordResetForm").submit(function(event){
+  event.preventDefault();
+  var button = $(this).children("button");
+  button.html('&nbsp;<i class="fa fa-spinner fa-spin"></i>&nbsp;');
+  var user = firebase.auth().currentUser;
+  var oldPassword = $("#oldPassword").val();
+  var newPassword = $("#newPassword").val();
+  $('#passwordResetForm').trigger("reset");
+  var credential = firebase.auth.EmailAuthProvider.credential(user.email, oldPassword);
+  user.reauthenticate(credential).then(function() {
+    user.updatePassword(newPassword).then(function() {
+      displayAlert("alert-success", "Password updated!");
+      button.html('Reset Password');
+      changeView("#mindfulness");
+    }, function(error) {
+      button.html('Reset Password');
+      displayAlert("alert-error", error);
+    });
+  }, function(error) {
+    button.html('Reset Password');
+    displayAlert("alert-error", error);
   });
 });
