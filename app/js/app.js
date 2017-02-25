@@ -186,8 +186,10 @@ $(document).ready(function() {
 
         var postMood = $(this).html();
 
+        var humandate = new Date;
+
         var slackurl = "https://hooks.slack.com/services/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";
-        var payload = "*" + userProfile.name + "* (" + user.email + ") just listened to an audio. Activity: _" + activityName + "_, Starting Mood: _" + moodName + "_, Finishing mood: _" + postMood + "_";
+        var payload = "*" + userProfile.name + "* (" + user.email + ") just listened to an audio. Time: _" + humandate + "_, Activity: _" + activityName + "_, Starting Mood: _" + moodName + "_, Finishing mood: _" + postMood + "_";
 
         $.ajax({
           data: 'payload=' + JSON.stringify({
@@ -200,21 +202,15 @@ $(document).ready(function() {
         });
 
         var updates = {};
+        var adminUpdate = {};
 
         var a = audio.get(0);
         var duration = a.duration * 1000;
-
         var newStreakDate = Date.now();
         var newStreak = streakCalc(newStreakDate, userProfile.streakDate, userProfile.streak);
         var newTotalTime = userProfile.totalAudioTime + duration;
         var newTotalSessions = userProfile.totalSessions + 1;
-        var newHistoryObj = {
-          "date" : newStreakDate,
-          "preMood" : moodName,
-          "activity" : activityName,
-          "activityID" : activityId,
-          "postMood" : postMood
-        }
+
         var newAdminHistoryObj = {
           "date" : newStreakDate,
           "uid" : currentUser,
@@ -224,15 +220,23 @@ $(document).ready(function() {
           "activity" : activityName,
           "activityID" : activityId,
           "postMood" : postMood,
-          "audioDuration" : duration // Vanity metric calcs!
         }
+
+        var newHistoryObj = {
+          "date" : newStreakDate,
+          "preMood" : moodName,
+          "activity" : activityName,
+          "activityID" : activityId,
+          "postMood" : postMood
+        }
+
+        adminUpdate['/admin/history/' + newStreakDate] = newAdminHistoryObj;
 
         updates['/users/' + currentUser + '/streak'] = newStreak;
         updates['/users/' + currentUser + '/streakDate'] = newStreakDate;
         updates['/users/' + currentUser + '/totalAudioTime'] = newTotalTime;
         updates['/users/' + currentUser + '/totalSessions'] = newTotalSessions;
         updates['/users/' + currentUser + '/history/' + newStreakDate] = newHistoryObj;
-        updates['/admin/history/' + newStreakDate] = newAdminHistoryObj;
 
         var stats = userProfile.stats;
         stats.startingMood[moodName] = (stats.startingMood[moodName] || 0) + 1;
@@ -240,10 +244,12 @@ $(document).ready(function() {
         stats.endingMood[postMood] = (stats.endingMood[postMood] || 0) + 1;
 
         try {
+          firebase.database().ref().update(adminUpdate);
           firebase.database().ref().update(updates);
           firebase.database().ref('/users/' + currentUser + '/stats/').set(stats);
+          displayAlert("alert-success", "Great job! Your analytics have been updated. See you tomorrow!");
         } catch(error){
-          console.log(error);
+          displayAlert("alert-warning", "Warning! Our database had a little issue handling what just happened. Don't worry, our team has been notified that there was an error and your data has been saved securely in our bunker. In case someone asks, this was the error: " + error);
           var payload2 = "*" + userProfile.name + "* (" + user.email + ") encountered the following error: _" + error + "_";
           $.ajax({
             data: 'payload=' + JSON.stringify({
