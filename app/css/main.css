@@ -660,5 +660,17 @@ section .admin-view h3 {
 .cancel-activity-edit-btn {
   display: none; }
 
+#uploadProgressBar {
+  height: 2rem;
+  display: none;
+  background: #e5e5e5;
+  border-radius: 5px;
+  align-items: stretch; }
+  #uploadProgressBar #progressBarInner {
+    background: #66b47d;
+    height: 2rem;
+    width: 0%;
+    border-radius: 5px; }
+
 #adminAnalyticsView {
   display: block; }

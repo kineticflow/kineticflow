@@ -97,7 +97,7 @@ $("#editActivityForm").submit(function(event) {
   try {
     firebase.database().ref('/data/activities/' + activityKey).set(updateActivity);
   } catch (error) {
-    console.log(error);
+    displayAlert("alert-error", error);
   }
   finally {
     $('#editActivityForm').trigger("reset");
@@ -115,7 +115,7 @@ $("#addNewActivityForm").on("submit", function(event) {
   try {
     firebase.database().ref('/data/activities').push(newActivity);
   } catch (error) {
-    console.log(error);
+    displayAlert("alert-error", error);
   } finally {
     $('#addNewActivityForm').trigger("reset");
   }
@@ -132,39 +132,47 @@ $("#newFile").on("change", function(){
   return file;
 });
 
-$("#newAudioForm").on("submit", function(event) {
+$("#newAudioForm").submit(function(event) {
+  event.preventDefault();
+  var button = $(this).children("button");
+  button.hide();
+  $('#uploadProgressBar').fadeIn();
   var newAudioID = $('#newAudioID').val();
   var newAudioTitle = $('#newAudioTitle').val();
   var newAudioTags = $('#newAudioTags').val().replace(/\s+/g, '').split(',');
   var uploadTask = storageRef.child(file.name).put(file);
-  uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
-    function(snapshot) {
-      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');
-      switch (snapshot.state) {
-        case firebase.storage.TaskState.progress: // or 'paused'
-          console.log('Upload is ' + progress + '% done');
-          break;
-        case firebase.storage.TaskState.PAUSED: // or 'paused'
-          console.log('Upload is paused');
-          break;
-        case firebase.storage.TaskState.RUNNING: // or 'running'
-          console.log('Upload is running');
-      }
-    }, function(error) {
+  uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, function(snapshot) {
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    $('#progressBarInner').css('width', progress + '%');
+    switch (snapshot.state) {
+      case firebase.storage.TaskState.progress: // or 'paused'
+        console.log('Upload is ' + progress + '% done (from snapshot state)');
+        break;
+      case firebase.storage.TaskState.PAUSED: // or 'paused'
+        displayAlert('alert-warning', 'Upload is paused');
+        $('#progressText').html('Upload is paused');
+        break;
+      case firebase.storage.TaskState.RUNNING: // or 'running'
+        $('#progressText').html('Upload is running');
+    }
+  }, function(error) {
+    $('#uploadProgressBar').hide();
+    $('#progressBarInner').css('width', '0%');
+    button.fadeIn();
     switch (error.code) {
       case 'storage/unauthorized':
-        console.log("User doesn't have permission to access the object");
+        displayAlert("alert-warning", "Upload unsuccessful: User doesn't have permission to access the storage bucket. Ask Sam for help.");
         break;
       case 'storage/canceled':
-        console.log("User canceled the upload");
+        displayAlert("alert-warning", "User canceled the upload");
         break;
       case 'storage/unknown':
-        console.log("Unknown error occurred, inspect error.serverResponse");
+        displayAlert("alert-error", "Upload unsuccessful: Unknown error occurred, how unhelpful! Ask Sam for help.");
     }
   }, function() {
     var downloadURL = uploadTask.snapshot.downloadURL;
-    console.log("Successful upload: " + downloadURL);
+    displayAlert("alert-success", newAudioTitle + " successfully uploaded!");
+    $('#progressText').html('');
     var newAudioObj = {
       "id" : newAudioID,
       "link" : downloadURL,
@@ -174,10 +182,14 @@ $("#newAudioForm").on("submit", function(event) {
     try {
       var newAudioKey = firebase.database().ref('/data/audios/').push().key;
       firebase.database().ref('/data/audios/' + newAudioKey).update(newAudioObj);
+      displayAlert("alert-success", "Database reference for new audio successfully created!");
     } catch(error){
-      console.log(error);
+      displayAlert("alert-error", "Uh oh, there was an issue creating a database reference. " + error);
     } finally {
       $('#newAudioForm').trigger("reset");
+      $('#uploadProgressBar').hide();
+      $('#progressBarInner').css('width', '0%');
+      button.fadeIn();
     }
   });
   return false;
@@ -224,7 +236,7 @@ $("#addNewUserForm").submit(function(event){
     "totalAudioTime" : 0,
     "totalSessions" : 0
   };
-  
+
   try {
     firebase.database().ref('/users/' + newUID).set(profileData);
   } catch (error) {

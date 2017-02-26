@@ -54,6 +54,19 @@ section {
 .cancel-activity-edit-btn {
   display: none;
 }
+#uploadProgressBar {
+  height: 2rem;
+  display: none;
+  background: $grey;
+  border-radius: 5px;
+  align-items: stretch;
+  #progressBarInner {
+    background: $success;
+    height: 2rem;
+    width: 0%;
+    border-radius: 5px;
+  }
+}
 #adminAnalyticsView {
   display: block;
 }
