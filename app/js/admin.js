@@ -17,7 +17,7 @@ adminDBRef.on('value', function(snapshot) {
 
   var adminData = snapshot.val();
 
-  // Show the Admin all analytics
+  // Show the Admin all the things
 
   $.each(adminData.organisations, function(key, value){
     var organisation = value.replace(/\s+/g, '');
@@ -46,8 +46,21 @@ adminDBRef.on('value', function(snapshot) {
 // All Activities
 var adminDataRef = firebase.database().ref("data");
 adminDataRef.on('value', function(snapshot) {
+
+  var audioTable = $("#audiosWrapper table tbody");
+  audioTable.empty();
   $('.activities-wrapper').empty();
+
   var appData = snapshot.val();
+
+  // List Audios
+  $.each(appData.audios, function(key, value) {
+    var displayTags = value.tags + ""; // Cheat to convert array to string.
+    displayTags = displayTags.replace(/,/g, ', ');
+    audioTable.append('<tr><td>' + value.id + '</td><td>' + value.title + '</td><td class="table-tags">' + displayTags + '</td><td class="table-overflow">' + value.link + '</td></tr>')
+  });
+
+  // List activities
   $.each(appData.activities, function(key, value){
 
     var displayTags = value.tags + ""; // Cheat to convert array to string.
@@ -91,7 +104,7 @@ $("#editActivityForm").submit(function(event) {
   var updateActivity = {
     "title": $('#editActivityTitle').val(),
     "id": $('#editActivityID').val(),
-    "tags": $('#editActivityTags').val().replace(/,\s+/g, '').split(','),
+    "tags": $('#editActivityTags').val().replace(/,\s+/g, ',').split(','),
     "description": $('#editActivityDescription').val()
   };
   try {
@@ -122,8 +135,6 @@ $("#addNewActivityForm").on("submit", function(event) {
   return false;
 });
 
-
-
 // Let an admin upload a new audio
 var storageRef = firebase.storage().ref();
 var file;
@@ -134,6 +145,10 @@ $("#newFile").on("change", function(){
 
 $("#newAudioForm").submit(function(event) {
   event.preventDefault();
+  if (file == undefined) {
+    displayAlert("alert-warning", "Woah there! You have to select a file before you can upload.");
+    return false;
+  }
   var button = $(this).children("button");
   button.hide();
   $('#uploadProgressBar').fadeIn();
@@ -192,23 +207,43 @@ $("#newAudioForm").submit(function(event) {
       button.fadeIn();
     }
   });
-  return false;
 });
 
 $("#addNewGroupForm").on("submit", function(event) {
   var newGroup = $('#newGroupId').val();
   try {
     firebase.database().ref('/admin/organisations').push(newGroup);
+    displayAlert("alert-success", "New group successfully created");
   } catch (error) {
-    console.log(error);
+    displayAlert("alert-error", error);
   } finally {
     $('#addNewGroupForm').trigger("reset");
   }
   return false;
 });
 
+// List all users
+var adminUsersRef = firebase.database().ref("users");
+adminUsersRef.on('value', function(snapshot) {
+
+  var usersTable = $("#usersWrapper table tbody");
+  usersTable.empty();
+
+  var usersData = snapshot.val();
+
+  $.each(usersData, function(key, value) {
+    var totalTime = formatMilliseconds(value.totalAudioTime);
+    usersTable.append('<tr><td>' + key + '</td><td>' + value.name + '</td><td>' + value.organisation + '</td><td>' + value.totalSessions + '</td><td>' + totalTime + '</td></tr>')
+  });
+
+});
+
 $("#addNewUserForm").submit(function(event){
   event.preventDefault();
+  if ($('#newUserUID').val() == "" || $('#newUserEmail').val() == "" || $('#newUserName').val() == "" || $('#newUserOrg').val() == "") {
+    displayAlert("alert-warning", "Woah there! You have to complete all fields.");
+    return false;
+  }
   var newUID = $.trim($('#newUserUID').val());
   var email = $.trim($('#newUserEmail').val());
   var name = $.trim($('#newUserName').val());
@@ -239,8 +274,11 @@ $("#addNewUserForm").submit(function(event){
 
   try {
     firebase.database().ref('/users/' + newUID).set(profileData);
+    displayAlert("alert-success", "Database reference for new user successfully created!");
   } catch (error) {
     displayAlert("alert-error", error);
+  } finally {
+    $('#addNewUserForm').trigger("reset");
   }
 });
 

@@ -410,6 +410,8 @@ footer {
       text-transform: uppercase;
       color: #777;
       font-size: 0.8rem; }
+    .user-logged-in section #groupActivitiesHeader {
+      display: none; }
     .user-logged-in section .activity-list {
       padding: 0; }
       .user-logged-in section .activity-list li {
@@ -670,7 +672,25 @@ section .admin-view h3 {
     background: #66b47d;
     height: 2rem;
     width: 0%;
-    border-radius: 5px; }
+    border-radius: 5px;
+    transition: 0.4s ease; }
 
 #adminAnalyticsView {
   display: block; }
+
+.admin-form input {
+  min-width: 50%; }
+
+#audiosWrapper table {
+  font-size: 0.85rem; }
+  #audiosWrapper table td {
+    padding: 0.33rem 0; }
+
+.table-tags {
+  max-width: 200px; }
+
+.table-overflow {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }

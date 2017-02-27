@@ -91,6 +91,9 @@
       color: $dark-grey;
       font-size: 0.8rem;
     }
+    #groupActivitiesHeader {
+      display: none;
+    }
     .activity-list {
       padding: 0;
       li {

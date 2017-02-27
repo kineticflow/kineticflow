@@ -110,10 +110,9 @@
                 <!-- app.js puts activitys here -->
                 <li><i class="fa fa-sun-o fa-spin fa-2x"></i></li>
               </ul>
-              <p class="list-header">Group (For the whole team to listen together)  <i class="fa fa-users icon-right"></i></p>
+              <p class="list-header" id="groupActivitiesHeader">Group (For the whole team to listen together)  <i class="fa fa-users icon-right"></i></p>
               <ul class="list-unstyled list-inline activity-list" id="groupActivities">
                 <!-- app.js puts activitys here -->
-                <li><i class="fa fa-sun-o fa-spin fa-2x"></i></li>
               </ul>
               <p class="list-header">Lifestyle  <i class="fa fa-user icon-right"></i></p>
               <ul class="list-unstyled list-inline activity-list" id="personalActivities">
@@ -259,7 +258,7 @@
                 <div class="input-group">
                   <label for="newActivityTags">Activity Tags</label>
                   <input type="text" id="newActivityTags" />
-                  <p class="help-text-black">An activity's tags must be camelCase and comma separated.</p>
+                  <p class="help-text-black">An activity should be tagged with at least one organisation and one of these: [work, personal, groupWork].</p>
                 </div>
                 <div class="input-group">
                   <label for="newActivityDescription">Activity Description</label>
@@ -306,7 +305,7 @@
                 <div class="input-group">
                   <label for="newAudioTags">Audio Tags</label>
                   <input type="text" id="newAudioTags" />
-                  <p class="help-text-black">An audio's tags must be camelCase and comma separated: <em>mood ids</em> and <em>activity ids</em>.</p>
+                  <p class="help-text-black">An audio should be tagged with at least one mood id and at least one activity id.</p>
                 </div>
                 <div class="input-group">
                   <input type="file" id="newFile" />
@@ -319,6 +318,21 @@
                 </div>
                 <p id="progressText"></p>
               </form>
+              <div id="audiosWrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Title</th>
+                      <th>Tags</th>
+                      <th>Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             <div class="admin-view" id="adminGroupsView">
@@ -361,6 +375,22 @@
                 </div>
                 <button type="submit" class="btn btn-success"><i class="fa fa-plus icon-left-close"></i> Add User</button>
               </form>
+              <div id="usersWrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>UID</th>
+                      <th>Name</th>
+                      <th>Organisation</th>
+                      <th>Total Sessions</th>
+                      <th>Total Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
 

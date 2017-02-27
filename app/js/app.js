@@ -40,6 +40,7 @@ $(document).ready(function() {
               if ($.inArray("work", value.tags) > -1) {
                 $("#workActivities").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
               } else if ($.inArray("groupWork", value.tags) > -1) {
+                $("#groupActivitiesHeader").show();
                 $("#groupActivities").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
               } else if ($.inArray("personal", value.tags) > -1) {
                 $("#personalActivities").append("<li><button id="+ value.id +" class='btn btn-outline activity-btn'>"+ value.title +"</button></li>");
